@@ -71,7 +71,9 @@ def apply(nn_func, func_args, log_file, print_source=False, num_bench=1, num_rep
   tgt_gpu = tvm.target.Target(target='cuda', host='llvm')
   dev = tvm.device(tgt_gpu.kind.name, 0)
   args = nn_func(*func_args)
+  # Some func_name may be not valid, we need to replace the illegal characters
   func_name = pathlib.Path(log_file).stem
+  func_name = func_name.replace("-", "_").replace("[", "_").replace("]", "_").replace(".", "_").replace(",", "_").replace(" ", "_")
   if not os.path.exists(log_file+".lib.tar") or compare_modify_time(log_file+".lib.tar", log_file):
     sch, args = task.apply_best(log_file)
     func = tvm.build(sch, args, tvm.target.cuda(), name=func_name)
