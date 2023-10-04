@@ -1,0 +1,1758 @@
+2022-11-10 15:30:12,541 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv7x7_s2_1_224_224_3_64_7_7.log 1044 lines
+2022-11-10 15:30:12,591 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv7x7_s2_1_224_224_3_64_7_7.log
+2022-11-10 15:30:14,190 ansor_utils.py:34 [1, 224, 224, 3]
+2022-11-10 15:30:14,192 ansor_utils.py:34 [7, 7, 3, 64]
+2022-11-10 15:30:14,192 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:14,790 ansor_utils.py:44 mean_time 19.181 us
+2022-11-10 15:30:14,794 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_112_112_64.log 36 lines
+2022-11-10 15:30:14,800 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_112_112_64.log
+2022-11-10 15:30:15,186 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:15,193 ansor_utils.py:34 [1, 64]
+2022-11-10 15:30:15,193 ansor_utils.py:34 [1, 64]
+2022-11-10 15:30:15,194 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:15,574 ansor_utils.py:44 mean_time 11.946 us
+2022-11-10 15:30:15,578 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_112_112_64.log 36 lines
+2022-11-10 15:30:15,581 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_112_112_64.log
+2022-11-10 15:30:15,943 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:15,950 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:16,325 ansor_utils.py:44 mean_time 11.944 us
+2022-11-10 15:30:16,329 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_maxpool_1_112_112_64_3_3_1.log 140 lines
+2022-11-10 15:30:16,332 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_maxpool_1_112_112_64_3_3_1.log
+2022-11-10 15:30:16,748 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:16,755 ansor_utils.py:34 [1, 112, 112, 64]
+2022-11-10 15:30:17,143 ansor_utils.py:44 mean_time 12.343 us
+2022-11-10 15:30:17,145 hori_fusion_resnext.py:36 xxxx (56, 56) input_dim: 64, n_channel: 256, out_dim: 256,
+2022-11-10 15:30:17,162 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_64_4_64_s1.log 1044 lines
+2022-11-10 15:30:17,171 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_64_4_64_s1.log
+2022-11-10 15:30:19,063 ansor_utils.py:34 [1, 56, 56, 64]
+2022-11-10 15:30:19,065 ansor_utils.py:34 [64, 64, 4]
+2022-11-10 15:30:19,066 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:19,544 ansor_utils.py:44 mean_time 15.272 us
+2022-11-10 15:30:19,551 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:19,555 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:19,974 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:19,980 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:19,981 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:19,981 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:20,363 ansor_utils.py:44 mean_time 11.949 us
+2022-11-10 15:30:20,368 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:20,370 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:20,775 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:20,781 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:21,158 ansor_utils.py:44 mean_time 11.944 us
+2022-11-10 15:30:21,177 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log 1044 lines
+2022-11-10 15:30:21,187 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log
+2022-11-10 15:30:24,211 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:24,218 ansor_utils.py:34 [64, 3, 3, 4, 4]
+2022-11-10 15:30:24,218 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:24,542 ansor_utils.py:44 mean_time 10.083 us
+2022-11-10 15:30:24,550 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:24,553 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:24,980 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:24,986 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:24,987 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:24,987 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:25,369 ansor_utils.py:44 mean_time 11.949 us
+2022-11-10 15:30:25,374 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:25,377 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:25,778 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:25,785 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:26,161 ansor_utils.py:44 mean_time 11.943 us
+2022-11-10 15:30:26,178 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log 1044 lines
+2022-11-10 15:30:26,186 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log
+2022-11-10 15:30:27,564 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:27,570 ansor_utils.py:34 [256, 256]
+2022-11-10 15:30:27,571 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:28,626 ansor_utils.py:44 mean_time 34.457 us
+2022-11-10 15:30:28,632 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log 84 lines
+2022-11-10 15:30:28,637 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log
+2022-11-10 15:30:29,048 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:29,055 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:29,055 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:29,056 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:29,436 ansor_utils.py:44 mean_time 11.937 us
+2022-11-10 15:30:29,452 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_64_256.log 1044 lines
+2022-11-10 15:30:29,459 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_64_256.log
+2022-11-10 15:30:32,284 ansor_utils.py:34 [1, 56, 56, 64]
+2022-11-10 15:30:32,286 ansor_utils.py:34 [64, 256]
+2022-11-10 15:30:32,287 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:32,638 ansor_utils.py:44 mean_time 11.022 us
+2022-11-10 15:30:32,645 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log 84 lines
+2022-11-10 15:30:32,649 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log
+2022-11-10 15:30:33,051 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:33,057 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:33,057 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:33,058 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:33,438 ansor_utils.py:44 mean_time 11.936 us
+2022-11-10 15:30:33,441 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_56_56_256.log 24 lines
+2022-11-10 15:30:33,443 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_56_56_256.log
+2022-11-10 15:30:33,800 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:33,806 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:34,182 ansor_utils.py:44 mean_time 11.942 us
+2022-11-10 15:30:34,183 hori_fusion_resnext.py:36 xxxx (56, 56) input_dim: 256, n_channel: 256, out_dim: 256,
+2022-11-10 15:30:34,199 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_4_64_s1.log 1044 lines
+2022-11-10 15:30:34,206 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_4_64_s1.log
+2022-11-10 15:30:35,458 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:35,464 ansor_utils.py:34 [64, 256, 4]
+2022-11-10 15:30:35,465 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:36,680 ansor_utils.py:44 mean_time 39.807 us
+2022-11-10 15:30:36,684 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:36,690 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:37,119 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:37,126 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:37,126 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:37,127 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:37,508 ansor_utils.py:44 mean_time 11.948 us
+2022-11-10 15:30:37,512 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:37,514 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:37,912 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:37,919 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:38,296 ansor_utils.py:44 mean_time 11.943 us
+2022-11-10 15:30:38,315 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log 1044 lines
+2022-11-10 15:30:38,326 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log
+2022-11-10 15:30:41,382 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:41,389 ansor_utils.py:34 [64, 3, 3, 4, 4]
+2022-11-10 15:30:41,390 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:41,713 ansor_utils.py:44 mean_time 10.074 us
+2022-11-10 15:30:41,721 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:41,725 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:42,157 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:42,164 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:42,164 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:42,164 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:42,546 ansor_utils.py:44 mean_time 11.949 us
+2022-11-10 15:30:42,549 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:42,552 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:42,956 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:42,963 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:43,339 ansor_utils.py:44 mean_time 11.943 us
+2022-11-10 15:30:43,355 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log 1044 lines
+2022-11-10 15:30:43,361 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log
+2022-11-10 15:30:44,753 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:44,760 ansor_utils.py:34 [256, 256]
+2022-11-10 15:30:44,761 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:45,813 ansor_utils.py:44 mean_time 34.421 us
+2022-11-10 15:30:45,819 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log 84 lines
+2022-11-10 15:30:45,824 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log
+2022-11-10 15:30:46,238 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:46,244 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:46,245 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:46,245 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:46,625 ansor_utils.py:44 mean_time 11.937 us
+2022-11-10 15:30:46,626 hori_fusion_resnext.py:36 xxxx (56, 56) input_dim: 256, n_channel: 256, out_dim: 256,
+2022-11-10 15:30:46,643 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_4_64_s1.log 1044 lines
+2022-11-10 15:30:46,651 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_4_64_s1.log
+2022-11-10 15:30:47,914 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:47,921 ansor_utils.py:34 [64, 256, 4]
+2022-11-10 15:30:47,922 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:49,136 ansor_utils.py:44 mean_time 39.806 us
+2022-11-10 15:30:49,141 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:49,145 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:49,574 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:49,580 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:49,581 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:49,581 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:49,962 ansor_utils.py:44 mean_time 11.949 us
+2022-11-10 15:30:49,966 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:49,969 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:50,374 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:50,380 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:50,756 ansor_utils.py:44 mean_time 11.941 us
+2022-11-10 15:30:50,775 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log 1044 lines
+2022-11-10 15:30:50,786 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_56_56_4_4_3.log
+2022-11-10 15:30:53,810 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:53,817 ansor_utils.py:34 [64, 3, 3, 4, 4]
+2022-11-10 15:30:53,817 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:54,140 ansor_utils.py:44 mean_time 10.075 us
+2022-11-10 15:30:54,148 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:54,152 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_56_56_4_64.log
+2022-11-10 15:30:54,577 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:54,584 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:54,584 ansor_utils.py:34 [1, 64, 4]
+2022-11-10 15:30:54,584 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:54,966 ansor_utils.py:44 mean_time 11.948 us
+2022-11-10 15:30:54,969 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log 108 lines
+2022-11-10 15:30:54,971 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_56_56_4_64.log
+2022-11-10 15:30:55,376 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:55,383 ansor_utils.py:34 [1, 64, 56, 56, 4]
+2022-11-10 15:30:55,759 ansor_utils.py:44 mean_time 11.942 us
+2022-11-10 15:30:55,775 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log 1044 lines
+2022-11-10 15:30:55,779 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_56_56_256_256.log
+2022-11-10 15:30:57,165 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:57,172 ansor_utils.py:34 [256, 256]
+2022-11-10 15:30:57,173 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:58,224 ansor_utils.py:44 mean_time 34.408 us
+2022-11-10 15:30:58,230 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log 84 lines
+2022-11-10 15:30:58,234 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_56_56_256.log
+2022-11-10 15:30:58,641 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:58,647 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:58,648 ansor_utils.py:34 [1, 256]
+2022-11-10 15:30:58,648 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:30:59,028 ansor_utils.py:44 mean_time 11.939 us
+2022-11-10 15:30:59,029 hori_fusion_resnext.py:36 xxxx (56, 56) input_dim: 256, n_channel: 512, out_dim: 512,
+2022-11-10 15:30:59,046 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_8_64_s2.log 1044 lines
+2022-11-10 15:30:59,053 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_56_56_256_8_64_s2.log
+2022-11-10 15:31:02,374 ansor_utils.py:34 [1, 56, 56, 256]
+2022-11-10 15:31:02,381 ansor_utils.py:34 [64, 256, 8]
+2022-11-10 15:31:02,382 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:03,393 ansor_utils.py:44 mean_time 33.127 us
+2022-11-10 15:31:03,403 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:03,407 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:03,824 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:03,828 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:03,828 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:03,829 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:04,066 ansor_utils.py:44 mean_time 7.236 us
+2022-11-10 15:31:04,069 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:04,072 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:04,459 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:04,463 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:04,695 ansor_utils.py:44 mean_time 7.223 us
+2022-11-10 15:31:04,713 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log 1044 lines
+2022-11-10 15:31:04,724 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log
+2022-11-10 15:31:06,566 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:06,570 ansor_utils.py:34 [64, 3, 3, 8, 8]
+2022-11-10 15:31:06,571 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:06,868 ansor_utils.py:44 mean_time 9.322 us
+2022-11-10 15:31:06,875 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:06,878 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:07,299 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:07,302 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:07,303 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:07,303 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:07,541 ansor_utils.py:44 mean_time 7.235 us
+2022-11-10 15:31:07,544 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:07,547 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:07,940 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:07,944 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:08,176 ansor_utils.py:44 mean_time 7.222 us
+2022-11-10 15:31:08,191 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log 1044 lines
+2022-11-10 15:31:08,194 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log
+2022-11-10 15:31:10,025 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:10,029 ansor_utils.py:34 [512, 512]
+2022-11-10 15:31:10,031 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:11,259 ansor_utils.py:44 mean_time 40.369 us
+2022-11-10 15:31:11,265 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log 72 lines
+2022-11-10 15:31:11,270 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log
+2022-11-10 15:31:11,664 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:11,668 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:11,669 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:11,669 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:11,905 ansor_utils.py:44 mean_time 7.228 us
+2022-11-10 15:31:11,921 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_256_512.log 1044 lines
+2022-11-10 15:31:11,929 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_256_512.log
+2022-11-10 15:31:13,429 ansor_utils.py:34 [1, 28, 28, 256]
+2022-11-10 15:31:13,431 ansor_utils.py:34 [256, 512]
+2022-11-10 15:31:13,433 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:14,021 ansor_utils.py:44 mean_time 19.043 us
+2022-11-10 15:31:14,026 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log 72 lines
+2022-11-10 15:31:14,030 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log
+2022-11-10 15:31:14,422 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:14,426 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:14,427 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:14,427 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:14,663 ansor_utils.py:44 mean_time 7.230 us
+2022-11-10 15:31:14,666 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_28_28_512.log 24 lines
+2022-11-10 15:31:14,668 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_28_28_512.log
+2022-11-10 15:31:15,019 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:15,024 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:15,255 ansor_utils.py:44 mean_time 7.223 us
+2022-11-10 15:31:15,256 hori_fusion_resnext.py:36 xxxx (28, 28) input_dim: 512, n_channel: 512, out_dim: 512,
+2022-11-10 15:31:15,272 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log 1044 lines
+2022-11-10 15:31:15,276 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log
+2022-11-10 15:31:18,539 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:18,544 ansor_utils.py:34 [64, 512, 8]
+2022-11-10 15:31:18,548 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:19,824 ansor_utils.py:44 mean_time 41.938 us
+2022-11-10 15:31:19,834 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:19,838 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:20,253 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:20,257 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:20,257 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:20,258 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:20,495 ansor_utils.py:44 mean_time 7.235 us
+2022-11-10 15:31:20,499 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:20,501 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:20,892 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:20,897 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:21,128 ansor_utils.py:44 mean_time 7.223 us
+2022-11-10 15:31:21,146 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log 1044 lines
+2022-11-10 15:31:21,152 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log
+2022-11-10 15:31:22,993 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:22,998 ansor_utils.py:34 [64, 3, 3, 8, 8]
+2022-11-10 15:31:22,999 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:23,296 ansor_utils.py:44 mean_time 9.322 us
+2022-11-10 15:31:23,302 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:23,307 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:23,718 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:23,722 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:23,723 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:23,723 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:23,960 ansor_utils.py:44 mean_time 7.237 us
+2022-11-10 15:31:23,964 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:23,966 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:24,358 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:24,363 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:24,594 ansor_utils.py:44 mean_time 7.223 us
+2022-11-10 15:31:24,611 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log 1044 lines
+2022-11-10 15:31:24,617 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log
+2022-11-10 15:31:26,449 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:26,452 ansor_utils.py:34 [512, 512]
+2022-11-10 15:31:26,455 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:27,684 ansor_utils.py:44 mean_time 40.453 us
+2022-11-10 15:31:27,690 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log 72 lines
+2022-11-10 15:31:27,693 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log
+2022-11-10 15:31:28,091 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:28,095 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:28,095 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:28,095 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:28,331 ansor_utils.py:44 mean_time 7.230 us
+2022-11-10 15:31:28,332 hori_fusion_resnext.py:36 xxxx (28, 28) input_dim: 512, n_channel: 512, out_dim: 512,
+2022-11-10 15:31:28,349 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log 1044 lines
+2022-11-10 15:31:28,353 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log
+2022-11-10 15:31:31,807 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:31,810 ansor_utils.py:34 [64, 512, 8]
+2022-11-10 15:31:31,813 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:33,089 ansor_utils.py:44 mean_time 41.985 us
+2022-11-10 15:31:33,099 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:33,105 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:33,528 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:33,532 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:33,533 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:33,533 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:33,770 ansor_utils.py:44 mean_time 7.236 us
+2022-11-10 15:31:33,774 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:33,776 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:34,165 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:34,169 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:34,401 ansor_utils.py:44 mean_time 7.223 us
+2022-11-10 15:31:34,420 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log 1044 lines
+2022-11-10 15:31:34,431 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log
+2022-11-10 15:31:36,284 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:36,288 ansor_utils.py:34 [64, 3, 3, 8, 8]
+2022-11-10 15:31:36,288 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:36,586 ansor_utils.py:44 mean_time 9.349 us
+2022-11-10 15:31:36,593 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:36,597 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:37,026 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:37,031 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:37,032 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:37,032 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:37,270 ansor_utils.py:44 mean_time 7.236 us
+2022-11-10 15:31:37,273 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:37,276 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:37,666 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:37,670 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:37,902 ansor_utils.py:44 mean_time 7.224 us
+2022-11-10 15:31:37,917 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log 1044 lines
+2022-11-10 15:31:37,920 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log
+2022-11-10 15:31:39,751 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:39,755 ansor_utils.py:34 [512, 512]
+2022-11-10 15:31:39,757 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:40,987 ansor_utils.py:44 mean_time 40.449 us
+2022-11-10 15:31:40,993 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log 72 lines
+2022-11-10 15:31:40,997 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log
+2022-11-10 15:31:41,392 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:41,397 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:41,397 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:41,398 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:41,634 ansor_utils.py:44 mean_time 7.230 us
+2022-11-10 15:31:41,635 hori_fusion_resnext.py:36 xxxx (28, 28) input_dim: 512, n_channel: 512, out_dim: 512,
+2022-11-10 15:31:41,651 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log 1044 lines
+2022-11-10 15:31:41,660 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_8_64_s1.log
+2022-11-10 15:31:44,930 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:44,934 ansor_utils.py:34 [64, 512, 8]
+2022-11-10 15:31:44,937 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:46,214 ansor_utils.py:44 mean_time 41.982 us
+2022-11-10 15:31:46,223 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:46,227 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:46,645 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:46,650 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:46,651 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:46,651 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:46,888 ansor_utils.py:44 mean_time 7.237 us
+2022-11-10 15:31:46,892 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:46,894 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:47,280 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:47,284 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:47,516 ansor_utils.py:44 mean_time 7.224 us
+2022-11-10 15:31:47,534 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log 1044 lines
+2022-11-10 15:31:47,545 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_8_8_3.log
+2022-11-10 15:31:49,394 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:49,399 ansor_utils.py:34 [64, 3, 3, 8, 8]
+2022-11-10 15:31:49,399 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:49,697 ansor_utils.py:44 mean_time 9.347 us
+2022-11-10 15:31:49,704 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:49,707 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_8_64.log
+2022-11-10 15:31:50,125 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:50,129 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:50,129 ansor_utils.py:34 [1, 64, 8]
+2022-11-10 15:31:50,130 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:50,367 ansor_utils.py:44 mean_time 7.235 us
+2022-11-10 15:31:50,371 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log 108 lines
+2022-11-10 15:31:50,374 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_8_64.log
+2022-11-10 15:31:50,768 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:50,773 ansor_utils.py:34 [1, 64, 28, 28, 8]
+2022-11-10 15:31:51,004 ansor_utils.py:44 mean_time 7.224 us
+2022-11-10 15:31:51,020 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log 1044 lines
+2022-11-10 15:31:51,027 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_512.log
+2022-11-10 15:31:52,857 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:52,860 ansor_utils.py:34 [512, 512]
+2022-11-10 15:31:52,863 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:54,093 ansor_utils.py:44 mean_time 40.444 us
+2022-11-10 15:31:54,099 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log 72 lines
+2022-11-10 15:31:54,103 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_512.log
+2022-11-10 15:31:54,497 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:54,502 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:54,502 ansor_utils.py:34 [1, 512]
+2022-11-10 15:31:54,502 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:54,738 ansor_utils.py:44 mean_time 7.230 us
+2022-11-10 15:31:54,739 hori_fusion_resnext.py:36 xxxx (28, 28) input_dim: 512, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:31:54,755 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_16_64_s1.log 1044 lines
+2022-11-10 15:31:54,762 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_28_28_512_16_64_s1.log
+2022-11-10 15:31:56,252 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:31:56,255 ansor_utils.py:34 [64, 512, 16]
+2022-11-10 15:31:56,260 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:31:58,401 ansor_utils.py:44 mean_time 70.708 us
+2022-11-10 15:31:58,407 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_16_64.log 36 lines
+2022-11-10 15:31:58,411 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_16_64.log
+2022-11-10 15:31:58,802 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:31:58,808 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:31:58,809 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:31:58,809 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:31:59,190 ansor_utils.py:44 mean_time 11.950 us
+2022-11-10 15:31:59,194 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_16_64.log 36 lines
+2022-11-10 15:31:59,197 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_16_64.log
+2022-11-10 15:31:59,560 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:31:59,566 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:31:59,942 ansor_utils.py:44 mean_time 11.943 us
+2022-11-10 15:31:59,960 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_16_16_3.log 1044 lines
+2022-11-10 15:31:59,966 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_28_28_16_16_3.log
+2022-11-10 15:32:01,875 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:01,882 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:32:01,883 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:02,497 ansor_utils.py:44 mean_time 19.745 us
+2022-11-10 15:32:02,503 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_16_64.log 36 lines
+2022-11-10 15:32:02,507 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_28_28_16_64.log
+2022-11-10 15:32:02,896 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:02,903 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:02,903 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:02,904 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:03,285 ansor_utils.py:44 mean_time 11.946 us
+2022-11-10 15:32:03,290 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_16_64.log 36 lines
+2022-11-10 15:32:03,293 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_28_28_16_64.log
+2022-11-10 15:32:03,658 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:03,665 ansor_utils.py:34 [1, 64, 28, 28, 16]
+2022-11-10 15:32:04,041 ansor_utils.py:44 mean_time 11.941 us
+2022-11-10 15:32:04,057 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_1024_1024.log 1044 lines
+2022-11-10 15:32:04,063 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_1024_1024.log
+2022-11-10 15:32:07,477 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:07,483 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:32:07,491 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:12,403 ansor_utils.py:44 mean_time 157.388 us
+2022-11-10 15:32:12,410 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_1024.log 36 lines
+2022-11-10 15:32:12,414 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_1024.log
+2022-11-10 15:32:12,782 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:12,789 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:12,789 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:12,790 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:13,170 ansor_utils.py:44 mean_time 11.947 us
+2022-11-10 15:32:13,185 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_1024.log 1044 lines
+2022-11-10 15:32:13,193 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_28_28_512_1024.log
+2022-11-10 15:32:15,907 ansor_utils.py:34 [1, 28, 28, 512]
+2022-11-10 15:32:15,911 ansor_utils.py:34 [512, 1024]
+2022-11-10 15:32:15,915 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:17,938 ansor_utils.py:44 mean_time 66.738 us
+2022-11-10 15:32:17,945 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_1024.log 36 lines
+2022-11-10 15:32:17,949 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_28_28_1024.log
+2022-11-10 15:32:18,350 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:18,356 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:18,357 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:18,357 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:18,737 ansor_utils.py:44 mean_time 11.948 us
+2022-11-10 15:32:18,741 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_28_28_1024.log 24 lines
+2022-11-10 15:32:18,743 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_28_28_1024.log
+2022-11-10 15:32:19,097 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:19,103 ansor_utils.py:34 [1, 28, 28, 1024]
+2022-11-10 15:32:19,479 ansor_utils.py:44 mean_time 11.942 us
+2022-11-10 15:32:19,480 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:32:19,496 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:32:19,503 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:32:20,854 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:20,856 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:32:20,864 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:23,058 ansor_utils.py:44 mean_time 72.588 us
+2022-11-10 15:32:23,065 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:23,071 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:23,698 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:23,701 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:23,701 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:23,702 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:23,872 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:32:23,877 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:23,879 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:32:24,472 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:24,476 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:24,642 ansor_utils.py:44 mean_time 5.062 us
+2022-11-10 15:32:24,660 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:32:24,672 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:32:27,632 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:27,634 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:32:27,636 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:27,988 ansor_utils.py:44 mean_time 11.197 us
+2022-11-10 15:32:27,997 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:28,002 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:28,630 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:28,632 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:28,633 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:28,633 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:28,804 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:32:28,810 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:28,812 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:32:29,400 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:29,403 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:29,569 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:32:29,585 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:32:29,591 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:32:32,644 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:32,646 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:32:32,656 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:34,314 ansor_utils.py:44 mean_time 54.744 us
+2022-11-10 15:32:34,323 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:32:34,326 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:32:34,812 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:34,815 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:34,816 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:34,816 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:34,984 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:32:34,985 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:32:35,001 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:32:35,009 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:32:36,358 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:36,360 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:32:36,369 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:38,562 ansor_utils.py:44 mean_time 72.596 us
+2022-11-10 15:32:38,569 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:38,575 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:39,204 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:39,207 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:39,208 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:39,209 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:39,379 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:32:39,384 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:39,387 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:32:39,974 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:39,977 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:40,144 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:32:40,162 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:32:40,174 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:32:43,095 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:43,098 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:32:43,100 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:43,453 ansor_utils.py:44 mean_time 11.198 us
+2022-11-10 15:32:43,461 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:43,465 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:44,084 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:44,087 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:44,088 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:44,088 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:44,258 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:32:44,263 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:44,267 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:32:44,860 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:44,863 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:45,029 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:32:45,045 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:32:45,053 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:32:48,104 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:48,107 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:32:48,115 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:49,772 ansor_utils.py:44 mean_time 54.746 us
+2022-11-10 15:32:49,781 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:32:49,784 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:32:50,266 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:50,269 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:50,269 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:32:50,270 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:50,438 ansor_utils.py:44 mean_time 5.009 us
+2022-11-10 15:32:50,439 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:32:50,454 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:32:50,459 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:32:51,803 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:32:51,805 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:32:51,814 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:54,007 ansor_utils.py:44 mean_time 72.583 us
+2022-11-10 15:32:54,014 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:54,018 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:54,633 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:54,636 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:54,636 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:54,637 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:54,807 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:32:54,812 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:54,816 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:32:55,409 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:55,412 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:55,577 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:32:55,595 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:32:55,606 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:32:58,537 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:58,540 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:32:58,542 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:58,894 ansor_utils.py:44 mean_time 11.202 us
+2022-11-10 15:32:58,902 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:58,906 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:32:59,528 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:59,532 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:59,532 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:32:59,533 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:32:59,703 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:32:59,708 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:32:59,711 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:00,304 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:00,307 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:00,472 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:33:00,488 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:33:00,496 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:33:03,535 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:03,537 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:33:03,546 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:05,203 ansor_utils.py:44 mean_time 54.743 us
+2022-11-10 15:33:05,212 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:33:05,215 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:33:05,700 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:05,703 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:05,703 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:05,703 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:05,871 ansor_utils.py:44 mean_time 5.009 us
+2022-11-10 15:33:05,872 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:33:05,889 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:33:05,896 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:33:07,240 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:07,242 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:33:07,250 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:09,443 ansor_utils.py:44 mean_time 72.580 us
+2022-11-10 15:33:09,450 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:09,456 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:10,069 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:10,072 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:10,073 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:10,073 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:10,244 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:33:10,249 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:10,252 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:10,846 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:10,849 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:11,015 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:33:11,034 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:33:11,046 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:33:13,972 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:13,975 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:33:13,977 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:14,329 ansor_utils.py:44 mean_time 11.202 us
+2022-11-10 15:33:14,338 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:14,342 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:14,959 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:14,961 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:14,962 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:14,962 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:15,134 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:33:15,139 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:15,142 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:15,737 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:15,740 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:15,906 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:33:15,922 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:33:15,929 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:33:18,977 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:18,979 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:33:18,988 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:20,646 ansor_utils.py:44 mean_time 54.749 us
+2022-11-10 15:33:20,654 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:33:20,658 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:33:21,157 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:21,160 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:21,160 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:21,161 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:21,329 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:33:21,330 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:33:21,347 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:33:21,355 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:33:22,696 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:22,698 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:33:22,707 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:24,900 ansor_utils.py:44 mean_time 72.582 us
+2022-11-10 15:33:24,907 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:24,913 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:25,537 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:25,541 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:25,541 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:25,542 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:25,712 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:33:25,716 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:25,719 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:26,313 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:26,316 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:26,482 ansor_utils.py:44 mean_time 5.070 us
+2022-11-10 15:33:26,500 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:33:26,504 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:33:29,426 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:29,428 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:33:29,430 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:29,782 ansor_utils.py:44 mean_time 11.196 us
+2022-11-10 15:33:29,790 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:29,794 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:30,413 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:30,416 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:30,417 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:30,417 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:30,587 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:33:30,592 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:30,594 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:31,183 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:31,186 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:31,351 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:33:31,367 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:33:31,375 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:33:34,428 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:34,430 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:33:34,439 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:36,096 ansor_utils.py:44 mean_time 54.750 us
+2022-11-10 15:33:36,105 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:33:36,108 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:33:36,594 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:36,597 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:36,598 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:36,598 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:36,767 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:33:36,768 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:33:36,783 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:33:36,789 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:33:38,125 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:38,128 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:33:38,136 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:40,329 ansor_utils.py:44 mean_time 72.589 us
+2022-11-10 15:33:40,337 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:40,341 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:40,956 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:40,959 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:40,960 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:40,960 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:41,130 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:33:41,135 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:41,137 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:41,724 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:41,726 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:41,891 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:33:41,910 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:33:41,920 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:33:44,840 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:44,843 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:33:44,845 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:45,197 ansor_utils.py:44 mean_time 11.200 us
+2022-11-10 15:33:45,206 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:45,210 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:45,834 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:45,838 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:45,838 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:45,838 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:46,008 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:33:46,013 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:46,015 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:46,608 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:46,612 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:46,778 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:33:46,794 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:33:46,800 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:33:49,835 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:49,837 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:33:49,846 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:51,503 ansor_utils.py:44 mean_time 54.749 us
+2022-11-10 15:33:51,512 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:33:51,516 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:33:52,004 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:52,007 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:52,007 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:33:52,008 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:52,177 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:33:52,179 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:33:52,195 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:33:52,204 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:33:53,536 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:33:53,538 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:33:53,546 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:55,739 ansor_utils.py:44 mean_time 72.592 us
+2022-11-10 15:33:55,747 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:55,750 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:33:56,367 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:56,370 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:56,370 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:33:56,371 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:56,541 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:33:56,546 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:33:56,550 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:33:57,140 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:57,144 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:33:57,310 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:33:57,329 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:33:57,339 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:34:00,262 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:00,265 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:34:00,267 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:00,619 ansor_utils.py:44 mean_time 11.201 us
+2022-11-10 15:34:00,628 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:00,632 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:01,253 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:01,257 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:01,258 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:01,258 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:01,428 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:34:01,433 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:01,436 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:02,027 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:02,030 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:02,196 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:34:02,212 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:34:02,215 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:34:05,256 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:05,259 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:34:05,267 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:06,924 ansor_utils.py:44 mean_time 54.739 us
+2022-11-10 15:34:06,933 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:34:06,939 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:34:07,427 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:07,430 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:07,430 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:07,430 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:07,598 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:34:07,599 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:34:07,615 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:34:07,623 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:34:08,961 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:08,963 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:34:08,971 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:11,165 ansor_utils.py:44 mean_time 72.581 us
+2022-11-10 15:34:11,172 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:11,176 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:11,799 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:11,802 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:11,803 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:11,803 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:11,973 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:34:11,978 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:11,984 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:12,581 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:12,584 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:12,750 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:34:12,767 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:34:12,773 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:34:15,726 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:15,728 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:34:15,730 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:16,083 ansor_utils.py:44 mean_time 11.199 us
+2022-11-10 15:34:16,091 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:16,095 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:16,720 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:16,724 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:16,724 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:16,725 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:16,894 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:34:16,899 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:16,902 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:17,495 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:17,498 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:17,664 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:34:17,680 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:34:17,687 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:34:20,801 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:20,803 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:34:20,812 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:22,470 ansor_utils.py:44 mean_time 54.746 us
+2022-11-10 15:34:22,479 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:34:22,482 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:34:22,974 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:22,976 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:22,977 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:22,977 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:23,146 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:34:23,147 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:34:23,163 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:34:23,170 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:34:24,520 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:24,522 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:34:24,531 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:26,724 ansor_utils.py:44 mean_time 72.580 us
+2022-11-10 15:34:26,731 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:26,735 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:27,361 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:27,364 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:27,364 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:27,365 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:27,536 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:34:27,541 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:27,544 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:28,139 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:28,141 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:28,307 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:34:28,325 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:34:28,332 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:34:31,285 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:31,288 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:34:31,291 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:31,644 ansor_utils.py:44 mean_time 11.196 us
+2022-11-10 15:34:31,653 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:31,656 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:32,285 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:32,288 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:32,288 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:32,289 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:32,459 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:34:32,464 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:32,467 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:33,064 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:33,067 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:33,234 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:34:33,250 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:34:33,257 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:34:36,333 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:36,335 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:34:36,343 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:38,001 ansor_utils.py:44 mean_time 54.739 us
+2022-11-10 15:34:38,010 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:34:38,013 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:34:38,504 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:38,507 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:38,507 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:38,508 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:38,676 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:34:38,677 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:34:38,694 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:34:38,701 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:34:40,050 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:40,052 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:34:40,060 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:42,253 ansor_utils.py:44 mean_time 72.580 us
+2022-11-10 15:34:42,261 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:42,267 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:42,900 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:42,903 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:42,903 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:42,904 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:43,074 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:34:43,079 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:43,081 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:43,680 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:43,683 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:43,850 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:34:43,868 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:34:43,880 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:34:46,835 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:46,838 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:34:46,840 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:47,192 ansor_utils.py:44 mean_time 11.199 us
+2022-11-10 15:34:47,201 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:47,204 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:47,833 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:47,835 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:47,836 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:47,836 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:48,007 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:34:48,012 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:48,014 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:48,607 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:48,611 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:48,777 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:34:48,793 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:34:48,801 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:34:51,862 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:51,864 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:34:51,872 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:53,530 ansor_utils.py:44 mean_time 54.742 us
+2022-11-10 15:34:53,539 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:34:53,543 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:34:54,030 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:54,033 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:54,033 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:34:54,034 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:54,202 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:34:54,203 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:34:54,219 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:34:54,228 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:34:55,580 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:34:55,582 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:34:55,590 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:57,784 ansor_utils.py:44 mean_time 72.584 us
+2022-11-10 15:34:57,791 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:57,796 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:34:58,439 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:58,442 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:58,443 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:34:58,444 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:58,621 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:34:58,626 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:34:58,630 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:34:59,228 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:59,232 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:34:59,397 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:34:59,415 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:34:59,424 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:35:02,344 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:02,347 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:35:02,349 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:02,701 ansor_utils.py:44 mean_time 11.195 us
+2022-11-10 15:35:02,711 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:02,715 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:03,334 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:03,337 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:03,338 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:03,338 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:03,509 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:35:03,515 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:03,518 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:04,111 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:04,114 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:04,280 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:04,296 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:35:04,299 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:35:07,355 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:07,357 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:35:07,365 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:09,023 ansor_utils.py:44 mean_time 54.739 us
+2022-11-10 15:35:09,032 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:35:09,039 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:35:09,526 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:09,529 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:09,529 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:09,530 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:09,698 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:35:09,699 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:35:09,715 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:35:09,724 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:35:11,061 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:11,063 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:35:11,071 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:13,264 ansor_utils.py:44 mean_time 72.586 us
+2022-11-10 15:35:13,271 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:13,277 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:13,899 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:13,901 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:13,902 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:13,902 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:14,072 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:35:14,077 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:14,081 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:14,673 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:14,676 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:14,842 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:14,861 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:35:14,872 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:35:17,790 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:17,793 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:35:17,795 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:18,147 ansor_utils.py:44 mean_time 11.198 us
+2022-11-10 15:35:18,155 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:18,159 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:18,775 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:18,778 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:18,778 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:18,779 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:18,949 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:35:18,954 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:18,958 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:19,551 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:19,554 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:19,720 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:19,735 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:35:19,738 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:35:22,759 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:22,761 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:35:22,770 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:24,428 ansor_utils.py:44 mean_time 54.740 us
+2022-11-10 15:35:24,437 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:35:24,440 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:35:24,926 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:24,929 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:24,929 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:24,930 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:25,098 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:35:25,099 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:35:25,115 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:35:25,124 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:35:26,471 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:26,473 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:35:26,481 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:28,675 ansor_utils.py:44 mean_time 72.579 us
+2022-11-10 15:35:28,683 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:28,687 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:29,310 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:29,313 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:29,313 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:29,314 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:29,484 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:35:29,490 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:29,494 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:30,085 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:30,088 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:30,254 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:30,273 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:35:30,286 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:35:33,199 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:33,202 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:35:33,204 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:33,556 ansor_utils.py:44 mean_time 11.194 us
+2022-11-10 15:35:33,564 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:33,568 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:34,188 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:34,190 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:34,191 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:34,191 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:34,361 ansor_utils.py:44 mean_time 5.043 us
+2022-11-10 15:35:34,366 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:34,368 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:34,955 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:34,958 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:35,124 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:35,140 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:35:35,148 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:35:38,188 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:38,190 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:35:38,198 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:39,855 ansor_utils.py:44 mean_time 54.740 us
+2022-11-10 15:35:39,864 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:35:39,869 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:35:40,349 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:40,352 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:40,352 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:40,352 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:40,520 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:35:40,521 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:35:40,538 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:35:40,547 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:35:41,901 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:41,903 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:35:41,912 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:44,107 ansor_utils.py:44 mean_time 72.585 us
+2022-11-10 15:35:44,116 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:44,122 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:44,736 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:44,739 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:44,739 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:44,740 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:44,909 ansor_utils.py:44 mean_time 5.043 us
+2022-11-10 15:35:44,914 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:44,917 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:45,508 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:45,511 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:45,677 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:35:45,695 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:35:45,708 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:35:48,642 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:48,645 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:35:48,647 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:48,999 ansor_utils.py:44 mean_time 11.195 us
+2022-11-10 15:35:49,008 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:49,012 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:35:49,632 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:49,634 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:49,635 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:35:49,635 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:49,806 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:35:49,811 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:49,814 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:35:50,408 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:50,411 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:50,577 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:35:50,592 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:35:50,600 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:35:53,655 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:53,658 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:35:53,666 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:55,324 ansor_utils.py:44 mean_time 54.745 us
+2022-11-10 15:35:55,333 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:35:55,339 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:35:55,823 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:55,827 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:55,827 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:35:55,828 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:55,996 ansor_utils.py:44 mean_time 5.012 us
+2022-11-10 15:35:55,997 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:35:56,014 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:35:56,022 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:35:57,362 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:35:57,364 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:35:57,372 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:35:59,565 ansor_utils.py:44 mean_time 72.564 us
+2022-11-10 15:35:59,572 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:35:59,576 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:00,194 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:00,197 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:00,197 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:00,198 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:00,368 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:36:00,373 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:00,376 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:00,971 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:00,974 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:01,141 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:01,159 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:36:01,172 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:36:04,099 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:04,102 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:36:04,103 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:04,455 ansor_utils.py:44 mean_time 11.195 us
+2022-11-10 15:36:04,464 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:04,470 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:05,088 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:05,091 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:05,091 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:05,092 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:05,262 ansor_utils.py:44 mean_time 5.046 us
+2022-11-10 15:36:05,266 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:05,268 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:05,858 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:05,860 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:06,026 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:06,042 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:36:06,050 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:36:09,094 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:09,096 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:36:09,104 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:10,762 ansor_utils.py:44 mean_time 54.739 us
+2022-11-10 15:36:10,770 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:36:10,774 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:36:11,261 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:11,264 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:11,264 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:11,265 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:11,433 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:36:11,434 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:36:11,449 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:36:11,453 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:36:12,789 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:12,791 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:36:12,800 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:14,993 ansor_utils.py:44 mean_time 72.581 us
+2022-11-10 15:36:15,000 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:15,003 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:15,625 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:15,628 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:15,628 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:15,629 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:15,799 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:36:15,804 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:15,807 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:16,400 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:16,403 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:16,569 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:16,588 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:36:16,600 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:36:19,527 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:19,530 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:36:19,532 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:19,883 ansor_utils.py:44 mean_time 11.197 us
+2022-11-10 15:36:19,892 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:19,895 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:20,514 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:20,518 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:20,519 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:20,519 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:20,688 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:36:20,693 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:20,696 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:21,278 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:21,281 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:21,447 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:36:21,463 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:36:21,470 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:36:24,520 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:24,522 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:36:24,530 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:26,188 ansor_utils.py:44 mean_time 54.744 us
+2022-11-10 15:36:26,198 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:36:26,203 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:36:26,684 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:26,686 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:26,687 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:26,687 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:26,856 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:36:26,857 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:36:26,873 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:36:26,879 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:36:28,211 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:28,214 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:36:28,222 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:30,416 ansor_utils.py:44 mean_time 72.588 us
+2022-11-10 15:36:30,423 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:30,426 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:31,047 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:31,050 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:31,051 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:31,052 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:31,222 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:36:31,227 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:31,229 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:31,813 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:31,815 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:31,981 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:32,000 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:36:32,013 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:36:34,929 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:34,932 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:36:34,934 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:35,286 ansor_utils.py:44 mean_time 11.194 us
+2022-11-10 15:36:35,294 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:35,298 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:35,919 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:35,922 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:35,923 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:35,923 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:36,093 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:36:36,098 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:36,100 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:36,691 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:36,694 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:36,860 ansor_utils.py:44 mean_time 5.072 us
+2022-11-10 15:36:36,876 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:36:36,883 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:36:39,923 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:39,925 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:36:39,933 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:41,591 ansor_utils.py:44 mean_time 54.743 us
+2022-11-10 15:36:41,600 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:36:41,604 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:36:42,093 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:42,096 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:42,096 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:42,097 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:42,265 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:36:42,266 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:36:42,283 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:36:42,289 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:36:43,624 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:43,626 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:36:43,635 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:45,828 ansor_utils.py:44 mean_time 72.590 us
+2022-11-10 15:36:45,836 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:45,839 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:46,445 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:46,448 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:46,448 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:46,449 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:46,619 ansor_utils.py:44 mean_time 5.045 us
+2022-11-10 15:36:46,624 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:46,626 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:47,213 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:47,216 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:47,382 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:47,401 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:36:47,412 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:36:50,333 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:50,335 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:36:50,337 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:50,689 ansor_utils.py:44 mean_time 11.196 us
+2022-11-10 15:36:50,697 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:50,700 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:36:51,324 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:51,327 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:51,327 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:36:51,328 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:51,498 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:36:51,503 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:36:51,505 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:36:52,094 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:52,097 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:36:52,263 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:36:52,279 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:36:52,285 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:36:55,336 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:55,339 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:36:55,347 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:57,004 ansor_utils.py:44 mean_time 54.742 us
+2022-11-10 15:36:57,013 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:36:57,017 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:36:57,499 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:57,502 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:57,503 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:36:57,503 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:57,672 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:36:57,673 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:36:57,689 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:36:57,698 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:36:59,030 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:36:59,033 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:36:59,041 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:01,234 ansor_utils.py:44 mean_time 72.579 us
+2022-11-10 15:37:01,241 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:01,247 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:01,873 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:01,876 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:01,876 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:01,877 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:02,047 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:37:02,052 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:02,055 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:02,649 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:02,651 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:02,818 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:37:02,836 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:37:02,842 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:37:05,773 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:05,776 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:37:05,778 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:06,130 ansor_utils.py:44 mean_time 11.195 us
+2022-11-10 15:37:06,138 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:06,142 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:06,762 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:06,766 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:06,767 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:06,767 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:06,937 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:37:06,942 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:06,944 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:07,540 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:07,543 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:07,711 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:37:07,728 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:37:07,736 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:37:10,801 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:10,803 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:37:10,812 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:12,469 ansor_utils.py:44 mean_time 54.745 us
+2022-11-10 15:37:12,478 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:37:12,481 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:37:12,972 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:12,975 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:12,975 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:12,975 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:13,144 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:37:13,145 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:37:13,161 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:37:13,170 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:37:14,509 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:14,511 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:37:14,519 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:16,713 ansor_utils.py:44 mean_time 72.589 us
+2022-11-10 15:37:16,720 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:16,725 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:17,338 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:17,342 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:17,343 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:17,343 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:17,513 ansor_utils.py:44 mean_time 5.043 us
+2022-11-10 15:37:17,518 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:17,520 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:18,114 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:18,117 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:18,289 ansor_utils.py:44 mean_time 5.099 us
+2022-11-10 15:37:18,308 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:37:18,318 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:37:21,274 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:21,276 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:37:21,278 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:21,632 ansor_utils.py:44 mean_time 11.230 us
+2022-11-10 15:37:21,640 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:21,643 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:22,274 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:22,277 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:22,277 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:22,277 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:22,447 ansor_utils.py:44 mean_time 5.050 us
+2022-11-10 15:37:22,452 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:22,454 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:23,057 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:23,062 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:23,227 ansor_utils.py:44 mean_time 5.061 us
+2022-11-10 15:37:23,243 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:37:23,251 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:37:26,344 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:26,346 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:37:26,354 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:28,012 ansor_utils.py:44 mean_time 54.741 us
+2022-11-10 15:37:28,021 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:37:28,026 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:37:28,516 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:28,519 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:28,520 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:28,520 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:28,689 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:37:28,690 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:37:28,706 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:37:28,711 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:37:30,052 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:30,054 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:37:30,062 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:32,255 ansor_utils.py:44 mean_time 72.577 us
+2022-11-10 15:37:32,262 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:32,268 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:32,892 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:32,895 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:32,896 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:32,896 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:33,067 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:37:33,072 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:33,076 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:33,671 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:33,674 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:33,841 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:37:33,857 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:37:33,862 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:37:36,812 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:36,815 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:37:36,817 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:37,169 ansor_utils.py:44 mean_time 11.193 us
+2022-11-10 15:37:37,178 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:37,182 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:37,810 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:37,813 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:37,813 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:37,814 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:37,984 ansor_utils.py:44 mean_time 5.043 us
+2022-11-10 15:37:37,989 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:37,992 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:38,579 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:38,582 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:38,748 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:37:38,763 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:37:38,766 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:37:41,824 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:41,826 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:37:41,834 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:43,492 ansor_utils.py:44 mean_time 54.748 us
+2022-11-10 15:37:43,501 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:37:43,504 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:37:43,990 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:43,993 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:43,993 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:43,994 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:44,161 ansor_utils.py:44 mean_time 5.011 us
+2022-11-10 15:37:44,162 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 1024, out_dim: 1024,
+2022-11-10 15:37:44,179 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log 1044 lines
+2022-11-10 15:37:44,187 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_16_64_s1.log
+2022-11-10 15:37:45,531 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:45,533 ansor_utils.py:34 [64, 1024, 16]
+2022-11-10 15:37:45,542 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:47,735 ansor_utils.py:44 mean_time 72.564 us
+2022-11-10 15:37:47,743 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:47,749 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:48,373 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:48,376 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:48,376 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:48,377 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:48,547 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:37:48,552 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:48,556 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:49,150 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:49,153 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:49,319 ansor_utils.py:44 mean_time 5.070 us
+2022-11-10 15:37:49,337 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log 1044 lines
+2022-11-10 15:37:49,342 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_16_16_3.log
+2022-11-10 15:37:52,284 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:52,286 ansor_utils.py:34 [64, 3, 3, 16, 16]
+2022-11-10 15:37:52,288 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:52,640 ansor_utils.py:44 mean_time 11.194 us
+2022-11-10 15:37:52,649 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:52,652 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_16_64.log
+2022-11-10 15:37:53,275 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:53,278 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:53,279 ansor_utils.py:34 [1, 64, 16]
+2022-11-10 15:37:53,279 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:53,450 ansor_utils.py:44 mean_time 5.044 us
+2022-11-10 15:37:53,454 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log 540 lines
+2022-11-10 15:37:53,458 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_16_64.log
+2022-11-10 15:37:54,052 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:54,055 ansor_utils.py:34 [1, 64, 14, 14, 16]
+2022-11-10 15:37:54,222 ansor_utils.py:44 mean_time 5.071 us
+2022-11-10 15:37:54,238 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log 1044 lines
+2022-11-10 15:37:54,245 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_1024.log
+2022-11-10 15:37:57,310 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:57,312 ansor_utils.py:34 [1024, 1024]
+2022-11-10 15:37:57,321 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:58,979 ansor_utils.py:44 mean_time 54.739 us
+2022-11-10 15:37:58,988 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log 276 lines
+2022-11-10 15:37:58,991 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_1024.log
+2022-11-10 15:37:59,480 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:59,483 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:59,484 ansor_utils.py:34 [1, 1024]
+2022-11-10 15:37:59,484 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:37:59,653 ansor_utils.py:44 mean_time 5.010 us
+2022-11-10 15:37:59,654 hori_fusion_resnext.py:36 xxxx (14, 14) input_dim: 1024, n_channel: 2048, out_dim: 2048,
+2022-11-10 15:37:59,670 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_32_64_s1.log 1044 lines
+2022-11-10 15:37:59,677 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_14_14_1024_32_64_s1.log
+2022-11-10 15:38:01,159 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:38:01,161 ansor_utils.py:34 [64, 1024, 32]
+2022-11-10 15:38:01,180 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:03,730 ansor_utils.py:44 mean_time 84.420 us
+2022-11-10 15:38:03,736 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_32_64.log 36 lines
+2022-11-10 15:38:03,739 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_32_64.log
+2022-11-10 15:38:04,119 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:04,122 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:04,123 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:04,123 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:04,362 ansor_utils.py:44 mean_time 7.309 us
+2022-11-10 15:38:04,365 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_32_64.log 36 lines
+2022-11-10 15:38:04,368 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_32_64.log
+2022-11-10 15:38:04,718 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:04,723 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:04,955 ansor_utils.py:44 mean_time 7.233 us
+2022-11-10 15:38:04,973 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_32_32_3.log 1044 lines
+2022-11-10 15:38:04,986 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_14_14_32_32_3.log
+2022-11-10 15:38:08,512 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:08,516 ansor_utils.py:34 [64, 3, 3, 32, 32]
+2022-11-10 15:38:08,521 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:09,265 ansor_utils.py:44 mean_time 24.177 us
+2022-11-10 15:38:09,273 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_32_64.log 36 lines
+2022-11-10 15:38:09,277 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_14_14_32_64.log
+2022-11-10 15:38:09,666 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:09,669 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:09,670 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:09,670 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:09,909 ansor_utils.py:44 mean_time 7.306 us
+2022-11-10 15:38:09,913 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_32_64.log 36 lines
+2022-11-10 15:38:09,916 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_14_14_32_64.log
+2022-11-10 15:38:10,277 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:10,282 ansor_utils.py:34 [1, 64, 14, 14, 32]
+2022-11-10 15:38:10,513 ansor_utils.py:44 mean_time 7.232 us
+2022-11-10 15:38:10,529 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_2048_2048.log 1044 lines
+2022-11-10 15:38:10,533 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_2048_2048.log
+2022-11-10 15:38:13,711 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:13,715 ansor_utils.py:34 [2048, 2048]
+2022-11-10 15:38:13,755 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:18,779 ansor_utils.py:44 mean_time 166.839 us
+2022-11-10 15:38:18,788 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_2048.log 36 lines
+2022-11-10 15:38:18,793 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_2048.log
+2022-11-10 15:38:19,176 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:19,179 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:19,180 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:19,180 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:19,417 ansor_utils.py:44 mean_time 7.256 us
+2022-11-10 15:38:19,431 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_2048.log 1044 lines
+2022-11-10 15:38:19,434 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_14_14_1024_2048.log
+2022-11-10 15:38:20,683 ansor_utils.py:34 [1, 14, 14, 1024]
+2022-11-10 15:38:20,685 ansor_utils.py:34 [1024, 2048]
+2022-11-10 15:38:20,701 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:23,471 ansor_utils.py:44 mean_time 91.758 us
+2022-11-10 15:38:23,475 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_2048.log 36 lines
+2022-11-10 15:38:23,478 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_14_14_2048.log
+2022-11-10 15:38:23,849 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:23,853 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:23,854 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:23,854 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:24,090 ansor_utils.py:44 mean_time 7.255 us
+2022-11-10 15:38:24,093 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_14_14_2048.log 24 lines
+2022-11-10 15:38:24,096 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_relu_1_14_14_2048.log
+2022-11-10 15:38:24,436 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:24,440 ansor_utils.py:34 [1, 14, 14, 2048]
+2022-11-10 15:38:24,672 ansor_utils.py:44 mean_time 7.231 us
+2022-11-10 15:38:24,673 hori_fusion_resnext.py:36 xxxx (7, 7) input_dim: 2048, n_channel: 2048, out_dim: 2048,
+2022-11-10 15:38:24,689 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_7_7_2048_32_64_s1.log 1044 lines
+2022-11-10 15:38:24,692 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_7_7_2048_32_64_s1.log
+2022-11-10 15:38:25,979 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:25,980 ansor_utils.py:34 [64, 2048, 32]
+2022-11-10 15:38:26,019 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:29,382 ansor_utils.py:44 mean_time 111.569 us
+2022-11-10 15:38:29,387 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:29,391 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log
+2022-11-10 15:38:29,783 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:29,786 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:29,786 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:29,787 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:29,921 ansor_utils.py:44 mean_time 3.848 us
+2022-11-10 15:38:29,924 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:29,927 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log
+2022-11-10 15:38:30,282 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:30,284 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:30,414 ansor_utils.py:44 mean_time 3.826 us
+2022-11-10 15:38:30,432 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_7_7_32_32_3.log 1044 lines
+2022-11-10 15:38:30,444 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_7_7_32_32_3.log
+2022-11-10 15:38:32,622 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:32,623 ansor_utils.py:34 [64, 3, 3, 32, 32]
+2022-11-10 15:38:32,629 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:33,046 ansor_utils.py:44 mean_time 13.395 us
+2022-11-10 15:38:33,052 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:33,055 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log
+2022-11-10 15:38:33,444 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:33,446 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:33,446 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:33,447 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:33,581 ansor_utils.py:44 mean_time 3.853 us
+2022-11-10 15:38:33,584 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:33,588 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log
+2022-11-10 15:38:33,944 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:33,947 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:34,078 ansor_utils.py:44 mean_time 3.826 us
+2022-11-10 15:38:34,094 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_7_7_2048_2048.log 1044 lines
+2022-11-10 15:38:34,101 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_7_7_2048_2048.log
+2022-11-10 15:38:37,679 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:37,681 ansor_utils.py:34 [2048, 2048]
+2022-11-10 15:38:37,719 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:39,744 ansor_utils.py:44 mean_time 67.027 us
+2022-11-10 15:38:39,753 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_7_7_2048.log 36 lines
+2022-11-10 15:38:39,756 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_7_7_2048.log
+2022-11-10 15:38:40,131 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:40,132 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:40,133 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:40,133 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:40,273 ansor_utils.py:44 mean_time 4.041 us
+2022-11-10 15:38:40,274 hori_fusion_resnext.py:36 xxxx (7, 7) input_dim: 2048, n_channel: 2048, out_dim: 2048,
+2022-11-10 15:38:40,290 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_7_7_2048_32_64_s1.log 1044 lines
+2022-11-10 15:38:40,297 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_conv1x1_stride_1_7_7_2048_32_64_s1.log
+2022-11-10 15:38:41,591 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:41,593 ansor_utils.py:34 [64, 2048, 32]
+2022-11-10 15:38:41,631 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:44,994 ansor_utils.py:44 mean_time 111.565 us
+2022-11-10 15:38:44,998 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:45,004 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log
+2022-11-10 15:38:45,391 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:45,393 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:45,394 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:45,394 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:45,528 ansor_utils.py:44 mean_time 3.846 us
+2022-11-10 15:38:45,531 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:45,533 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log
+2022-11-10 15:38:45,888 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:45,890 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:46,020 ansor_utils.py:44 mean_time 3.826 us
+2022-11-10 15:38:46,038 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_7_7_32_32_3.log 1044 lines
+2022-11-10 15:38:46,049 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_fused_conv3x3_1_7_7_32_32_3.log
+2022-11-10 15:38:48,220 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:48,222 ansor_utils.py:34 [64, 3, 3, 32, 32]
+2022-11-10 15:38:48,227 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:48,643 ansor_utils.py:44 mean_time 13.361 us
+2022-11-10 15:38:48,649 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:48,652 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_batch_norm_1_7_7_32_64.log
+2022-11-10 15:38:49,040 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:49,042 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:49,042 ansor_utils.py:34 [1, 64, 32]
+2022-11-10 15:38:49,043 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:49,177 ansor_utils.py:44 mean_time 3.851 us
+2022-11-10 15:38:49,180 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log 60 lines
+2022-11-10 15:38:49,183 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_hfused_relu_1_7_7_32_64.log
+2022-11-10 15:38:49,538 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:49,542 ansor_utils.py:34 [1, 64, 7, 7, 32]
+2022-11-10 15:38:49,671 ansor_utils.py:44 mean_time 3.827 us
+2022-11-10 15:38:49,686 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_7_7_2048_2048.log 1044 lines
+2022-11-10 15:38:49,692 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_7_7_2048_2048.log
+2022-11-10 15:38:53,276 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:53,277 ansor_utils.py:34 [2048, 2048]
+2022-11-10 15:38:53,316 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:55,343 ansor_utils.py:44 mean_time 67.050 us
+2022-11-10 15:38:55,351 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_7_7_2048.log 36 lines
+2022-11-10 15:38:55,356 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_batch_norm_1_7_7_2048.log
+2022-11-10 15:38:55,727 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:55,728 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:55,729 ansor_utils.py:34 [1, 2048]
+2022-11-10 15:38:55,729 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:55,869 ansor_utils.py:44 mean_time 4.043 us
+2022-11-10 15:38:55,872 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_maxpool_1_7_7_2048_7_7_1.log 145 lines
+2022-11-10 15:38:55,875 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_maxpool_1_7_7_2048_7_7_1.log
+2022-11-10 15:38:56,287 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:56,291 ansor_utils.py:34 [1, 7, 7, 2048]
+2022-11-10 15:38:56,514 ansor_utils.py:44 mean_time 6.861 us
+2022-11-10 15:38:56,530 SouffleModel.py:133 Read log ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_1_1_2048_2048.log 1044 lines
+2022-11-10 15:38:56,537 ansor_utils.py:55 load schedule ResNextHorizontal_kernel_configs/resnext_imagenet_50_conv1x1_1_1_1_2048_2048.log
+2022-11-10 15:38:58,892 ansor_utils.py:34 [1, 1, 1, 2048]
+2022-11-10 15:38:58,892 ansor_utils.py:34 [2048, 2048]
+2022-11-10 15:38:58,930 ansor_utils.py:34 [1, 1, 1, 2048]
+2022-11-10 15:38:59,544 ansor_utils.py:44 mean_time 19.998 us
+[19.1802771, 11.945244099999998, 11.943790300000002, 12.3434843, 15.271063499999997, 11.9488114, 11.9429889, 10.0826075, 11.9488511, 11.943133699999999, 34.457043, 11.9360985, 11.021835799999998, 11.936010699999999, 11.941848400000001, 39.8069214, 11.9480793, 11.9427617, 10.0725589, 11.9486849, 11.942847299999999, 34.4206154, 11.936223, 39.806422600000005, 11.9470685, 11.9405217, 10.073373499999999, 11.9480028, 11.942424, 34.4084935, 11.938133399999998, 33.1239643, 7.235857500000001, 7.2232107, 9.3187171, 7.2352867000000005, 7.222429900000001, 40.354340300000004, 7.2280046, 19.0408339, 7.2285768, 7.223362799999999, 41.93383140000001, 7.2347668, 7.2229354, 9.3188414, 7.2368682, 7.223066, 40.3621075, 7.2297021, 41.930923500000006, 7.2359698, 7.2234796, 9.344404299999999, 7.235662199999999, 7.223703199999999, 40.3878827, 7.2291776, 41.9822129, 7.237083599999999, 7.223012, 9.347403499999999, 7.234996099999999, 7.223565799999999, 40.4440472, 7.229003299999999, 70.7083228, 11.9493852, 11.9430221, 19.7434697, 11.945215600000001, 11.9407891, 157.3881756, 11.946831299999998, 66.73797510000001, 11.9462823, 11.9421329, 72.58578349999999, 5.045277800000001, 5.0617517, 11.1966751, 5.0447068, 5.0709588, 54.7443372, 5.0102163, 72.59061580000001, 5.0448885, 5.0715554, 11.1976346, 5.0449712, 5.069975400000001, 54.74133930000001, 5.0089689, 72.58137219999999, 5.0449649, 5.071353, 11.195556600000002, 5.0446793, 5.0715842, 54.741186500000005, 5.0090544999999995, 72.5728217, 5.0440382, 5.071108000000001, 11.1965666, 5.0446321, 5.0710180000000005, 54.7434887, 5.009562300000001, 72.58192559999999, 5.0438534, 5.070420399999999, 11.194728000000001, 5.0443529, 5.0707153, 54.7475574, 5.0098696, 72.58499040000001, 5.0441316, 5.071166900000001, 11.198010799999999, 5.04518, 5.0717973, 54.7386761, 5.0103655, 72.5882463, 5.0446339, 5.0714428, 11.1987557, 5.0444484, 5.0718463, 54.73710899999999, 5.0104301, 72.5795438, 5.0448993, 5.070348399999999, 11.1960278, 5.043483400000001, 5.0707567, 54.73596780000001, 5.011105, 72.580034, 5.0445017000000005, 5.0710892, 11.1964492, 5.0446681, 5.0715764000000005, 54.73866319999999, 5.011142, 72.58013369999999, 5.0448145, 5.0718159, 11.198350499999998, 5.0442006, 5.071467299999999, 54.7350234, 5.0099856, 72.5700278, 5.044335300000001, 5.0712607, 11.1945318, 5.0438286, 5.0707515, 54.7391066, 5.010074199999999, 72.5753721, 5.0444757000000005, 5.0711425, 11.198206199999998, 5.0446947, 5.0709811, 54.739569100000004, 5.009722399999999, 72.5791169, 5.0456244, 5.0703890000000005, 11.194198400000001, 5.0426282, 5.071036, 54.7390398, 5.0102152, 72.5776914, 5.0434413, 5.070307, 11.193746, 5.043562199999999, 5.0712354, 54.740138699999996, 5.0109749, 72.56400989999999, 5.0438905, 5.0709908, 11.1940197, 5.0436841, 5.0708864, 54.7394071, 5.0113833, 72.5775693, 5.043633, 5.0712401, 11.1938674, 5.0438231, 5.0719181, 54.743593000000004, 5.010795300000001, 72.58780630000001, 5.0444237, 5.0706893, 11.1924359, 5.0440087, 5.0713865, 54.739165400000005, 5.010687099999999, 72.5896168, 5.0442096, 5.0711939, 11.1942277, 5.0439487000000005, 5.0712114, 54.74110100000001, 5.0114144000000005, 72.57906080000001, 5.0437503, 5.071052999999999, 11.1915532, 5.0442363, 5.0707969, 54.73565610000001, 5.0108446, 72.5796052, 5.0431602, 5.0707401999999995, 11.229586600000001, 5.0479263, 5.060692, 54.73870990000001, 5.010550200000001, 72.5610788, 5.043602900000001, 5.0708735, 11.1926008, 5.0423717, 5.070473299999999, 54.7405449, 5.0103251, 72.5638488, 5.0429961, 5.070471499999999, 11.191493, 5.0432273, 5.0712646, 54.7381593, 5.0099579, 84.41998729999999, 7.3091077, 7.2325681, 24.1770988, 7.3064164, 7.2320736, 166.8386126, 7.2552941, 91.7480293, 7.2526927, 7.231153999999999, 111.5624134, 3.8477767999999997, 3.8262683000000006, 13.370738, 3.8479466999999996, 3.8264011999999994, 67.02691039999999, 4.039415, 111.5632735, 3.845639100000001, 3.826054700000001, 13.355329900000001, 3.8468440999999998, 3.8257361000000008, 67.03706969999999, 4.0400083, 6.860142899999999, 19.9984579]
+5902.154731399997

@@ -1,0 +1,113 @@
+2023-04-12 18:56:12 [INFO] [task_scheduler.cc:160] Initializing Task #68: "fused_nn_dense"
+2023-04-12 18:56:12 [INFO] [task_scheduler.cc:35] 
+# from tvm.script import tir as T
+@tvm.script.ir_module
+class Module:
+    @T.prim_func
+    def main(p0: T.Buffer[(T.int64(1), T.int64(2048)), "float32"], p1: T.Buffer[(T.int64(1000), T.int64(2048)), "float32"], T_matmul_NT: T.Buffer[(T.int64(1), T.int64(1000)), "float32"]):
+        # function attr dict
+        T.func_attr({"global_symbol": "main", "tir.noalias": True, "layout_free_buffers": [1]})
+        # body
+        # with T.block("root")
+        for i, j, k in T.grid(T.int64(1), T.int64(1000), T.int64(2048)):
+            with T.block("T_matmul_NT"):
+                v_i, v_j, v_k = T.axis.remap("SSR", [i, j, k])
+                T.reads(p0[v_i, v_k], p1[v_j, v_k])
+                T.writes(T_matmul_NT[v_i, v_j])
+                with T.init():
+                    T_matmul_NT[v_i, v_j] = T.float32(0)
+                T_matmul_NT[v_i, v_j] = T_matmul_NT[v_i, v_j] + p0[v_i, v_k] * p1[v_j, v_k]
+    
+
+2023-04-12 18:56:12 [INFO] [task_scheduler.cc:164] Total 1 design space(s) generated
+2023-04-12 18:56:12 [INFO] [task_scheduler.cc:170] Design space #0:
+# from tvm.script import tir as T
+@tvm.script.ir_module
+class Module:
+    @T.prim_func
+    def main(p0: T.Buffer[(T.int64(1), T.int64(2048)), "float32"], p1: T.Buffer[(T.int64(1000), T.int64(2048)), "float32"], T_matmul_NT: T.Buffer[(T.int64(1), T.int64(1000)), "float32"]):
+        # function attr dict
+        T.func_attr({"global_symbol": "main", "tir.noalias": True, "layout_free_buffers": [1]})
+        # body
+        with T.block("root"):
+            T.reads()
+            T.writes()
+            T.block_attr({"meta_schedule.unroll_explicit":0})
+            T_matmul_NT_local = T.alloc_buffer([T.int64(1), T.int64(1000)], dtype="float32", scope="local")
+            p0_shared = T.alloc_buffer([T.int64(1), T.int64(2048)], dtype="float32", scope="shared")
+            p1_shared = T.alloc_buffer([T.int64(1000), T.int64(2048)], dtype="float32", scope="shared")
+            for i_0_j_0_fused in T.thread_binding(T.int64(1), thread="blockIdx.x"):
+                for i_1_j_1_fused in T.thread_binding(T.int64(10), thread="vthread.x"):
+                    for i_2_j_2_fused in T.thread_binding(T.int64(10), thread="threadIdx.x"):
+                        for k_0 in T.serial(T.int64(128)):
+                            for ax0_ax1_fused in T.serial(T.int64(16)):
+                                with T.block("p0_shared"):
+                                    v0 = T.axis.spatial(T.int64(1), T.int64(0))
+                                    v1 = T.axis.spatial(T.int64(2048), k_0 * T.int64(16) + ax0_ax1_fused)
+                                    T.reads(p0[v0, v1])
+                                    T.writes(p0_shared[v0, v1])
+                                    T.block_attr({"meta_schedule.cooperative_fetch":3})
+                                    p0_shared[v0, v1] = p0[v0, v1]
+                            for ax0_ax1_fused in T.serial(T.int64(16000)):
+                                with T.block("p1_shared"):
+                                    v0 = T.axis.spatial(T.int64(1000), ax0_ax1_fused // T.int64(16))
+                                    v1 = T.axis.spatial(T.int64(2048), k_0 * T.int64(16) + ax0_ax1_fused % T.int64(16))
+                                    T.reads(p1[v0, v1])
+                                    T.writes(p1_shared[v0, v1])
+                                    T.block_attr({"meta_schedule.cooperative_fetch":4})
+                                    p1_shared[v0, v1] = p1[v0, v1]
+                            for k_1, i_3, j_3, k_2, i_4, j_4 in T.grid(T.int64(16), T.int64(1), T.int64(2), T.int64(1), T.int64(1), T.int64(5)):
+                                with T.block("T_matmul_NT"):
+                                    v_i = T.axis.spatial(T.int64(1), i_4 + i_3)
+                                    v_j = T.axis.spatial(T.int64(1000), i_1_j_1_fused * T.int64(100) + i_2_j_2_fused * T.int64(10) + j_3 * T.int64(5) + j_4)
+                                    v_k = T.axis.reduce(T.int64(2048), k_0 * T.int64(16) + k_1 + k_2)
+                                    T.reads(p0_shared[v_i, v_k], p1_shared[v_j, v_k])
+                                    T.writes(T_matmul_NT_local[v_i, v_j])
+                                    T.block_attr({"meta_schedule.thread_extent_high_inclusive":1024, "meta_schedule.thread_extent_low_inclusive":32, "meta_schedule.tiling_structure":"SSSRRSRS"})
+                                    with T.init():
+                                        T_matmul_NT_local[v_i, v_j] = T.float32(0)
+                                    T_matmul_NT_local[v_i, v_j] = T_matmul_NT_local[v_i, v_j] + p0_shared[v_i, v_k] * p1_shared[v_j, v_k]
+                        for ax0, ax1 in T.grid(T.int64(1), T.int64(10)):
+                            with T.block("T_matmul_NT_local"):
+                                v0 = T.axis.spatial(T.int64(1), ax0)
+                                v1 = T.axis.spatial(T.int64(1000), i_1_j_1_fused * T.int64(100) + i_2_j_2_fused * T.int64(10) + ax1)
+                                T.reads(T_matmul_NT_local[v0, v1])
+                                T.writes(T_matmul_NT[v0, v1])
+                                T_matmul_NT[v0, v1] = T_matmul_NT_local[v0, v1]
+    
+
+b0 = sch.get_block(name="T_matmul_NT", func_name="main")
+b1 = sch.get_block(name="root", func_name="main")
+sch.annotate(block_or_loop=b0, ann_key="meta_schedule.tiling_structure", ann_val="SSSRRSRS")
+l2, l3, l4 = sch.get_loops(block=b0)
+v5, v6, v7, v8, v9 = sch.sample_perfect_tile(loop=l2, n=5, max_innermost_factor=64, decision=[1, 1, 1, 1, 1])
+l10, l11, l12, l13, l14 = sch.split(loop=l2, factors=[v5, v6, v7, v8, v9], preserve_unit_iters=True)
+v15, v16, v17, v18, v19 = sch.sample_perfect_tile(loop=l3, n=5, max_innermost_factor=64, decision=[1, 10, 10, 2, 5])
+l20, l21, l22, l23, l24 = sch.split(loop=l3, factors=[v15, v16, v17, v18, v19], preserve_unit_iters=True)
+v25, v26, v27 = sch.sample_perfect_tile(loop=l4, n=3, max_innermost_factor=64, decision=[128, 16, 1])
+l28, l29, l30 = sch.split(loop=l4, factors=[v25, v26, v27], preserve_unit_iters=True)
+sch.reorder(l10, l20, l11, l21, l12, l22, l28, l29, l13, l23, l30, l14, l24)
+l31 = sch.fuse(l10, l20, preserve_unit_iters=True)
+sch.bind(loop=l31, thread_axis="blockIdx.x")
+l32 = sch.fuse(l11, l21, preserve_unit_iters=True)
+sch.bind(loop=l32, thread_axis="vthread.x")
+l33 = sch.fuse(l12, l22, preserve_unit_iters=True)
+sch.bind(loop=l33, thread_axis="threadIdx.x")
+sch.annotate(block_or_loop=b0, ann_key="meta_schedule.thread_extent_low_inclusive", ann_val=32)
+sch.annotate(block_or_loop=b0, ann_key="meta_schedule.thread_extent_high_inclusive", ann_val=1024)
+b34 = sch.cache_write(block=b0, write_buffer_index=0, storage_scope="local")
+sch.reverse_compute_at(block=b34, loop=l33, preserve_unit_loops=True, index=-1)
+b35 = sch.cache_read(block=b0, read_buffer_index=0, storage_scope="shared", consumer_blocks=[b0])
+sch.compute_at(block=b35, loop=l28, preserve_unit_loops=True, index=-1)
+l36, l37, l38, l39, l40, l41 = sch.get_loops(block=b35)
+l42 = sch.fuse(l40, l41, preserve_unit_iters=True)
+v43 = sch.sample_categorical(candidates=[1, 2, 3, 4], probs=[0.25, 0.25, 0.25, 0.25], decision=2)
+sch.annotate(block_or_loop=b35, ann_key="meta_schedule.cooperative_fetch", ann_val=v43)
+b44 = sch.cache_read(block=b0, read_buffer_index=1, storage_scope="shared", consumer_blocks=[b0])
+sch.compute_at(block=b44, loop=l28, preserve_unit_loops=True, index=-1)
+l45, l46, l47, l48, l49, l50 = sch.get_loops(block=b44)
+l51 = sch.fuse(l49, l50, preserve_unit_iters=True)
+v52 = sch.sample_categorical(candidates=[1, 2, 3, 4], probs=[0.25, 0.25, 0.25, 0.25], decision=3)
+sch.annotate(block_or_loop=b44, ann_key="meta_schedule.cooperative_fetch", ann_val=v52)
+v53 = sch.sample_categorical(candidates=[0, 16, 64, 512, 1024], probs=[0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001], decision=0)
+sch.annotate(block_or_loop=b1, ann_key="meta_schedule.unroll_explicit", ann_val=v53)

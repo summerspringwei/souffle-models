@@ -1,0 +1,186 @@
+2023-04-12 18:55:59 [INFO] [task_scheduler.cc:160] Initializing Task #37: "fused_nn_contrib_conv2d_winograd_weight_transform_3"
+2023-04-12 18:55:59 [INFO] [task_scheduler.cc:35] 
+# from tvm.script import tir as T
+@tvm.script.ir_module
+class Module:
+    @T.prim_func
+    def main(p0: T.Buffer[(T.int64(4), T.int64(4), T.int64(3), T.int64(3)), "float32"], transform_weight: T.Buffer[(T.int64(6), T.int64(6), T.int64(4), T.int64(4)), "float32"]):
+        # function attr dict
+        T.func_attr({"global_symbol": "main", "tir.noalias": True})
+        # body
+        # with T.block("root")
+        G = T.alloc_buffer([T.int64(6), T.int64(3)], dtype="float32")
+        for i, j in T.grid(T.int64(6), T.int64(3)):
+            with T.block("G"):
+                v_i, v_j = T.axis.remap("SS", [i, j])
+                T.reads()
+                T.writes(G[v_i, v_j])
+                T.block_attr({"schedule_rule":"None"})
+                G[v_i, v_j] = T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(2), T.float32(1), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(0), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(2), T.float32(0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(1), T.float32(-0.13333334028720856), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(0), T.float32(0.066666670143604279), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(2), T.float32(-0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(1), T.float32(-0.53333336114883423), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(0), T.float32(-1.0666667222976685), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(2), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(0), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(2), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(0), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(2), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(0), T.float32(1), T.float32(0)))))))))))))))))))
+        for eps, nu, co, ci, r_kh, r_kw in T.grid(T.int64(6), T.int64(6), T.int64(4), T.int64(4), T.int64(3), T.int64(3)):
+            with T.block("transform_weight"):
+                v_eps, v_nu, v_co, v_ci, v_r_kh, v_r_kw = T.axis.remap("SSSSRR", [eps, nu, co, ci, r_kh, r_kw])
+                T.reads(p0[v_co, v_ci, v_r_kh, v_r_kw], G[T.min(v_eps, v_nu) : T.max(v_eps, v_nu) + T.int64(1), T.min(v_r_kh, v_r_kw) : T.max(v_r_kh, v_r_kw) + T.int64(1)])
+                T.writes(transform_weight[v_eps, v_nu, v_co, v_ci])
+                with T.init():
+                    transform_weight[v_eps, v_nu, v_co, v_ci] = T.float32(0)
+                transform_weight[v_eps, v_nu, v_co, v_ci] = transform_weight[v_eps, v_nu, v_co, v_ci] + p0[v_co, v_ci, v_r_kh, v_r_kw] * G[v_eps, v_r_kh] * G[v_nu, v_r_kw]
+    
+
+2023-04-12 18:55:59 [INFO] [task_scheduler.cc:164] Total 2 design space(s) generated
+2023-04-12 18:55:59 [INFO] [task_scheduler.cc:170] Design space #0:
+# from tvm.script import tir as T
+@tvm.script.ir_module
+class Module:
+    @T.prim_func
+    def main(p0: T.Buffer[(T.int64(4), T.int64(4), T.int64(3), T.int64(3)), "float32"], transform_weight: T.Buffer[(T.int64(6), T.int64(6), T.int64(4), T.int64(4)), "float32"]):
+        # function attr dict
+        T.func_attr({"global_symbol": "main", "tir.noalias": True})
+        # body
+        with T.block("root"):
+            T.reads()
+            T.writes()
+            T.block_attr({"meta_schedule.unroll_explicit":1024})
+            G = T.alloc_buffer([T.int64(6), T.int64(3)], dtype="float32")
+            for i, j in T.grid(T.int64(6), T.int64(3)):
+                with T.block("G"):
+                    v_i, v_j = T.axis.remap("SS", [i, j])
+                    T.reads()
+                    T.writes(G[v_i, v_j])
+                    T.block_attr({"schedule_rule":"None"})
+                    G[v_i, v_j] = T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(2), T.float32(1), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(0), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(2), T.float32(0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(1), T.float32(-0.13333334028720856), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(0), T.float32(0.066666670143604279), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(2), T.float32(-0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(1), T.float32(-0.53333336114883423), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(0), T.float32(-1.0666667222976685), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(2), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(0), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(2), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(0), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(2), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(0), T.float32(1), T.float32(0)))))))))))))))))))
+            for eps_nu_co_ci_fused_0 in T.thread_binding(T.int64(3), thread="blockIdx.x"):
+                for eps_nu_co_ci_fused_1 in T.thread_binding(T.int64(256), thread="threadIdx.x"):
+                    for r_kh, r_kw in T.grid(T.int64(3), T.int64(3)):
+                        with T.block("transform_weight"):
+                            T.where(eps_nu_co_ci_fused_0 * T.int64(256) + eps_nu_co_ci_fused_1 < T.int64(576))
+                            v_eps = T.axis.spatial(T.int64(6), (eps_nu_co_ci_fused_0 * T.int64(256) + eps_nu_co_ci_fused_1) // T.int64(96))
+                            v_nu = T.axis.spatial(T.int64(6), (eps_nu_co_ci_fused_0 * T.int64(256) + eps_nu_co_ci_fused_1) % T.int64(96) // T.int64(16))
+                            v_co = T.axis.spatial(T.int64(4), (eps_nu_co_ci_fused_0 * T.int64(256) + eps_nu_co_ci_fused_1) % T.int64(16) // T.int64(4))
+                            v_ci = T.axis.spatial(T.int64(4), (eps_nu_co_ci_fused_0 * T.int64(256) + eps_nu_co_ci_fused_1) % T.int64(4))
+                            v_r_kh, v_r_kw = T.axis.remap("RR", [r_kh, r_kw])
+                            T.reads(p0[v_co, v_ci, v_r_kh, v_r_kw], G[T.min(v_eps, v_nu) : T.max(v_eps, v_nu) + T.int64(1), T.min(v_r_kh, v_r_kw) : T.max(v_r_kh, v_r_kw) + T.int64(1)])
+                            T.writes(transform_weight[v_eps, v_nu, v_co, v_ci])
+                            with T.init():
+                                transform_weight[v_eps, v_nu, v_co, v_ci] = T.float32(0)
+                            transform_weight[v_eps, v_nu, v_co, v_ci] = transform_weight[v_eps, v_nu, v_co, v_ci] + p0[v_co, v_ci, v_r_kh, v_r_kw] * G[v_eps, v_r_kh] * G[v_nu, v_r_kw]
+    
+
+b0 = sch.get_block(name="transform_weight", func_name="main")
+b1 = sch.get_block(name="root", func_name="main")
+v2 = sch.sample_categorical(candidates=[0, 16, 64, 512, 1024], probs=[0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001], decision=4)
+sch.annotate(block_or_loop=b1, ann_key="meta_schedule.unroll_explicit", ann_val=v2)
+l3, l4, l5, l6, l7, l8 = sch.get_loops(block=b0)
+l9 = sch.fuse(l3, l4, l5, l6, preserve_unit_iters=True)
+v10 = sch.sample_categorical(candidates=[32, 64, 128, 256, 512], probs=[0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001], decision=3)
+l11, l12 = sch.split(loop=l9, factors=[None, v10], preserve_unit_iters=True)
+sch.bind(loop=l11, thread_axis="blockIdx.x")
+sch.bind(loop=l12, thread_axis="threadIdx.x")
+2023-04-12 18:55:59 [INFO] [task_scheduler.cc:170] Design space #1:
+# from tvm.script import tir as T
+@tvm.script.ir_module
+class Module:
+    @T.prim_func
+    def main(p0: T.Buffer[(T.int64(4), T.int64(4), T.int64(3), T.int64(3)), "float32"], transform_weight: T.Buffer[(T.int64(6), T.int64(6), T.int64(4), T.int64(4)), "float32"]):
+        # function attr dict
+        T.func_attr({"global_symbol": "main", "tir.noalias": True})
+        # body
+        with T.block("root"):
+            T.reads()
+            T.writes()
+            T.block_attr({"meta_schedule.unroll_explicit":16})
+            G = T.alloc_buffer([T.int64(6), T.int64(3)], dtype="float32")
+            for i, j in T.grid(T.int64(6), T.int64(3)):
+                with T.block("G"):
+                    v_i, v_j = T.axis.remap("SS", [i, j])
+                    T.reads()
+                    T.writes(G[v_i, v_j])
+                    T.block_attr({"schedule_rule":"None"})
+                    G[v_i, v_j] = T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(2), T.float32(1), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(5) and v_j % T.int64(3) == T.int64(0), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(2), T.float32(0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(1), T.float32(-0.13333334028720856), T.Select(v_i % T.int64(6) == T.int64(4) and v_j % T.int64(3) == T.int64(0), T.float32(0.066666670143604279), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(2), T.float32(-0.26666668057441711), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(1), T.float32(-0.53333336114883423), T.Select(v_i % T.int64(6) == T.int64(3) and v_j % T.int64(3) == T.int64(0), T.float32(-1.0666667222976685), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(2), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(2) and v_j % T.int64(3) == T.int64(0), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(2), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(1), T.float32(0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(1) and v_j % T.int64(3) == T.int64(0), T.float32(-0.3333333432674408), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(2), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(1), T.float32(0), T.Select(v_i % T.int64(6) == T.int64(0) and v_j % T.int64(3) == T.int64(0), T.float32(1), T.float32(0)))))))))))))))))))
+            for eps_nu_co_ci_fused in T.thread_binding(T.int64(576), thread="blockIdx.x"):
+                for r_kh_r_kw_fused_0 in T.serial(T.int64(1)):
+                    for r_kh_r_kw_fused_1 in T.thread_binding(T.int64(16), thread="threadIdx.x"):
+                        with T.block("transform_weight"):
+                            T.where(r_kh_r_kw_fused_0 * T.int64(16) + r_kh_r_kw_fused_1 < T.int64(9))
+                            v_eps = T.axis.spatial(T.int64(6), eps_nu_co_ci_fused // T.int64(96))
+                            v_nu = T.axis.spatial(T.int64(6), eps_nu_co_ci_fused % T.int64(96) // T.int64(16))
+                            v_co = T.axis.spatial(T.int64(4), eps_nu_co_ci_fused % T.int64(16) // T.int64(4))
+                            v_ci = T.axis.spatial(T.int64(4), eps_nu_co_ci_fused % T.int64(4))
+                            v_r_kh = T.axis.reduce(T.int64(3), (r_kh_r_kw_fused_0 * T.int64(16) + r_kh_r_kw_fused_1) // T.int64(3))
+                            v_r_kw = T.axis.reduce(T.int64(3), (r_kh_r_kw_fused_0 * T.int64(16) + r_kh_r_kw_fused_1) % T.int64(3))
+                            T.reads(p0[v_co, v_ci, v_r_kh, v_r_kw], G[T.min(v_eps, v_nu) : T.max(v_eps, v_nu) + T.int64(1), T.min(v_r_kh, v_r_kw) : T.max(v_r_kh, v_r_kw) + T.int64(1)])
+                            T.writes(transform_weight[v_eps, v_nu, v_co, v_ci])
+                            with T.init():
+                                transform_weight[v_eps, v_nu, v_co, v_ci] = T.float32(0)
+                            transform_weight[v_eps, v_nu, v_co, v_ci] = transform_weight[v_eps, v_nu, v_co, v_ci] + p0[v_co, v_ci, v_r_kh, v_r_kw] * G[v_eps, v_r_kh] * G[v_nu, v_r_kw]
+    
+
+b0 = sch.get_block(name="transform_weight", func_name="main")
+b1 = sch.get_block(name="root", func_name="main")
+v2 = sch.sample_categorical(candidates=[4, 8, 16, 32, 64, 128, 256, 512], probs=[0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125], decision=2)
+l3, l4, l5, l6, l7, l8 = sch.get_loops(block=b0)
+l9 = sch.fuse(l7, l8, preserve_unit_iters=True)
+l10, l11 = sch.split(loop=l9, factors=[None, v2], preserve_unit_iters=True)
+sch.bind(loop=l11, thread_axis="threadIdx.x")
+v12 = sch.sample_categorical(candidates=[0, 16, 64, 512, 1024], probs=[0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001, 0.20000000000000001], decision=1)
+sch.annotate(block_or_loop=b1, ann_key="meta_schedule.unroll_explicit", ann_val=v12)
+l13, l14, l15, l16, l17, l18 = sch.get_loops(block=b0)
+l19 = sch.fuse(l13, l14, l15, l16, preserve_unit_iters=True)
+sch.bind(loop=l19, thread_axis="blockIdx.x")
+2023-04-12 18:59:33 [INFO] [evolutionary_search.cc:713] Generating candidates......
+2023-04-12 18:59:33 [INFO] [evolutionary_search.cc:715] Picked top 0 candidate(s) from database
+2023-04-12 18:59:34 [INFO] [evolutionary_search.cc:533] Sample-Init-Population summary:
+Postproc #0 [meta_schedule.DisallowDynamicLoop(0x564ef00c9ef8)]: 0 failure(s)
+Postproc #1 [meta_schedule.RewriteCooperativeFetch(0x564eef3f4718)]: 0 failure(s)
+Postproc #2 [meta_schedule.RewriteUnboundBlock(0x564eed4a4cb8)]: 0 failure(s)
+Postproc #3 [meta_schedule.RewriteParallelVectorizeUnroll(0x564eed087508)]: 0 failure(s)
+Postproc #4 [meta_schedule.RewriteReductionBlock(0x564ef10aebb8)]: 0 failure(s)
+Postproc #5 [meta_schedule.VerifyGPUCode(0x564eec5eca58)]: 0 failure(s)
+Postproc #6 [meta_schedule.RewriteTensorize(0x564eecdb2138)]: 0 failure(s)
+2023-04-12 18:59:34 [INFO] [evolutionary_search.cc:723] Sampled 512 candidate(s)
+2023-04-12 18:59:35 [INFO] [evolutionary_search.cc:621] Evolve iter #0 done. Summary:
+Postproc #0 [meta_schedule.DisallowDynamicLoop(0x564ef00c9ef8)]: 0 failure(s)
+Postproc #1 [meta_schedule.RewriteCooperativeFetch(0x564eef3f4718)]: 0 failure(s)
+Postproc #2 [meta_schedule.RewriteUnboundBlock(0x564eed4a4cb8)]: 0 failure(s)
+Postproc #3 [meta_schedule.RewriteParallelVectorizeUnroll(0x564eed087508)]: 0 failure(s)
+Postproc #4 [meta_schedule.RewriteReductionBlock(0x564ef10aebb8)]: 0 failure(s)
+Postproc #5 [meta_schedule.VerifyGPUCode(0x564eec5eca58)]: 0 failure(s)
+Postproc #6 [meta_schedule.RewriteTensorize(0x564eecdb2138)]: 0 failure(s)
+2023-04-12 18:59:35 [INFO] [evolutionary_search.cc:621] Evolve iter #1 done. Summary:
+Postproc #0 [meta_schedule.DisallowDynamicLoop(0x564ef00c9ef8)]: 0 failure(s)
+Postproc #1 [meta_schedule.RewriteCooperativeFetch(0x564eef3f4718)]: 0 failure(s)
+Postproc #2 [meta_schedule.RewriteUnboundBlock(0x564eed4a4cb8)]: 0 failure(s)
+Postproc #3 [meta_schedule.RewriteParallelVectorizeUnroll(0x564eed087508)]: 0 failure(s)
+Postproc #4 [meta_schedule.RewriteReductionBlock(0x564ef10aebb8)]: 0 failure(s)
+Postproc #5 [meta_schedule.VerifyGPUCode(0x564eec5eca58)]: 0 failure(s)
+Postproc #6 [meta_schedule.RewriteTensorize(0x564eecdb2138)]: 0 failure(s)
+2023-04-12 18:59:36 [INFO] [evolutionary_search.cc:621] Evolve iter #2 done. Summary:
+Postproc #0 [meta_schedule.DisallowDynamicLoop(0x564ef00c9ef8)]: 0 failure(s)
+Postproc #1 [meta_schedule.RewriteCooperativeFetch(0x564eef3f4718)]: 0 failure(s)
+Postproc #2 [meta_schedule.RewriteUnboundBlock(0x564eed4a4cb8)]: 0 failure(s)
+Postproc #3 [meta_schedule.RewriteParallelVectorizeUnroll(0x564eed087508)]: 0 failure(s)
+Postproc #4 [meta_schedule.RewriteReductionBlock(0x564ef10aebb8)]: 0 failure(s)
+Postproc #5 [meta_schedule.VerifyGPUCode(0x564eec5eca58)]: 0 failure(s)
+Postproc #6 [meta_schedule.RewriteTensorize(0x564eecdb2138)]: 0 failure(s)
+2023-04-12 18:59:37 [INFO] [evolutionary_search.cc:621] Evolve iter #3 done. Summary:
+Postproc #0 [meta_schedule.DisallowDynamicLoop(0x564ef00c9ef8)]: 0 failure(s)
+Postproc #1 [meta_schedule.RewriteCooperativeFetch(0x564eef3f4718)]: 0 failure(s)
+Postproc #2 [meta_schedule.RewriteUnboundBlock(0x564eed4a4cb8)]: 0 failure(s)
+Postproc #3 [meta_schedule.RewriteParallelVectorizeUnroll(0x564eed087508)]: 0 failure(s)
+Postproc #4 [meta_schedule.RewriteReductionBlock(0x564ef10aebb8)]: 0 failure(s)
+Postproc #5 [meta_schedule.VerifyGPUCode(0x564eec5eca58)]: 0 failure(s)
+Postproc #6 [meta_schedule.RewriteTensorize(0x564eecdb2138)]: 0 failure(s)
+2023-04-12 18:59:37 [INFO] [evolutionary_search.cc:649] Scores of the best 10 candidates:
+[1 : 10]:	0.9920  0.9879  0.9567  0.9543  0.9301  0.9203  0.8993  0.8861  0.8834  0.8682
+2023-04-12 18:59:37 [INFO] [evolutionary_search.cc:727] Got 10 candidate(s) with evolutionary search
+2023-04-12 18:59:37 [INFO] [evolutionary_search.cc:730] Sending 10 candidates(s) for measurement
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #1: GFLOPs: 2.7581. Time: 5.6386 us. Best GFLOPs: 2.7581
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #2: GFLOPs: 2.7584. Time: 5.6380 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #3: GFLOPs: 2.3709. Time: 6.5594 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #4: GFLOPs: 2.4621. Time: 6.3166 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #5: GFLOPs: 1.9686. Time: 7.9001 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #6: GFLOPs: 2.7582. Time: 5.6385 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #7: GFLOPs: 2.2764. Time: 6.8318 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #8: GFLOPs: 1.9677. Time: 7.9037 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #9: GFLOPs: 2.6927. Time: 5.7756 us. Best GFLOPs: 2.7584
+2023-04-12 19:03:29 [INFO] [task_scheduler.cc:131] [Task #37: fused_nn_contrib_conv2d_winograd_weight_transform_3] Trial #10: GFLOPs: 2.6696. Time: 5.8256 us. Best GFLOPs: 2.7584

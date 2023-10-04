@@ -1,0 +1,756 @@
+2023-03-09 21:50:53 [INFO] Logging directory: ms_work_dir/logs
+2023-03-09 21:51:00 [INFO] LocalBuilder: max_workers = 40
+2023-03-09 21:51:00 [INFO] LocalRunner: max_workers = 1
+2023-03-09 21:51:00 [INFO] [task_scheduler.cc:159] Initializing Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:51:02 [INFO] [task_scheduler.cc:159] Initializing Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:51:02 [INFO] [task_scheduler.cc:159] Initializing Task #2: "fused_nn_conv2d"
+2023-03-09 21:51:04 [INFO] [task_scheduler.cc:159] Initializing Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:51:05 [INFO] [task_scheduler.cc:159] Initializing Task #4: "fused_multiply"
+2023-03-09 21:51:05 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-03-09 21:51:05 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:51:08 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-03-09 21:51:09 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-03-09 21:51:35 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:51:41 [INFO] [task_scheduler.cc:193] Sending 62 sample(s) to builder
+2023-03-09 21:51:47 [INFO] [task_scheduler.cc:195] Sending 62 sample(s) to runner
+2023-03-09 21:52:07 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #2: "fused_nn_conv2d"
+2023-03-09 21:52:16 [INFO] [task_scheduler.cc:260] Task #2 has finished. Remaining task(s): 4
+2023-03-09 21:52:16 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-03-09 21:52:16 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:52:37 [INFO] [task_scheduler.cc:193] Sending 64 sample(s) to builder
+2023-03-09 21:52:45 [INFO] [task_scheduler.cc:195] Sending 64 sample(s) to runner
+2023-03-09 21:53:23 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:53:26 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-03-09 21:53:27 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-03-09 21:53:29 [DEBUG] XGB iter   0: tr-p-rmse: 0.414286	tr-a-peak@32: 1.000000	tr-rmse: 0.414286	tr-rmse: 0.414286
+2023-03-09 21:53:29 [DEBUG] XGB iter  25: tr-p-rmse: 0.003763	tr-a-peak@32: 1.000000	tr-rmse: 0.003763	tr-rmse: 0.003763
+2023-03-09 21:53:29 [DEBUG] XGB iter  50: tr-p-rmse: 0.000034	tr-a-peak@32: 1.000000	tr-rmse: 0.000034	tr-rmse: 0.000034
+2023-03-09 21:53:29 [DEBUG] XGB iter  75: tr-p-rmse: 0.000000	tr-a-peak@32: 1.000000	tr-rmse: 0.000000	tr-rmse: 0.000000
+2023-03-09 21:53:29 [DEBUG] XGB iter 100: tr-p-rmse: 0.000000	tr-a-peak@32: 1.000000	tr-rmse: 0.000000	tr-rmse: 0.000000
+2023-03-09 21:53:29 [DEBUG] XGB stopped. Best iteration: [73] tr-p-rmse:0.00000	tr-a-peak@32:1.00000	tr-rmse:0.00000	tr-rmse:0.00000 
+2023-03-09 21:53:29 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:53:29 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-03-09 21:53:29 [DEBUG] XGB iter   0: tr-p-rmse: 0.453520	tr-a-peak@32: 0.999867	tr-rmse: 0.424063	tr-rmse: 0.424063
+2023-03-09 21:53:30 [DEBUG] XGB iter  25: tr-p-rmse: 0.019392	tr-a-peak@32: 0.999978	tr-rmse: 0.451723	tr-rmse: 0.451723
+2023-03-09 21:53:30 [DEBUG] XGB iter  50: tr-p-rmse: 0.019398	tr-a-peak@32: 0.999978	tr-rmse: 0.451715	tr-rmse: 0.451715
+2023-03-09 21:53:30 [DEBUG] XGB stopped. Best iteration: [20] tr-p-rmse:0.01925	tr-a-peak@32:0.99998	tr-rmse:0.45190	tr-rmse:0.45190 
+2023-03-09 21:53:30 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:53:30 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     62 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 62
+Total latency (us): 3.40048
+
+2023-03-09 21:53:30 [DEBUG] XGB iter   0: tr-p-rmse: 0.482325	tr-a-peak@32: 0.996915	tr-rmse: 0.451661	tr-rmse: 0.451661
+2023-03-09 21:53:31 [DEBUG] XGB iter  25: tr-p-rmse: 0.112803	tr-a-peak@32: 0.999976	tr-rmse: 0.494485	tr-rmse: 0.494485
+2023-03-09 21:53:31 [DEBUG] XGB iter  50: tr-p-rmse: 0.112803	tr-a-peak@32: 0.999976	tr-rmse: 0.494485	tr-rmse: 0.494485
+2023-03-09 21:53:31 [DEBUG] XGB stopped. Best iteration: [19] tr-p-rmse:0.11271	tr-a-peak@32:0.99998	tr-rmse:0.49456	tr-rmse:0.49456 
+2023-03-09 21:53:31 [INFO] [task_scheduler.cc:237] [Updated] Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:53:31 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     62 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        11.4989 |       3.2727 |                3.2727 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 126
+Total latency (us): 6.67313
+
+2023-03-09 21:53:31 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-03-09 21:53:31 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     62 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        11.4989 |       3.2727 |                3.2727 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 132
+Total latency (us): 9.81371
+
+2023-03-09 21:53:31 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:53:43 [INFO] [task_scheduler.cc:193] Sending 37 sample(s) to builder
+2023-03-09 21:53:47 [INFO] [task_scheduler.cc:195] Sending 37 sample(s) to runner
+2023-03-09 21:53:57 [DEBUG] XGB validation: p-rmse: 0.111549	a-peak@32: 0.997598
+2023-03-09 21:53:57 [DEBUG] XGB iter   0: tr-p-rmse: 0.447649	tr-a-peak@32: 0.966099	tr-rmse: 0.462520	tr-rmse: 0.462520
+2023-03-09 21:53:57 [DEBUG] XGB iter  25: tr-p-rmse: 0.109267	tr-a-peak@32: 0.999978	tr-rmse: 0.511207	tr-rmse: 0.511207
+2023-03-09 21:53:58 [DEBUG] XGB iter  50: tr-p-rmse: 0.109267	tr-a-peak@32: 0.999978	tr-rmse: 0.511206	tr-rmse: 0.511206
+2023-03-09 21:53:58 [DEBUG] XGB stopped. Best iteration: [20] tr-p-rmse:0.10923	tr-a-peak@32:0.99998	tr-rmse:0.51124	tr-rmse:0.51124 
+2023-03-09 21:53:58 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:53:58 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        11.4989 |       3.2727 |                3.2727 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 169
+Total latency (us): 9.81371
+
+2023-03-09 21:53:58 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:54:32 [INFO] [task_scheduler.cc:193] Sending 36 sample(s) to builder
+2023-03-09 21:54:35 [INFO] [task_scheduler.cc:195] Sending 36 sample(s) to runner
+2023-03-09 21:54:45 [DEBUG] XGB validation: p-rmse: 0.074316	a-peak@32: 0.967435
+2023-03-09 21:54:45 [DEBUG] XGB iter   0: tr-p-rmse: 0.403131	tr-a-peak@32: 0.983740	tr-rmse: 0.516907	tr-rmse: 0.516907
+2023-03-09 21:54:45 [DEBUG] XGB iter  25: tr-p-rmse: 0.091060	tr-a-peak@32: 1.000000	tr-rmse: 0.568645	tr-rmse: 0.568645
+2023-03-09 21:54:46 [DEBUG] XGB iter  50: tr-p-rmse: 0.091060	tr-a-peak@32: 1.000000	tr-rmse: 0.568645	tr-rmse: 0.568645
+2023-03-09 21:54:46 [DEBUG] XGB stopped. Best iteration: [20] tr-p-rmse:0.09102	tr-a-peak@32:1.00000	tr-rmse:0.56868	tr-rmse:0.56868 
+2023-03-09 21:54:46 [INFO] [task_scheduler.cc:237] [Updated] Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:54:46 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 205
+Total latency (us): 9.66052
+
+2023-03-09 21:54:46 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:54:52 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:54:52 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:54:52 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-03-09 21:54:52 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 205
+Total latency (us): 9.66052
+
+2023-03-09 21:54:52 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:55:04 [INFO] [task_scheduler.cc:193] Sending 1 sample(s) to builder
+2023-03-09 21:55:05 [INFO] [task_scheduler.cc:195] Sending 1 sample(s) to runner
+2023-03-09 21:55:06 [DEBUG] XGB validation: p-rmse: 0.008002	a-peak@32: 1.000000
+2023-03-09 21:55:06 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:55:06 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:06 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:260] Task #3 has finished. Remaining task(s): 3
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:260] Task #1 has finished. Remaining task(s): 2
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:12 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:55:19 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:19 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:19 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-03-09 21:55:19 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:19 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:55:25 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:25 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:25 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-03-09 21:55:25 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:25 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-03-09 21:55:32 [INFO] [task_scheduler.cc:260] Task #4 has finished. Remaining task(s): 1
+2023-03-09 21:55:32 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:32 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:39 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:39 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:39 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:39 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:39 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:47 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:47 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:47 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:47 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:47 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:54 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:55:54 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:55:54 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:55:54 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:55:54 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:56:02 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-03-09 21:56:02 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-03-09 21:56:02 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:56:02 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-03-09 21:56:02 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-03-09 21:56:09 [INFO] [task_scheduler.cc:260] Task #0 has finished. Remaining task(s): 0
+2023-03-09 21:56:09 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |    Y 
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        38.9309 |       3.4005 |                3.4005 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.0636 |       3.1195 |                3.1195 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        41.9388 |       3.1406 |                3.1406 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.66052
+
+2023-04-12 17:16:34 [INFO] Logging directory: ms_work_dir/logs
+2023-04-12 17:16:39 [INFO] LocalBuilder: max_workers = 40
+2023-04-12 17:16:40 [INFO] LocalRunner: max_workers = 1
+2023-04-12 17:16:40 [INFO] [task_scheduler.cc:159] Initializing Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:159] Initializing Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:159] Initializing Task #2: "fused_nn_conv2d"
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:159] Initializing Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:159] Initializing Task #4: "fused_multiply"
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-04-12 17:16:41 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:16:42 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-04-12 17:16:43 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-04-12 17:16:50 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:16:52 [INFO] [task_scheduler.cc:193] Sending 64 sample(s) to builder
+2023-04-12 17:16:56 [INFO] [task_scheduler.cc:195] Sending 64 sample(s) to runner
+2023-04-12 17:17:15 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #2: "fused_nn_conv2d"
+2023-04-12 17:17:19 [INFO] [task_scheduler.cc:260] Task #2 has finished. Remaining task(s): 4
+2023-04-12 17:17:19 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-04-12 17:17:19 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:17:27 [INFO] [task_scheduler.cc:193] Sending 64 sample(s) to builder
+2023-04-12 17:17:33 [INFO] [task_scheduler.cc:195] Sending 64 sample(s) to runner
+2023-04-12 17:17:54 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:17:55 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-04-12 17:17:56 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-04-12 17:23:43 [INFO] Logging directory: ms_work_dir/logs
+2023-04-12 17:23:49 [INFO] LocalBuilder: max_workers = 40
+2023-04-12 17:23:49 [INFO] LocalRunner: max_workers = 1
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:159] Initializing Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:159] Initializing Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:159] Initializing Task #2: "fused_nn_conv2d"
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:159] Initializing Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:159] Initializing Task #4: "fused_multiply"
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-04-12 17:23:50 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:23:51 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-04-12 17:23:52 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-04-12 17:23:59 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:24:00 [INFO] [task_scheduler.cc:193] Sending 64 sample(s) to builder
+2023-04-12 17:24:04 [INFO] [task_scheduler.cc:195] Sending 64 sample(s) to runner
+2023-04-12 17:24:24 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #2: "fused_nn_conv2d"
+2023-04-12 17:24:27 [INFO] [task_scheduler.cc:260] Task #2 has finished. Remaining task(s): 4
+2023-04-12 17:24:27 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-04-12 17:24:27 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:24:35 [INFO] [task_scheduler.cc:193] Sending 64 sample(s) to builder
+2023-04-12 17:24:39 [INFO] [task_scheduler.cc:195] Sending 64 sample(s) to runner
+2023-04-12 17:25:00 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:01 [INFO] [task_scheduler.cc:193] Sending 6 sample(s) to builder
+2023-04-12 17:25:02 [INFO] [task_scheduler.cc:195] Sending 6 sample(s) to runner
+2023-04-12 17:25:05 [DEBUG] XGB iter   0: tr-p-rmse: 0.414286	tr-a-peak@32: 1.000000	tr-rmse: 0.414286	tr-rmse: 0.414286
+2023-04-12 17:25:05 [DEBUG] XGB iter  25: tr-p-rmse: 0.003763	tr-a-peak@32: 1.000000	tr-rmse: 0.003763	tr-rmse: 0.003763
+2023-04-12 17:25:06 [DEBUG] XGB iter  50: tr-p-rmse: 0.000034	tr-a-peak@32: 1.000000	tr-rmse: 0.000034	tr-rmse: 0.000034
+2023-04-12 17:25:06 [DEBUG] XGB iter  75: tr-p-rmse: 0.000000	tr-a-peak@32: 1.000000	tr-rmse: 0.000000	tr-rmse: 0.000000
+2023-04-12 17:25:06 [DEBUG] XGB iter 100: tr-p-rmse: 0.000000	tr-a-peak@32: 1.000000	tr-rmse: 0.000000	tr-rmse: 0.000000
+2023-04-12 17:25:06 [DEBUG] XGB stopped. Best iteration: [73] tr-p-rmse:0.00000	tr-a-peak@32:1.00000	tr-rmse:0.00000	tr-rmse:0.00000 
+2023-04-12 17:25:06 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:25:06 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 0
+Total latency (us): 0
+
+2023-04-12 17:25:06 [DEBUG] XGB iter   0: tr-p-rmse: 0.418584	tr-a-peak@32: 0.999985	tr-rmse: 0.456994	tr-rmse: 0.456994
+2023-04-12 17:25:06 [DEBUG] XGB iter  25: tr-p-rmse: 0.021656	tr-a-peak@32: 0.999997	tr-rmse: 0.500970	tr-rmse: 0.500970
+2023-04-12 17:25:06 [DEBUG] XGB iter  50: tr-p-rmse: 0.021658	tr-a-peak@32: 0.999997	tr-rmse: 0.500966	tr-rmse: 0.500966
+2023-04-12 17:25:06 [DEBUG] XGB stopped. Best iteration: [19] tr-p-rmse:0.02152	tr-a-peak@32:1.00000	tr-rmse:0.50117	tr-rmse:0.50117 
+2023-04-12 17:25:06 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:06 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     64 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 64
+Total latency (us): 3.34007
+
+2023-04-12 17:25:06 [DEBUG] XGB iter   0: tr-p-rmse: 0.431764	tr-a-peak@32: 0.994935	tr-rmse: 0.492378	tr-rmse: 0.492378
+2023-04-12 17:25:06 [DEBUG] XGB iter  25: tr-p-rmse: 0.085064	tr-a-peak@32: 1.000000	tr-rmse: 0.541771	tr-rmse: 0.541771
+2023-04-12 17:25:06 [DEBUG] XGB iter  50: tr-p-rmse: 0.085065	tr-a-peak@32: 1.000000	tr-rmse: 0.541771	tr-rmse: 0.541771
+2023-04-12 17:25:06 [DEBUG] XGB stopped. Best iteration: [20] tr-p-rmse:0.08503	tr-a-peak@32:1.00000	tr-rmse:0.54180	tr-rmse:0.54180 
+2023-04-12 17:25:07 [INFO] [task_scheduler.cc:237] [Updated] Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:25:07 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     64 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.3478 |       3.0477 |                3.0477 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |            N/A |          N/A |                   N/A |      0 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 128
+Total latency (us): 6.38773
+
+2023-04-12 17:25:07 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-04-12 17:25:07 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     64 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.3478 |       3.0477 |                3.0477 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 134
+Total latency (us): 9.45224
+
+2023-04-12 17:25:07 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:09 [INFO] [task_scheduler.cc:193] Sending 35 sample(s) to builder
+2023-04-12 17:25:12 [INFO] [task_scheduler.cc:195] Sending 35 sample(s) to runner
+2023-04-12 17:25:23 [DEBUG] XGB validation: p-rmse: 0.036934	a-peak@32: 0.998766
+2023-04-12 17:25:23 [DEBUG] XGB iter   0: tr-p-rmse: 0.412458	tr-a-peak@32: 0.997449	tr-rmse: 0.485545	tr-rmse: 0.485545
+2023-04-12 17:25:23 [DEBUG] XGB iter  25: tr-p-rmse: 0.081000	tr-a-peak@32: 0.999998	tr-rmse: 0.537629	tr-rmse: 0.537629
+2023-04-12 17:25:23 [DEBUG] XGB iter  50: tr-p-rmse: 0.081001	tr-a-peak@32: 0.999998	tr-rmse: 0.537628	tr-rmse: 0.537628
+2023-04-12 17:25:23 [DEBUG] XGB stopped. Best iteration: [20] tr-p-rmse:0.08091	tr-a-peak@32:1.00000	tr-rmse:0.53772	tr-rmse:0.53772 
+2023-04-12 17:25:23 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:23 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.3478 |       3.0477 |                3.0477 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 169
+Total latency (us): 9.45224
+
+2023-04-12 17:25:23 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:25 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:25:25 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:25:25 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-04-12 17:25:25 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.3478 |       3.0477 |                3.0477 |     64 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 169
+Total latency (us): 9.45224
+
+2023-04-12 17:25:25 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:25:34 [INFO] [task_scheduler.cc:193] Sending 36 sample(s) to builder
+2023-04-12 17:25:37 [INFO] [task_scheduler.cc:195] Sending 36 sample(s) to runner
+2023-04-12 17:25:49 [DEBUG] XGB validation: p-rmse: 0.042298	a-peak@32: 0.984844
+2023-04-12 17:25:49 [DEBUG] XGB iter   0: tr-p-rmse: 0.389227	tr-a-peak@32: 0.999963	tr-rmse: 0.550714	tr-rmse: 0.550714
+2023-04-12 17:25:49 [DEBUG] XGB iter  25: tr-p-rmse: 0.066823	tr-a-peak@32: 0.999967	tr-rmse: 0.600880	tr-rmse: 0.600880
+2023-04-12 17:25:49 [DEBUG] XGB iter  50: tr-p-rmse: 0.066826	tr-a-peak@32: 0.999967	tr-rmse: 0.600877	tr-rmse: 0.600877
+2023-04-12 17:25:49 [DEBUG] XGB stopped. Best iteration: [24] tr-p-rmse:0.06682	tr-a-peak@32:0.99997	tr-rmse:0.60089	tr-rmse:0.60089 
+2023-04-12 17:25:49 [INFO] [task_scheduler.cc:237] [Updated] Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:25:49 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |     99 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 205
+Total latency (us): 9.38639
+
+2023-04-12 17:25:49 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:51 [INFO] [task_scheduler.cc:193] Sending 1 sample(s) to builder
+2023-04-12 17:25:52 [INFO] [task_scheduler.cc:195] Sending 1 sample(s) to runner
+2023-04-12 17:25:52 [DEBUG] XGB validation: p-rmse: 0.004110	a-peak@32: 1.000000
+2023-04-12 17:25:52 [INFO] [task_scheduler.cc:237] [Updated] Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:52 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:52 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |      
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #3: "fused_nn_conv2d_sigmoid"
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:260] Task #3 has finished. Remaining task(s): 3
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |      
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #1: "fused_nn_adaptive_avg_pool2d"
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:260] Task #1 has finished. Remaining task(s): 2
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:53 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:54 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:25:54 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:25:54 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-04-12 17:25:54 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:54 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:56 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:25:56 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:25:56 [INFO] [task_scheduler.cc:237] [Updated] Task #4: "fused_multiply"
+2023-04-12 17:25:56 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |      
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:56 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #4: "fused_multiply"
+2023-04-12 17:25:57 [INFO] [task_scheduler.cc:260] Task #4 has finished. Remaining task(s): 1
+2023-04-12 17:25:57 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:57 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:25:58 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:25:58 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:25:58 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:25:58 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:25:58 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:00 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:26:00 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:26:00 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:00 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:26:00 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:02 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:26:02 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:26:02 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:02 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:26:02 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:03 [INFO] [task_scheduler.cc:193] Sending 0 sample(s) to builder
+2023-04-12 17:26:03 [INFO] [task_scheduler.cc:195] Sending 0 sample(s) to runner
+2023-04-12 17:26:03 [INFO] [task_scheduler.cc:237] [Updated] Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:03 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |      
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
+2023-04-12 17:26:03 [INFO] [task_scheduler.cc:180] TaskScheduler picks Task #0: "fused_sigmoid_squeeze_expand_dims_multiply"
+2023-04-12 17:26:05 [INFO] [task_scheduler.cc:260] Task #0 has finished. Remaining task(s): 0
+2023-04-12 17:26:05 [INFO] [task_scheduler.cc:320] 
+ ID |                                       Name |   FLOP | Weight | Speed (GFLOPS) | Latency (us) | Weighted Latency (us) | Trials | Done 
+-------------------------------------------------------------------------------------------------------------------------------------------
+  0 | fused_sigmoid_squeeze_expand_dims_multiply |  18816 |      1 |            N/A |          N/A |                   N/A |      6 |    Y 
+  1 |               fused_nn_adaptive_avg_pool2d | 132384 |      1 |        39.6351 |       3.3401 |                3.3401 |    100 |    Y 
+  2 |                            fused_nn_conv2d |  37632 |      1 |            N/A |          N/A |                   N/A |      0 |    Y 
+  3 |                    fused_nn_conv2d_sigmoid |  37632 |      1 |        12.6205 |       2.9818 |                2.9818 |    100 |    Y 
+  4 |                             fused_multiply | 131712 |      1 |        42.9799 |       3.0645 |                3.0645 |      6 |    Y 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Total trials: 206
+Total latency (us): 9.38639
+
