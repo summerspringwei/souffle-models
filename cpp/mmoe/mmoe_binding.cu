@@ -1,9 +1,9 @@
 #include <torch/extension.h>
 #include <cooperative_groups.h>
 
-#include "../../cuda_kernel_utils.h"
-#include "../../cuda_utils.h"
-#include "../torch_utils.h"
+#include "souffle_utils/cuda_kernel_utils.h"
+#include "souffle_utils/cuda_utils.h"
+#include "souffle_utils/torch_utils.h"
 
 __global__ void MMoE(
   float* __restrict__ MMoE_experts_input, float* __restrict__ MMoE_experts_weight, float* __restrict__ MMoE_experts_compute, float* __restrict__ expert_bias,

@@ -8,9 +8,9 @@
 
 #include <torch/extension.h>
 
-#include "../../cuda_kernel_utils.h"
-#include "../../cuda_utils.h"
-#include "../torch_utils.h"
+#include "souffle_utils/cuda_kernel_utils.h"
+#include "souffle_utils/cuda_utils.h"
+#include "souffle_utils/torch_utils.h"
 
 #include "kernels/se_module_global_fused.cu"
 #include "kernels/se_module_tvm_fused.cu"

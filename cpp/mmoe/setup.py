@@ -26,7 +26,7 @@ setup(name='mmoe_bingding',
         cpp_extension.CUDAExtension(
           'mmoe_binding', 
           ['mmoe_binding.cu'],
-          include_dirs=[CUDA_HOME+"/include", this_dir+"../../"],
+          include_dirs=[CUDA_HOME+"/include", this_dir+"/../"],
           library_dirs=[CUDA_HOME+"/lib64"],
           extra_compile_args=extra_compile_args
           )

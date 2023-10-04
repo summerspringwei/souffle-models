@@ -24,7 +24,7 @@ setup(name='efficientnet_se_module_binding',
         cpp_extension.CUDAExtension(
           'efficientnet_se_module_binding', 
           ['efficientnet_se_module_binding.cu'],
-          include_dirs=[CUDA_HOME+"/include", this_dir+"../../"],
+          include_dirs=[CUDA_HOME+"/include", this_dir+"/../"],
           library_dirs=[CUDA_HOME+"/lib64"],
           extra_compile_args=extra_compile_args
           )
