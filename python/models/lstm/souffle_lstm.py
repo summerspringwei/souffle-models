@@ -66,9 +66,14 @@ class HoriVertiFusedLSTM(AnsorModule):
       config = [hori_fused_layers, self.batch_size * 4, 256]
       log_file = "kernel_configs/hori_fused_matv_tune_{}_{}_{}.log".format(*config)
       self.apply(hori_fused_matv, config, log_file)
-      config = [hori_fused_layers, self.batch_size, 256]
-      log_file = "kernel_configs/hori_fused_solve_{}_{}_{}.log".format(*config)
-      self.apply(hori_verti_fused_solve, config, log_file)
+      try:
+        config = [hori_fused_layers, self.batch_size, 256]
+        log_file = "kernel_configs/hori_fused_solve_{}_{}_{}.log".format(*config)
+        self.apply(hori_verti_fused_solve, config, log_file)
+      except:
+        print("Error: hori_verti_fused_solve failed")
+        
+    
 
     # 10 layers
     hori_fused_layers = self.num_layer
@@ -173,7 +178,20 @@ def main():
     model = HoriVertiFusedLSTM(1, 256, 10, 100, num_bench, num_repeat)
     model.forward()
     print(model.get_total_latency())
-
+  elif opt_level == "O3":
+    import torch
+    import lstm_binding
+    def test_lstm():
+      batch_size=1
+      num_layer=10
+      num_hidden=256
+      num_timestep=100
+      input_timestep = torch.ones((batch_size, num_timestep, num_hidden), dtype=torch.float32, device="cuda")
+      weight_input_wavefront = torch.ones((4*num_layer, num_hidden, num_hidden), dtype=torch.float32, device="cuda")
+      weight_state_wavefront = torch.ones((4*num_layer, num_hidden, num_hidden), dtype=torch.float32, device="cuda")
+      output_timestep = lstm_binding.fused_lstm(input_timestep, weight_input_wavefront, weight_state_wavefront)
+      return output_timestep
+    test_lstm()
 
 if __name__=="__main__":
   main()

@@ -77,7 +77,7 @@ def apply(nn_func, func_args, log_file, print_source=False, num_bench=1, num_rep
     func = tvm.build(sch, args, tvm.target.cuda(), name=func_name)
     # Save module to file
     func.export_library(log_file+".lib.tar")
-    print(func.imported_modules[0].get_source())
+    # print(func.imported_modules[0].get_source())
     logging.info("load and apply schedule {}".format(log_file))
   else:
     if os.path.exists(log_file+".lib"):

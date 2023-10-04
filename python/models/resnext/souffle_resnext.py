@@ -3,15 +3,6 @@ import sys, os
 import logging
 FORMAT = '%(asctime)s %(filename)s:%(lineno)d %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.INFO)
-sys.path.extend(['', '/home/xiachunwei/Software/clean_tvm/tvm/python/tvm/contrib/',
-'/home/xiachunwei/Software/clean_tvm/tvm/python',
- '/home/xiachunwei/Software/tensor-compiler/src/itvm/operator_fusion/models/resnext', 
- '/home/xiachunwei/Software/anaconda3/lib/python37.zip', '/home/xiachunwei/Software/anaconda3/lib/python3.7', 
- '/home/xiachunwei/Software/anaconda3/lib/python3.7/lib-dynload', '/home/xiachunwei/.local/lib/python3.7/site-packages', 
- '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages', 
- '/home/xiachunwei/Projects/CenterNet/src/lib/models/networks/DCNv2', '/home/xiachunwei/Projects/tensor-compiler-gpu/src/transform_preds', '/home/xiachunwei/Projects/EfficientNet-PyTorch', '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages/bert_binding-0.0.0-py3.7-linux-x86_64.egg', '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages/lstm_binding-0.0.0-py3.7-linux-x86_64.egg'])
-sys.path.append("/home/xiachunwei/Software/clean_tvm/tvm/python/")
-sys.path.append(os.path.dirname(os.path.abspath(__file__))+os.sep+"../../")
 from ansor_module import AnsorModule
 
 from resnext_kernels import fused_conv1x1_bn_relu, fused_conv1x1_bn_relu_stride, \

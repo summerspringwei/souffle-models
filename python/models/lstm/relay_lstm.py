@@ -27,7 +27,6 @@ import time
 #     tf_compat_v1 = tf.compat.v1
 # except ImportError:
 #     tf_compat_v1 = tf
-  
 
 target = tvm.target.Target(tvm.target.cuda())
 layout = None

@@ -157,7 +157,7 @@ def hori_fused_solve_tune():
   ]
   for config in kernel_configs:
     log_file = "kernel_configs/hori_fused_solve_{}_{}_{}.log".format(*config)
-    tune(hori_verti_fused_solve, config, log_file, num_trials=20)
+    tune(hori_verti_fused_solve, config, log_file, num_trials=2000)
     apply(hori_verti_fused_solve, config, log_file)
 
 
@@ -201,12 +201,12 @@ def hori_fused_solve_output_tune():
 
 
 def main():
-  hori_fused_solve_output_tune()
-  hori_fused_solve_hidden_tune()
-  matv_tune()
+  # hori_fused_solve_output_tune()
+  # hori_fused_solve_hidden_tune()
+  # matv_tune()
   # solve_tune()
   # hori_fused_matv_tune()
-  # hori_fused_solve_tune()
+  hori_fused_solve_tune()
 
 if __name__ == "__main__":
   main()

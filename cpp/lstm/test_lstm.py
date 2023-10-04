@@ -1,8 +1,6 @@
 
 import torch
 import lstm_binding
-import numpy as np
-import math
 
 def test_lstm():
   batch_size=1
