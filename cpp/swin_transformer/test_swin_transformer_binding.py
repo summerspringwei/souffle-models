@@ -1,5 +1,6 @@
 import swin_transformer_binding
 import swin_trans_fc2
+import cutlass_gemm
 import torch
 import numpy as np
 import math
@@ -52,10 +53,29 @@ def test_swin_trans_fc2():
   weight = torch.ones((K, N), dtype=torch.half, device="cuda") / 16
   output = swin_trans_fc2.swin_trans_fc2(src, weight)
   print(output)
+  # print(output.shape)
 
+
+def test_cutlass_gemm():
+  # cutlass_gemm.swin_trans_cutlass_gemm()
+  cutlass_gemm.swin_trans_fc2_splitK_m512n256k2048()
+  cutlass_gemm.swin_trans_fc1_m4096n512k128()
+  cutlass_gemm.swin_trans_fc2_m4096n128k512()
+  cutlass_gemm.swin_trans_fc1_m1024n1024k256()
+  cutlass_gemm.swin_trans_fc2_m1024n256k1024()
+  cutlass_gemm.swin_trans_fc1_m256n2048k512()
+  cutlass_gemm.swin_trans_fc2_m512n256k2048()
+  cutlass_gemm.swin_trans_fc1_m64n4096k1024()
+  cutlass_gemm.swin_trans_fc2_m64n1024k4096()
+  # a = torch.ones((256, 2048), dtype=torch.half, device="cuda") / 16
+  # b = torch.ones((2048, 512), dtype=torch.half, device="cuda") / 16
+  # c = cutlass_gemm.swin_trans_torch_cutlass_gemm(a, b)
+  # print(c)
+  # print(c.shape)
 
 if __name__=="__main__":
   # test_swin_transformer_fused_mlp()
   # test_bench_swin_transformer_fused_mlp()
   # test_swin_ffn()
-  test_swin_trans_fc2()
+  # test_swin_trans_fc2()
+  test_cutlass_gemm()

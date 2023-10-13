@@ -24,4 +24,4 @@ ncu -i ./tmp-souffle_swin_trans_O4.ncu-rep --csv --page raw  | grep -v "at::nati
 O4_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py tmp.csv)
 echo ${O4_LATENCY}
 
-echo "EfficientNet:" ${O0_LATENCY} ${O1_LATENCY} ${O2_LATENCY} ${O3_LATENCY} ${O4_LATENCY}
+echo "SwinTrans.:" ${O0_LATENCY} ${O1_LATENCY} ${O2_LATENCY} ${O3_LATENCY} ${O4_LATENCY}

@@ -5,13 +5,17 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 CUDA_HOME = os.getenv('CUDA_HOME') if os.getenv('CUDA_HOME')!=None else "/usr/local/cuda"
+CUTLASS_HOME = os.getenv('CUTLASS_HOME')
+if CUTLASS_HOME==None:
+  print("Please set CUTLASS_HOME")
+  exit(1)
 
 extra_compile_args = {"cxx": ["-g", "-O0"]}
 extra_compile_args["nvcc"] = [
-            "-g",
-            "-G",
-            "-O0",
-            # "-O3",
+            # "-g",
+            # "-G",
+            # "-O0",
+            "-O3",
             "-DCUDA_HAS_FP16=1",
             "-DUSE_FP16=ON",
             "-DCUDA_ARCH_BIN=80",
@@ -36,6 +40,18 @@ setup(name='swin_transformer_binding',
             library_dirs=[CUDA_HOME+"/lib64", CUDA_HOME+"/targets/x86_64-linux/lib/stubs", CUDA_HOME+"/targets/x86_64-linux"],
             extra_compile_args=extra_compile_args,
             libraries=["cuda", "cudart", "cudart_static"]
+          ),
+        cpp_extension.CUDAExtension(
+            'cutlass_gemm', 
+            ['cutlass_gemm_binding.cu'],
+            include_dirs=[CUDA_HOME+"/include", this_dir+"/../", CUTLASS_HOME+"/include", CUTLASS_HOME+"/tools/util/include/" ],
+            # library_dirs=[CUDA_HOME+"/lib64"],
+            library_dirs=[CUDA_HOME+"/lib64", \
+              CUDA_HOME+"/targets/x86_64-linux/lib/stubs", \
+                CUDA_HOME+"/targets/x86_64-linux", \
+                  CUTLASS_HOME+"/build/tools/library/"],
+            extra_compile_args=extra_compile_args,
+            libraries=["cuda", "cudart", "cudart_static", "cutlass"]
           )
         ],
       cmdclass={'build_ext': cpp_extension.BuildExtension})

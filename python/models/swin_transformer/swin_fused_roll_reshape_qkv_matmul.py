@@ -42,10 +42,10 @@ def _fused_reshape_permute_matmul_tensorcore(x, weight, dtype="float16"):
   """
     BN, seq_length, num_heads = get_const_tuple(x.shape)
     x_reshape_permuted = te.compute(
-        (BN, num_heads * seq_length),
+        (BN, seq_length * num_heads),
         lambda bn, s: x[bn,
-                        tir.indexmod(s, seq_length) * num_heads,
-                        tir.indexdiv(s, seq_length)],
+                        tir.indexdiv(s, num_heads),
+                        tir.indexmod(s, num_heads)],
         name="reshape_permute",
         tag="injective")
     matmul = topi.cuda.dense_tensorcore_cuda(x_reshape_permuted, weight)
@@ -63,7 +63,7 @@ def auto_tvm_tune_fused_reshape_permute_matmul_tensorcore(
     """Layer Norm: Compute the normalize
   Dense: (BHW, 4C) x (4C, 2C) -> (BHW, 2C)
   """
-    BN = batch_size * height * width
+    BN = batch_size * 64
     x_shape = (BN, channel // num_heads, num_heads)
 
     x = te.placeholder(x_shape, dtype, name="x")
@@ -97,15 +97,18 @@ def auto_tvm_apply_fused_reshape_permute_matmul_tensorcore(
         channel,
         model_name="swin_transform",
         dtype="float16",
-        num_bench=1000):
+        num_bench=1):
     log_file = "kernel_configs/{}_auto_tvm_tune_fused_reshape_permute_matmul_tensorcore_{}_{}_{}_{}_{}.log".format(
         model_name, batch_size, height, width, num_heads, channel)
-
-    BN = batch_size * height * width
+    # we pad (7*7=49) to 64
+    BN = batch_size * 64
     x_shape = (BN, channel // num_heads, num_heads)
-
+    print("swin_fused_roll_reshape_qkv_matmul.py:106 x_shape: {}, weight_shape:{} ".format(x_shape, (channel, channel)))
     x = te.placeholder(x_shape, dtype, name="x")
     weight = te.placeholder((channel, channel), dtype, name="weight")
+    if not os.path.exists(log_file):
+        print("Cannot find log file: {}".format(log_file))
+        return
     func_name =  pathlib.Path(log_file).stem
     with autotvm.apply_history_best(log_file):
         with tvm.target.Target("cuda"):
@@ -115,21 +118,29 @@ def auto_tvm_apply_fused_reshape_permute_matmul_tensorcore(
             # print(tvm.lower(s, args, simple_mode=True))
             func = tvm.build(s, args, name=func_name)
             # print(func.imported_modules[0].get_source())
-            str_schedule = str(tvm.lower(s, args, simple_mode=True))
-            str_cuda_source = str(func.imported_modules[0].get_source())
+            # str_schedule = str(tvm.lower(s, args, simple_mode=True))
+            # str_cuda_source = str(func.imported_modules[0].get_source())
             # str_cuda_source = str(func.imported_modules[0].get_ptx_source())
-            parseDim(str_schedule)
+            # parseDim(str_schedule)
 
     dev = tvm.cuda(0)
     return tvm_bench_func(func, args, dev,
-                          num_bench=num_bench), (str_schedule, str_cuda_source)
+                          num_bench=num_bench), (None, None)
 
 
 def fused_reshape_permute_matmul_tensorcore_tune(tunning=False):
     kernel_configs = [
+        [64, 64, 64, 4, 128, 'swin_transform', 'float16'],
+        [16, 32, 32, 8, 256, 'swin_transform', 'float16'],
+        [4, 16, 16, 16, 512, 'swin_transform', 'float16'],
+        [1, 8, 8, 32, 1024, 'swin_transform', 'float16'],
+        # [64, 64, 64, 4, 32, "swin_transform", "float16"],
+        # [16, 32, 32, 8, 32, "swin_transform", "float16"],
+        # [4, 16, 16, 16, 32, "swin_transform", "float16"],
+        # [1, 8, 8, 32, 32, "swin_transform", "float16"],
         # [1,64,64,4,128, "swin_transform", "float16"],
         # [1,32,32,8,256, "swin_transform", "float16"],
-        [1, 16, 16, 16, 512, "swin_transform", "float16"],
+        # [1, 16, 16, 16, 512, "swin_transform", "float16"],
         # [1,8,8,32,1024, "swin_transform", "float16"]
     ]
     for config in kernel_configs:
@@ -373,4 +384,4 @@ if __name__ == "__main__":
     # Part-5
     # fused_reshape_attn_v_pad_matmul_tensorcore(False)
     # Part-6
-    fused_reshape_permute_matmul_tensorcore_tune(False)
+    fused_reshape_permute_matmul_tensorcore_tune(True)

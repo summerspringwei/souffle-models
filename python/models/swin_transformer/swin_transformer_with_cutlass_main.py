@@ -109,22 +109,6 @@ import logging
 
 FORMAT = '%(asctime)s %(filename)s:%(lineno)d %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.INFO)
-sys.path.extend([
-    '', '/home/xiachunwei/Software/clean_tvm/tvm/python/tvm/contrib/',
-    '/home/xiachunwei/Software/clean_tvm/tvm/python',
-    '/home/xiachunwei/Software/tensor-compiler/src/itvm/operator_fusion/models/resnext',
-    '/home/xiachunwei/Software/anaconda3/lib/python37.zip',
-    '/home/xiachunwei/Software/anaconda3/lib/python3.7',
-    '/home/xiachunwei/Software/anaconda3/lib/python3.7/lib-dynload',
-    '/home/xiachunwei/.local/lib/python3.7/site-packages',
-    '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages',
-    '/home/xiachunwei/Projects/CenterNet/src/lib/models/networks/DCNv2',
-    '/home/xiachunwei/Projects/tensor-compiler-gpu/src/transform_preds',
-    '/home/xiachunwei/Projects/EfficientNet-PyTorch',
-    '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages/bert_binding-0.0.0-py3.7-linux-x86_64.egg',
-    '/home/xiachunwei/Software/anaconda3/lib/python3.7/site-packages/lstm_binding-0.0.0-py3.7-linux-x86_64.egg'
-])
-sys.path.append("/home/xiachunwei/Software/clean_tvm/tvm/python/")
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + os.sep + "../../")
 import ansor_utils
 from ansor_utils import tune, apply
@@ -142,6 +126,7 @@ from swin_mlp import auto_tvm_apply_fused_layer_norm_matmul_tensorcore_gelu, \
   auto_tvm_apply_fused_matmul_tensorcore_add
 from swin_patch_merge import fused_patch_merging_reshape_reduce_sum
 from inline_matmul_utils import nearest_power_2
+import cutlass_gemm
 
 
 class TVMPatchEmbed():
@@ -298,37 +283,21 @@ class TVMSwinTransformerBlock():
                              num_bench=num_bench)
         self.latency_arr.append(latency)
 
+        # MLP part
         # layernorm second-part+fc1+gelu (Swin MLP)
-        config = [
-            self.batch_size, pad_height, pad_width, self.channel,
-            self.channel * self.mlp_ratio
-        ]
-        (out,
-         latency), (str_schedule, str_cuda_source
-                    ) = auto_tvm_apply_fused_layer_norm_matmul_tensorcore_gelu(
-                        *config, num_bench=num_bench)
-        self.latency_arr.append(latency)
-        # file_path = "cuda_source/fused_layer_norm_matmul_tensorcore_gelu_{}_{}_{}_{}_{}.ptx".format(*config)
-        # num_block, num_thread, reg, shared = computeKernelResource(str_schedule, str_cuda_source, file_path)
-        # print("kernel {} block: {}, thread: {}, register: {}, shared memory: {}".format(
-        #   "layer_norm_matmul_tensorcore_gelu", num_block, num_thread, reg, shared))
-        # singleKernelSatisfyGlobalSync(num_block, num_thread, reg, shared)
         # fc2+add (Swin MLP)
-        config = [
-            self.batch_size, pad_height, pad_width,
-            self.channel * self.mlp_ratio, self.channel
-        ]
-        (out, latency), (
-            str_schedule,
-            str_cuda_source) = auto_tvm_apply_fused_matmul_tensorcore_add(
-                *config, num_bench=num_bench)
-        self.latency_arr.append(latency)
-        # file_path = "cuda_source/fused_matmul_tensorcore_add_{}_{}_{}_{}_{}.ptx".format(*config)
-        # num_block, num_thread, reg, shared = computeKernelResource(str_schedule, str_cuda_source, file_path)
-        # print("kernel {} block: {}, thread: {}, register: {}, shared memory: {}".format(
-        #   "matmul_tensorcore_add", num_block, num_thread, reg, shared))
-        # singleKernelSatisfyGlobalSync(num_block, num_thread, reg, shared)
-
+        if batch_size == 64:
+          cutlass_gemm.swin_trans_fc1_m4096n512k128()
+          cutlass_gemm.swin_trans_fc2_m4096n128k512()
+        elif batch_size == 16:
+          cutlass_gemm.swin_trans_fc1_m1024n1024k256()
+          cutlass_gemm.swin_trans_fc2_m1024n256k1024()
+        elif batch_size == 4:
+          cutlass_gemm.swin_trans_fc1_m256n2048k512()
+          cutlass_gemm.swin_trans_fc2_m512n256k2048()
+        elif batch_size == 1:
+          cutlass_gemm.swin_trans_fc1_m64n4096k1024()
+          cutlass_gemm.swin_trans_fc2_m64n1024k4096()
 
 class TVMPatchMerging():
 
@@ -384,8 +353,8 @@ class TVMSwinTransformer():
             in_chans=3,
             num_classes=1000,
             embed_dim=128,
-            # depths=[2, 2, 18, 2],
-            depths=[1, 1, 1, 1], # Only for ncu
+            depths=[2, 2, 18, 2],
+            # depths=[1, 1, 1, 1], # Only for ncu
             num_heads=[4, 8, 16, 32],
             # embed_dim=128, depths=[0, 0, 1, 0], num_heads=[4, 8, 16, 32],
             window_size=7,
