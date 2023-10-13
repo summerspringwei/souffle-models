@@ -99,7 +99,6 @@ def auto_tvm_tune_fused_layer_normalization_matmul(batch_size,
         callbacks=[autotvm.callback.log_to_file(log_file)],
     )
 
-
 def auto_tvm_apply_fused_layer_normalization_matmul(
         batch_size,
         height,

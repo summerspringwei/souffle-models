@@ -300,7 +300,6 @@ class TVMSwinTransformerBlock():
           cutlass_gemm.swin_trans_fc2_m64n1024k4096()
 
 class TVMPatchMerging():
-
     def __init__(self, batch_size, height, width, channel) -> None:
         self.batch_size = batch_size
         self.height = height
@@ -308,6 +307,7 @@ class TVMPatchMerging():
         self.channel = channel
         self.output_arr = []
         self.latency_arr = []
+        logging.info(f"TVMPatchMerging: batch_size: {batch_size}, height: {height}, width: {width}, channel: {channel}")
 
     def forward(self, num_bench=1):
         config = [
@@ -373,6 +373,7 @@ class TVMSwinTransformer():
         patch_height, patch_width = 56, 56
         self.layers = []
 
+        stages = 0
         for block_count, (d, num_head) in enumerate(zip(depths, num_heads)):
             for i in range(d):
                 blk = TVMSwinTransformerBlock(1,
@@ -384,7 +385,10 @@ class TVMSwinTransformer():
             pm = TVMPatchMerging(1, patch_height, patch_width,
                                  embed_dim * 2**block_count)
             patch_height, patch_width = patch_height // 2, patch_width // 2
-            self.layers.append(pm)
+            if stages < len(depths) - 1:
+              self.layers.append(pm)
+            stages += 1
+
 
     def forward(self, num_bench=1):
         self.patch_embed.forward()
@@ -404,5 +408,5 @@ class TVMSwinTransformer():
 
 if __name__ == "__main__":
     swin = TVMSwinTransformer()
-    swin.forward()
-    swin.get_latency()
+    # swin.forward()
+    # swin.get_latency()
