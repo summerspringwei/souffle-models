@@ -1,4 +1,6 @@
 import sys
+import os
+
 from typing import List
 
 import numpy as np
@@ -55,8 +57,14 @@ def filter_invalid_ncu_records(values: List):
 def get_ncu_sum_of_latency(file_path):
     output, units = read_ncu_csv(file_path, ["Kernel Name", "gpu__time_duration.sum"])
     output = filter_invalid_ncu_records(output)
+    # Only dump kernelname and latency to a csv file
+    simple_csv_file_name = os.path.splitext(file_path)[0]+"-kernel-latency.csv"
+    dir_path = os.path.dirname(os.path.abspath(file_path))
+    lines = []
     for record in output:
-        print(record)
+        lines.append(f"{record[0]},{record[1]}\n")
+    with open(os.path.join(dir_path, simple_csv_file_name), 'w') as f:
+        f.writelines(lines)
     # Always assume latency is the last column
     output_np = np.sum(np.array(output)[:, -1].astype(np.float32).reshape((-1,)))
     print(output_np)

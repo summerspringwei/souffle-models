@@ -1,0 +1,351 @@
+/workspace/anaconda3/lib/python3.9/site-packages/numpy/__init__.py
+/workspace/souffle-models/python/models/swin_transformer
+height: 56, width: 56, channel: 128
+inline Tensor(shape=[4096, 128], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 67611.894
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 4), ('warp_col_tiles', 4), ('chunk', 8), ('offset', 0), ('offsetCS', 8), ('vec', 2), ('wmma_m', 16)],None,36296
+TFLOPS: 8.784202713635984e-07
+inline Tensor(shape=[256, 64, 64], op.name=compute)
+inline Tensor(shape=[256, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [64, 64, 64, 4, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[4096, 128], op.name=compute)
+inline Tensor(shape=[4096, 128], op.name=x_normalized)
+dim3(64, 2, 1), dim3(32, 2, 2)
+height: 56, width: 56, channel: 128
+inline Tensor(shape=[4096, 128], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 284.23
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 4), ('warp_col_tiles', 4), ('chunk', 8), ('offset', 0), ('offsetCS', 8), ('vec', 2), ('wmma_m', 16)],None,36296
+TFLOPS: 0.0002123508529151851
+inline Tensor(shape=[256, 64, 64], op.name=compute)
+inline Tensor(shape=[256, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [64, 64, 64, 4, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[4096, 128], op.name=compute)
+inline Tensor(shape=[4096, 128], op.name=x_normalized)
+dim3(64, 2, 1), dim3(32, 2, 2)
+inline Tensor(shape=[1024, 512], op.name=compute)
+inline Tensor(shape=[1024, 512], op.name=x_normalized)
+height: 28, width: 28, channel: 256
+inline Tensor(shape=[1024, 256], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 69964.58499999999
+
+Best config:
+[('block_row_warps', 2), ('warp_row_tiles', 2), ('warp_col_tiles', 2), ('chunk', 12), ('offset', 8), ('offsetCS', 8), ('vec', 8), ('wmma_m', 8)],None,76449
+TFLOPS: 5.810012612269032e-07
+inline Tensor(shape=[128, 64, 64], op.name=compute)
+inline Tensor(shape=[128, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [16, 32, 32, 8, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[1024, 256], op.name=compute)
+inline Tensor(shape=[1024, 256], op.name=x_normalized)
+dim3(32, 4, 1), dim3(32, 1, 4)
+height: 28, width: 28, channel: 256
+inline Tensor(shape=[1024, 256], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 259.77099999999996
+
+Best config:
+[('block_row_warps', 2), ('warp_row_tiles', 2), ('warp_col_tiles', 2), ('chunk', 12), ('offset', 8), ('offsetCS', 8), ('vec', 8), ('wmma_m', 8)],None,76449
+TFLOPS: 0.0001336713846291989
+inline Tensor(shape=[128, 64, 64], op.name=compute)
+inline Tensor(shape=[128, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [16, 32, 32, 8, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[1024, 256], op.name=compute)
+inline Tensor(shape=[1024, 256], op.name=x_normalized)
+dim3(32, 4, 1), dim3(32, 1, 4)
+inline Tensor(shape=[256, 1024], op.name=compute)
+inline Tensor(shape=[256, 1024], op.name=x_normalized)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 54719.324
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 2.9661960484411647e-07
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 241.72899999999998
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.544286402801485e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 263.46700000000004
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.917074227320532e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 226.315
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.484299636875901e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 221.745
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.686644520328837e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 240.69799999999998
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.134442577440094e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 226.354
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.131674937370884e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 226.524
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.082222055260569e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 225.577
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.083043937157367e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 225.808
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.125081278367172e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 224.386
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.704713912067246e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 242.85000000000002
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.040622476640905e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 227.34799999999998
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.881480791433094e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 227.50699999999998
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.621962297170037e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 223.237
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.042377181302527e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 227.265
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 7.122487122725617e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 221.16
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.615531284277979e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+height: 14, width: 14, channel: 512
+inline Tensor(shape=[256, 512], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 221.954
+
+Best config:
+[('block_row_warps', 1), ('warp_row_tiles', 2), ('warp_col_tiles', 4), ('chunk', 4), ('offset', 8), ('offsetCS', 8), ('vec', 4), ('wmma_m', 16)],None,43888
+TFLOPS: 6.976179924060587e-05
+inline Tensor(shape=[64, 64, 64], op.name=compute)
+inline Tensor(shape=[64, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [4, 16, 16, 16, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[256, 512], op.name=compute)
+inline Tensor(shape=[256, 512], op.name=x_normalized)
+dim3(8, 8, 1), dim3(32, 1, 4)
+inline Tensor(shape=[64, 2048], op.name=compute)
+inline Tensor(shape=[64, 2048], op.name=x_normalized)
+height: 7, width: 7, channel: 1024
+inline Tensor(shape=[64, 1024], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 57375.157999999996
+
+Best config:
+[('block_row_warps', 2), ('warp_row_tiles', 2), ('warp_col_tiles', 2), ('chunk', 1), ('offset', 0), ('offsetCS', 0), ('vec', 4), ('wmma_m', 8)],None,64049
+TFLOPS: 1.421250588012255e-07
+inline Tensor(shape=[32, 64, 64], op.name=compute)
+inline Tensor(shape=[32, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [1, 8, 8, 32, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[64, 1024], op.name=compute)
+inline Tensor(shape=[64, 1024], op.name=x_normalized)
+dim3(2, 32, 1), dim3(32, 4, 1)
+height: 7, width: 7, channel: 1024
+inline Tensor(shape=[64, 1024], op.name=x_roll_permute_matmul)
+auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore min_latency: 237.13600000000002
+
+Best config:
+[('block_row_warps', 2), ('warp_row_tiles', 2), ('warp_col_tiles', 2), ('chunk', 1), ('offset', 0), ('offsetCS', 0), ('vec', 4), ('wmma_m', 8)],None,64049
+TFLOPS: 3.5563464758843794e-05
+inline Tensor(shape=[32, 64, 64], op.name=compute)
+inline Tensor(shape=[32, 32, 64], op.name=compute)
+Error exec auto_tvm_apply_fused_reshape_permute_matmul_tensorcore [1, 8, 8, 32, 32, 'swin_transform', 'float16']
+inline Tensor(shape=[64, 1024], op.name=compute)
+inline Tensor(shape=[64, 1024], op.name=x_normalized)
+dim3(2, 32, 1), dim3(32, 4, 1)
+inline Tensor(shape=[16, 4096], op.name=compute)
+inline Tensor(shape=[16, 4096], op.name=x_normalized)
+[67611.894, 69482.864, 63222.88300000001, 29368.379, 33602.297999999995, 87757.37700000001, 59100.751]
+[284.23, 287.42600000000004, 241.442, 228.687, 234.54700000000003, 338.887, 261.31100000000004]
+[37057.55, 229.64000000000001, 82994.474]
+[69964.58499999999, 52525.837999999996, 66326.075, 30606.739999999998, 38600.752, 72667.58099999999, 57203.147000000004]
+[259.77099999999996, 228.30300000000003, 246.21, 235.371, 247.58, 298.39700000000005, 254.54500000000002]
+[42377.397000000004, 247.99399999999997, 72103.474]
+[54719.324, 51442.281, 58504.67600000001, 29900.803, 37789.642, 90227.14600000001, 54495.787]
+[241.72899999999998, 233.162, 235.73299999999998, 235.308, 250.25900000000001, 327.125, 255.987]
+[263.46700000000004, 220.59599999999998, 229.858, 227.07500000000002, 247.57799999999997, 324.956, 241.26600000000002]
+[226.315, 235.319, 233.25699999999998, 220.849, 246.97199999999998, 320.99, 233.268]
+[221.745, 228.198, 230.36, 224.741, 248.051, 323.122, 237.872]
+[240.69799999999998, 213.875, 232.827, 217.492, 248.034, 319.65599999999995, 285.25699999999995]
+[226.354, 213.95800000000003, 228.874, 222.198, 248.433, 317.51300000000003, 252.36999999999998]
+[226.524, 215.452, 231.6, 221.32199999999997, 251.323, 320.40500000000003, 246.715]
+[225.577, 215.427, 240.53799999999998, 227.267, 246.68200000000002, 321.62600000000003, 249.76100000000002]
+[225.808, 214.156, 231.959, 224.61800000000002, 243.064, 314.6, 271.7]
+[224.386, 227.583, 227.846, 219.73000000000002, 249.139, 315.804, 236.96200000000002]
+[242.85000000000002, 216.725, 228.701, 224.811, 249.046, 321.906, 234.99300000000002]
+[227.34799999999998, 221.737, 232.14000000000001, 226.89000000000001, 245.999, 317.928, 246.594]
+[227.50699999999998, 230.427, 231.39000000000001, 222.767, 246.372, 320.304, 234.466]
+[223.237, 216.67100000000002, 230.715, 221.925, 244.991, 315.594, 235.42600000000002]
+[227.265, 214.234, 231.00699999999998, 221.78, 241.053, 316.46200000000005, 248.539]
+[221.16, 230.65099999999998, 229.71, 220.00300000000001, 250.77200000000002, 320.603, 238.253]
+[221.954, 218.727, 237.474, 224.053, 242.734, 316.94, 238.57000000000002]
+[41917.606, 250.02100000000002, 63898.014]
+[57375.157999999996, 53680.85399999999, 56869.797, 29318.218, 33196.699, 94138.191, 65095.09799999999]
+[237.13600000000002, 214.529, 240.365, 236.22299999999998, 227.149, 349.324, 267.204]
+[34194.043, 229.103, 65293.75]
+Total latency for swin transformer: 2040258.216 us
