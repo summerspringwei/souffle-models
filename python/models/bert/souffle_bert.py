@@ -4,8 +4,8 @@ import torch
 import bert_binding
 import souffle_bert_base
 
-batch_size, num_heads, max_seq_length, hidden_size, d_intermedia = 1, 12, 384, 64, 3072
-
+batch_size, num_heads, max_seq_length, num_hidden, d_intermedia = 1, 12, 384, 64, 3072
+hidden_size = num_heads * num_hidden
 def test_bert_binding_one_layer(opt_level: int):
   src = torch.randn(batch_size, max_seq_length, hidden_size).to(torch.float16).to('cuda')
   # src_mask = torch.ones(batch_size, max_seq_length, dtype=torch.int32)

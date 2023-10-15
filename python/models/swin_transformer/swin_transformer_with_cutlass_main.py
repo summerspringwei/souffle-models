@@ -333,18 +333,25 @@ class TVMPatchMerging():
                              num_bench=num_bench,
                              num_repeat=1)
         self.latency_arr.append(latency)
+        #m784n256k512; m196n512k1024; m49n1024k2048
+        # We pad to 1024/256/64
+        # config = [
+        #     self.batch_size,
+        #     nearest_power_2(self.height),
+        #     nearest_power_2(self.width), 
+        #     self.channel
+        # ]
+        # out, latency = auto_tvm_apply_fused_layer_normalization_matmul(*config, num_bench=1)
+        # self.latency_arr.append(latency)
+        if self.height == 14:
+          cutlass_gemm.swin_trans_patch_merge_slicedK_m64n1024k2048()
+        elif self.height == 28:
+          cutlass_gemm.swin_trans_patch_merge_slicedK_m256n512k1024()
+        elif self.height == 56:
+          cutlass_gemm.swin_trans_patch_merge_slicedK_m1024n256k512()
 
-        config = [
-            self.batch_size,
-            nearest_power_2(self.height),
-            nearest_power_2(self.width), 
-            self.channel
-        ]
-        out, latency = auto_tvm_apply_fused_layer_normalization_matmul(*config, num_bench=1)
-        self.latency_arr.append(latency)
 
-
-class TVMSwinTransformer():
+class TVMSwinTransformerO3():
 
     def __init__(
             self,

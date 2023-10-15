@@ -384,8 +384,8 @@ class TVMSwinTransformer():
             in_chans=3,
             num_classes=1000,
             embed_dim=128,
-            # depths=[2, 2, 18, 2],
-            depths=[1, 1, 1, 1], # Only for ncu
+            depths=[2, 2, 18, 2],
+            # depths=[1, 1, 1, 1], # Only for ncu
             num_heads=[4, 8, 16, 32],
             # embed_dim=128, depths=[0, 0, 1, 0], num_heads=[4, 8, 16, 32],
             window_size=7,

@@ -721,8 +721,32 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
       &(template_swin_trans_cutlass_gemm<64, 4096, 1024, 64, 64, 64, 32, 32, 64, 16, 8, 16, 5, 1>),
       "swin_trans_fc1_m64n4096k1024"
   );
+  // 27us on A100
   m.def("swin_trans_fc2_m64n1024k4096", 
       &(template_swin_trans_cutlass_gemm<64, 1024, 4096, 64, 64, 64, 32, 32, 64, 16, 8, 16, 5, 1>),
       "swin_trans_fc2_m64n1024k4096"
+  );
+  // 24 us on A100
+  m.def("swin_trans_fc2_slicedK_m64n1024k4096", 
+      &(template_swin_trans_cutlass_gemm<64, 1024, 4096, 64, 64, 64, 32, 64, 32, 16, 8, 16, 5, 1>),
+      "swin_trans_fc2_slicedK_m64n1024k4096"
+  );
+//   m.def("swin_trans_fc2_slicedK_m64n1024k4096", 
+//       &(template_swin_trans_cutlass_gemm<64, 1024, 4096, 32, 64, 64, 16, 32, 32, 16, 8, 16, 5, 1>),
+//       "swin_trans_fc2_slicedK_m64n1024k4096"
+//   );
+  // 15 us
+  m.def("swin_trans_patch_merge_slicedK_m64n1024k2048", 
+      &(template_swin_trans_cutlass_gemm<64, 1024, 2048, 64, 64, 64, 32, 64, 32, 16, 8, 16, 5, 1>),
+      "swin_trans_patch_merge_slicedK_m64n1024k2048"
+  );
+  //
+  m.def("swin_trans_patch_merge_slicedK_m256n512k1024", 
+      &(template_swin_trans_cutlass_gemm<256, 512, 1024, 64, 64, 64, 32, 64, 32, 16, 8, 16, 5, 1>),
+      "swin_trans_patch_merge_slicedK_m256n512k1024"
+  );
+  m.def("swin_trans_patch_merge_slicedK_m1024n256k512", 
+      &(template_swin_trans_cutlass_gemm<1024, 256, 512, 64, 64, 64, 32, 64, 32, 16, 8, 16, 5, 1>),
+      "swin_trans_patch_merge_slicedK_m1024n256k512"
   );
 }

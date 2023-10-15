@@ -58,15 +58,19 @@ def test_swin_trans_fc2():
 
 def test_cutlass_gemm():
   # cutlass_gemm.swin_trans_cutlass_gemm()
-  cutlass_gemm.swin_trans_fc2_splitK_m512n256k2048()
-  cutlass_gemm.swin_trans_fc1_m4096n512k128()
-  cutlass_gemm.swin_trans_fc2_m4096n128k512()
-  cutlass_gemm.swin_trans_fc1_m1024n1024k256()
-  cutlass_gemm.swin_trans_fc2_m1024n256k1024()
-  cutlass_gemm.swin_trans_fc1_m256n2048k512()
-  cutlass_gemm.swin_trans_fc2_m512n256k2048()
-  cutlass_gemm.swin_trans_fc1_m64n4096k1024()
+  # cutlass_gemm.swin_trans_fc2_splitK_m512n256k2048()
+  # cutlass_gemm.swin_trans_fc1_m4096n512k128()
+  # cutlass_gemm.swin_trans_fc2_m4096n128k512()
+  # cutlass_gemm.swin_trans_fc1_m1024n1024k256()
+  # cutlass_gemm.swin_trans_fc2_m1024n256k1024()
+  # cutlass_gemm.swin_trans_fc1_m256n2048k512()
+  # cutlass_gemm.swin_trans_fc2_m512n256k2048()
+  # cutlass_gemm.swin_trans_fc1_m64n4096k1024()
   cutlass_gemm.swin_trans_fc2_m64n1024k4096()
+  cutlass_gemm.swin_trans_fc2_slicedK_m64n1024k4096()
+  cutlass_gemm.swin_trans_patch_merge_slicedK_m64n1024k2048()
+  cutlass_gemm.swin_trans_patch_merge_slicedK_m256n512k1024()
+  cutlass_gemm.swin_trans_patch_merge_slicedK_m1024n256k512()
   # a = torch.ones((256, 2048), dtype=torch.half, device="cuda") / 16
   # b = torch.ones((2048, 512), dtype=torch.half, device="cuda") / 16
   # c = cutlass_gemm.swin_trans_torch_cutlass_gemm(a, b)
