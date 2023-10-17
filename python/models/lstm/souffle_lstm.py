@@ -23,10 +23,13 @@ class TVMLSTM():
     self.latency_arr = []
 
   def forward(self):
+    # for _ in range(self.time_steps):
+    #   for _ in range(self.num_layer):
     config = [self.batch_size * 4, self.hidden_size]
     log_file = "kernel_configs/lstm_matv_{}_{}.log".format(*config)
     output, latency = apply(matv, config, log_file, num_bench=self.num_bench, num_repeat=self.num_repeats)
     self.latency_arr.append(latency)
+    config = [self.batch_size, self.hidden_size]
     log_file = "kernel_configs/lstm_solve_{}_{}.log".format(*config)
     output, latency = apply(solve, config, log_file,  num_bench=self.num_bench, num_repeat=self.num_repeats)
     self.latency_arr.append(latency)
