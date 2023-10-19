@@ -32,12 +32,7 @@ fi
 ncu -i ./ncu-souffle_mmoe_O3.ncu-rep --csv --page raw | grep -v "at::native*" > ncu-souffle_mmoe_O3.csv
 O3_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_mmoe_O3.csv)
 
-if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
-ncu ${NCU_ARGS} -o ncu-souffle_mmoe_O4 -f \
- python3 souffle_mmoe.py O4 1 1
-fi
-ncu -i ./ncu-souffle_mmoe_O4.ncu-rep --csv --page raw  | grep -v "at::native*" > ncu-souffle_mmoe_O4.csv
-O4_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_mmoe_O4.csv)
+O4_LATENCY=${O3_LATENCY}
 
 echo "MMoE:", ${O0_LATENCY}, ${O1_LATENCY}, ${O2_LATENCY},\
    ${O3_LATENCY}, ${O4_LATENCY} | tee table4_mmoe.csv

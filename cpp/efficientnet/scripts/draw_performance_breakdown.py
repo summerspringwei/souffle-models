@@ -1,8 +1,12 @@
+import re
 import xlrd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as font_manager
 import matplotlib
+
+
+
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 
@@ -30,6 +34,30 @@ def read_ncu_xls(file_path):
       data_groups.append(latency_slice)
       start += group_size
       end += group_size
+    return data_groups
+
+
+def read_ncu_csv(file_path):
+    """
+    csv file format:
+    kernel_name,latency
+    """
+    latency_pattern=r',\d+\.?\d*$'
+    data_groups = []
+    group_size = 12
+    all_latency = []
+    with open(file_path, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+          line = line.strip()
+          latency_matches = re.findall(latency_pattern, line)
+          if latency_matches:
+             latency = float(latency_matches[0][1:])
+             all_latency.append(latency)
+    
+    # reshape the data to n * 12
+    data_groups = np.array(all_latency).reshape(-1, group_size).tolist()
+
     return data_groups
 
 
@@ -157,6 +185,8 @@ def draw_efficientnet_plot_v2(group_data):
 
 
 if __name__=="__main__":
-    data_groups = read_ncu_xls("/home/xiachunwei/Projects/tensor-compiler-gpu/src/operator_fusion/efficientnet/scripts/efficientnet-se_module_v2-max-block.xlsx")
+    # data_groups = read_ncu_xls("./efficientnet-se_module_v2-max-block.xlsx")
+    # print(data_groups)
+    data_groups = read_ncu_csv("../ncu-efficient_se_module_unittest-kernel-latency.csv")
     draw_efficientnet_plot(data_groups, normalize=True)
-    draw_efficientnet_plot_v2(data_groups)
+    # draw_efficientnet_plot_v2(data_groups)

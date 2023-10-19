@@ -5,22 +5,22 @@ DIRPATH=/workspace/souffle-models/python/models
 
 cd ${DIRPATH}/bert
 # BERT Pass
-# if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
-#   ncu --clock-control none --set detailed -o ncu-souffle_bert_O4 -f --target-processes all python3 souffle_bert.py O4 1 1
-#   ncu -i ./ncu-souffle_bert_O4.ncu-rep --csv --page raw  | grep -v "at::native*" | grep -v "at_cuda_detail" > ncu-souffle_bert_O4.csv
-# fi
-# SOUFFLE_BERT_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_bert_O4.csv)
-# bert_layer=12
-# SOUFFLE_BERT_LATENCY=$(python3 -c "print(${SOUFFLE_BERT_LATENCY} * ${bert_layer})")
+if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
+  ncu --clock-control none --set detailed -o ncu-souffle_bert_O4 -f --target-processes all python3 souffle_bert.py O4 1 1
+  ncu -i ./ncu-souffle_bert_O4.ncu-rep --csv --page raw  | grep -v "at::native*" | grep -v "at_cuda_detail" > ncu-souffle_bert_O4.csv
+fi
+SOUFFLE_BERT_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_bert_O4.csv)
+bert_layer=12
+SOUFFLE_BERT_LATENCY=$(python3 -c "print(${SOUFFLE_BERT_LATENCY} * ${bert_layer})")
 
-# # ResNext Pass
-# cd ${DIRPATH}/resnext
-# if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
-# ncu --clock-control none --set detailed -o ncu-souffle_resnext_O4 -f --target-processes all \
-#   python3 run_souffle_resnext.py O2 1 1 | tee resnext_O4_ncu.txt 2>&1
-# ncu -i ./ncu-souffle_resnext_O4.ncu-rep --csv --page raw  | grep -v "at::native*" > ncu-souffle_resnext_O4.csv
-# fi
-# SOUFFLE_RESNEXT_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_resnext_O4.csv)
+# ResNext Pass
+cd ${DIRPATH}/resnext
+if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
+ncu --clock-control none --set detailed -o ncu-souffle_resnext_O4 -f --target-processes all \
+  python3 run_souffle_resnext.py O2 1 1 | tee resnext_O4_ncu.txt 2>&1
+ncu -i ./ncu-souffle_resnext_O4.ncu-rep --csv --page raw  | grep -v "at::native*" > ncu-souffle_resnext_O4.csv
+fi
+SOUFFLE_RESNEXT_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_resnext_O4.csv)
 
 # LSTM Pass
 cd ${DIRPATH}/lstm

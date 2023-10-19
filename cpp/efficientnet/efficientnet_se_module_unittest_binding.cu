@@ -4,6 +4,8 @@
 #include <torch/script.h> // One-stop header.
 #include "torch/all.h"
 
+#include <torch/extension.h>
+
 #include <iostream>
 #include <memory>
 
@@ -331,8 +333,8 @@ void efficient_se_module(
                                           reduce_channel, tile_size_in_channel);
 }
 
-int main(int argc, char **argv) {
-  auto name_tensor_map = get_model_tensors(argv[1]);
+int run_all_se_module_unittest(std::string model_path) {
+  auto name_tensor_map = get_model_tensors(model_path.c_str());
   efficient_se_module<1, 112, 112, 32, 8, 1>(name_tensor_map, 0, 56 * 1024);
   efficient_se_module<1, 56, 56, 96, 4, 1>(name_tensor_map, 1, 48 * 1024);
   efficient_se_module<1, 56, 56, 144, 6, 1>(name_tensor_map, 2, 48 * 1024);
@@ -344,4 +346,10 @@ int main(int argc, char **argv) {
   efficient_se_module<1, 7, 7, 672, 28, 3>(name_tensor_map, 9, 16 * 1024);
   efficient_se_module<1, 7, 7, 1152, 48, 4>(name_tensor_map, 12, 16 * 1024);
   return 0;
+}
+
+PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
+  m.def("run_all_se_module_unittest",
+        &run_all_se_module_unittest,
+        "Run efficientnet all se module unittest");
 }

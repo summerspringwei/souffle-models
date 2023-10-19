@@ -28,9 +28,10 @@ O2_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_swin_t
 if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
 ncu ${NCU_ARGS} -o ncu-souffle_swin_trans_O3 -f \
   python3 swin_transformer_main.py | tee ncu-souffle_swin_trans_O3.txt 2>&1
+fi
 ncu -i ./ncu-souffle_swin_trans_O3.ncu-rep --csv --page raw | grep -v "at::native*" > ncu-souffle_swin_trans_O3.csv
 O3_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_swin_trans_O3.csv)
-
+exit 0
 if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
 ncu ${NCU_ARGS} -o ncu-souffle_swin_trans_O4 -f \
   python3 souffle_swin_trans.py O4 1 1
@@ -40,4 +41,4 @@ O4_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_swin_t
 
 
 echo "SwinTrans.:", ${O0_LATENCY}, ${O1_LATENCY}, ${O2_LATENCY},\
-   ${O3_LATENCY}, ${O4_LATENCY} | tee table4_swin_trans.csv
+   ${O3_LATENCY}, ${O4_LATENCY} | tee table4_swin_transformer.csv
