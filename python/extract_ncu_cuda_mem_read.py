@@ -54,11 +54,18 @@ def filter_invalid_ncu_records(values: List):
             output.append(value)
     return output
 
-def get_ncu_sum_of_latency(file_path):
-    output, units = read_ncu_csv(file_path, ["Kernel Name", "gpu__time_duration.sum"])
+def get_ncu_sum_of_memory_read(file_path):
+    output, units = read_ncu_csv(file_path, ["Kernel Name", "dram__bytes_read.sum"])
+    mem_unit = units[-1]
+    if mem_unit == "Kbyte":
+        scale = 1./1024
+    elif mem_unit == "Mbyte":
+        scale = 1
+    elif mem_unit == "Gbyte":
+        scale = 1024
     output = filter_invalid_ncu_records(output)
     # Only dump kernelname and latency to a csv file
-    simple_csv_file_name = os.path.splitext(file_path)[0]+"-kernel-latency.csv"
+    simple_csv_file_name = os.path.splitext(file_path)[0]+"-dram_bytes_read.csv"
     dir_path = os.path.dirname(os.path.abspath(file_path))
     lines = []
     for record in output:
@@ -67,11 +74,12 @@ def get_ncu_sum_of_latency(file_path):
         f.writelines(lines)
     # Always assume latency is the last column
     output_np = np.sum(np.array(output)[:, -1].astype(np.float32).reshape((-1,)))
-    print(output_np)
+    print(output_np * scale)
 
 
 def main():
-  get_ncu_sum_of_latency(sys.argv[1])
+  get_ncu_sum_of_memory_read(sys.argv[1])
+
 
 if __name__ == "__main__":
     main()

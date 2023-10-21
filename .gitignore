@@ -405,3 +405,6 @@ tmp.*
 cpp/efficientnet/scripts/efficientnet-se-module-latency-ours.pdf
 cpp/efficientnet/scripts/efficientnet-se-module-latency-ours.svg
 python/models/swin_transformer/ncu-souffle_swin_trans_O3.txt
+Fused_*.cu
+Fused_*.info
+Fused_*.json
