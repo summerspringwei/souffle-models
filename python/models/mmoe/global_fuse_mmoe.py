@@ -3,7 +3,7 @@ import torch
 
 import mmoe_binding
 
-def main():
+def global_fuse_mmoe():
   batch, input_dim, units, num_experts, num_tasks = 1, 100, 16, 8, 2
   # input = torch.randn((batch, input_dim))
   # expert_weight = torch.randn((num_experts, input_dim, units))
@@ -52,4 +52,4 @@ def main():
 
 
 if __name__ == "__main__":
-  main()
+  global_fuse_mmoe()

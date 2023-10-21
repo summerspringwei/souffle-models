@@ -3,7 +3,7 @@ import sys
 from tvm_synthetic_mmoe import FusedMMoE
 from hori_mmoe import HoriMMoE
 from naive_mmoe import NaiveMMoE
-
+from global_fuse_mmoe import global_fuse_mmoe
 def main():
   opt_level, num_bench, num_repeat = "O2", 1, 1
   # Parse arguments
@@ -24,7 +24,7 @@ def main():
     model = FusedMMoE(1, 100, 16, 8, 2, tune=False, num_trails=20, num_bench=num_bench, num_repeats=num_repeat)
     model.forward() 
   elif opt_level == "O3":
-    pass
+    global_fuse_mmoe()
   elif opt_level == "O4":
     pass
 
