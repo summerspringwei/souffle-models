@@ -1,643 +1,643 @@
 ==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
-==PROF== Connected to process 31989 (/workspace/anaconda3/bin/python3.9)
-==PROF== Target process 32033 terminated before first instrumented API call.
-==PROF== Target process 32032 terminated before first instrumented API call.
-==PROF== Target process 32035 terminated before first instrumented API call.
-==PROF== Target process 32034 terminated before first instrumented API call.
-==PROF== Target process 32036 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 0: 0%....50%....100% - 43 passes
-==PROF== Target process 32040 terminated before first instrumented API call.
-==PROF== Target process 32039 terminated before first instrumented API call.
-==PROF== Target process 32042 terminated before first instrumented API call.
-==PROF== Target process 32041 terminated before first instrumented API call.
-==PROF== Target process 32043 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_maxpool_1..." - 1: 0%....50%....100% - 43 passes
-==PROF== Target process 32045 terminated before first instrumented API call.
-==PROF== Target process 32044 terminated before first instrumented API call.
-==PROF== Target process 32047 terminated before first instrumented API call.
-==PROF== Target process 32046 terminated before first instrumented API call.
-==PROF== Target process 32048 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 2: 0%....50%....100% - 43 passes
-==PROF== Target process 32050 terminated before first instrumented API call.
-==PROF== Target process 32049 terminated before first instrumented API call.
-==PROF== Target process 32052 terminated before first instrumented API call.
-==PROF== Target process 32051 terminated before first instrumented API call.
-==PROF== Target process 32053 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 3: 0%....50%....100% - 43 passes
-==PROF== Target process 32055 terminated before first instrumented API call.
-==PROF== Target process 32054 terminated before first instrumented API call.
-==PROF== Target process 32057 terminated before first instrumented API call.
-==PROF== Target process 32056 terminated before first instrumented API call.
-==PROF== Target process 32058 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 4: 0%....50%....100% - 43 passes
-==PROF== Target process 32060 terminated before first instrumented API call.
-==PROF== Target process 32059 terminated before first instrumented API call.
-==PROF== Target process 32062 terminated before first instrumented API call.
-==PROF== Target process 32061 terminated before first instrumented API call.
-==PROF== Target process 32063 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 5: 0%....50%....100% - 43 passes
-==PROF== Target process 32065 terminated before first instrumented API call.
-==PROF== Target process 32064 terminated before first instrumented API call.
-==PROF== Target process 32067 terminated before first instrumented API call.
-==PROF== Target process 32066 terminated before first instrumented API call.
-==PROF== Target process 32068 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 6: 0%....50%....100% - 43 passes
-==PROF== Target process 32070 terminated before first instrumented API call.
-==PROF== Target process 32069 terminated before first instrumented API call.
-==PROF== Target process 32072 terminated before first instrumented API call.
-==PROF== Target process 32071 terminated before first instrumented API call.
-==PROF== Target process 32073 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 7: 0%....50%....100% - 43 passes
-==PROF== Target process 32075 terminated before first instrumented API call.
-==PROF== Target process 32074 terminated before first instrumented API call.
-==PROF== Target process 32077 terminated before first instrumented API call.
-==PROF== Target process 32076 terminated before first instrumented API call.
-==PROF== Target process 32078 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 8: 0%....50%....100% - 43 passes
-==PROF== Target process 32080 terminated before first instrumented API call.
-==PROF== Target process 32079 terminated before first instrumented API call.
-==PROF== Target process 32082 terminated before first instrumented API call.
-==PROF== Target process 32081 terminated before first instrumented API call.
-==PROF== Target process 32083 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 9: 0%....50%....100% - 43 passes
-==PROF== Target process 32085 terminated before first instrumented API call.
-==PROF== Target process 32084 terminated before first instrumented API call.
-==PROF== Target process 32087 terminated before first instrumented API call.
-==PROF== Target process 32086 terminated before first instrumented API call.
-==PROF== Target process 32088 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 10: 0%....50%....100% - 43 passes
-==PROF== Target process 32090 terminated before first instrumented API call.
-==PROF== Target process 32089 terminated before first instrumented API call.
-==PROF== Target process 32092 terminated before first instrumented API call.
-==PROF== Target process 32091 terminated before first instrumented API call.
-==PROF== Target process 32093 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 11: 0%....50%....100% - 43 passes
-==PROF== Target process 32095 terminated before first instrumented API call.
-==PROF== Target process 32094 terminated before first instrumented API call.
-==PROF== Target process 32097 terminated before first instrumented API call.
-==PROF== Target process 32096 terminated before first instrumented API call.
-==PROF== Target process 32098 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 12: 0%....50%....100% - 43 passes
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 13: 0%....50%....100% - 43 passes
-==PROF== Target process 32100 terminated before first instrumented API call.
-==PROF== Target process 32099 terminated before first instrumented API call.
-==PROF== Target process 32102 terminated before first instrumented API call.
-==PROF== Target process 32101 terminated before first instrumented API call.
-==PROF== Target process 32103 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 14: 0%....50%....100% - 43 passes
-==PROF== Target process 32105 terminated before first instrumented API call.
-==PROF== Target process 32104 terminated before first instrumented API call.
-==PROF== Target process 32107 terminated before first instrumented API call.
-==PROF== Target process 32106 terminated before first instrumented API call.
-==PROF== Target process 32108 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 15: 0%....50%....100% - 43 passes
-==PROF== Target process 32110 terminated before first instrumented API call.
-==PROF== Target process 32109 terminated before first instrumented API call.
-==PROF== Target process 32112 terminated before first instrumented API call.
-==PROF== Target process 32111 terminated before first instrumented API call.
-==PROF== Target process 32113 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 16: 0%....50%....100% - 43 passes
-==PROF== Target process 32115 terminated before first instrumented API call.
-==PROF== Target process 32114 terminated before first instrumented API call.
-==PROF== Target process 32117 terminated before first instrumented API call.
-==PROF== Target process 32116 terminated before first instrumented API call.
-==PROF== Target process 32118 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 17: 0%....50%....100% - 43 passes
-==PROF== Target process 32120 terminated before first instrumented API call.
-==PROF== Target process 32119 terminated before first instrumented API call.
-==PROF== Target process 32122 terminated before first instrumented API call.
-==PROF== Target process 32121 terminated before first instrumented API call.
-==PROF== Target process 32123 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 18: 0%....50%....100% - 43 passes
-==PROF== Target process 32125 terminated before first instrumented API call.
-==PROF== Target process 32124 terminated before first instrumented API call.
-==PROF== Target process 32127 terminated before first instrumented API call.
-==PROF== Target process 32126 terminated before first instrumented API call.
-==PROF== Target process 32128 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 19: 0%....50%....100% - 43 passes
-==PROF== Target process 32130 terminated before first instrumented API call.
-==PROF== Target process 32129 terminated before first instrumented API call.
-==PROF== Target process 32132 terminated before first instrumented API call.
-==PROF== Target process 32131 terminated before first instrumented API call.
-==PROF== Target process 32133 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 20: 0%....50%....100% - 43 passes
-==PROF== Target process 32135 terminated before first instrumented API call.
-==PROF== Target process 32134 terminated before first instrumented API call.
-==PROF== Target process 32137 terminated before first instrumented API call.
-==PROF== Target process 32136 terminated before first instrumented API call.
-==PROF== Target process 32138 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 21: 0%....50%....100% - 43 passes
-==PROF== Target process 32140 terminated before first instrumented API call.
-==PROF== Target process 32139 terminated before first instrumented API call.
-==PROF== Target process 32142 terminated before first instrumented API call.
-==PROF== Target process 32141 terminated before first instrumented API call.
-==PROF== Target process 32143 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 22: 0%....50%....100% - 43 passes
-==PROF== Target process 32145 terminated before first instrumented API call.
-==PROF== Target process 32144 terminated before first instrumented API call.
-==PROF== Target process 32147 terminated before first instrumented API call.
-==PROF== Target process 32146 terminated before first instrumented API call.
-==PROF== Target process 32148 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 23: 0%....50%....100% - 43 passes
-==PROF== Target process 32150 terminated before first instrumented API call.
-==PROF== Target process 32149 terminated before first instrumented API call.
-==PROF== Target process 32152 terminated before first instrumented API call.
-==PROF== Target process 32151 terminated before first instrumented API call.
-==PROF== Target process 32153 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 24: 0%....50%....100% - 43 passes
-==PROF== Target process 32155 terminated before first instrumented API call.
-==PROF== Target process 32154 terminated before first instrumented API call.
-==PROF== Target process 32157 terminated before first instrumented API call.
-==PROF== Target process 32156 terminated before first instrumented API call.
-==PROF== Target process 32158 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 25: 0%....50%....100% - 43 passes
-==PROF== Target process 32160 terminated before first instrumented API call.
-==PROF== Target process 32159 terminated before first instrumented API call.
-==PROF== Target process 32162 terminated before first instrumented API call.
-==PROF== Target process 32161 terminated before first instrumented API call.
-==PROF== Target process 32163 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 26: 0%....50%....100% - 43 passes
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 27: 0%....50%....100% - 43 passes
-==PROF== Target process 32165 terminated before first instrumented API call.
-==PROF== Target process 32164 terminated before first instrumented API call.
-==PROF== Target process 32167 terminated before first instrumented API call.
-==PROF== Target process 32166 terminated before first instrumented API call.
-==PROF== Target process 32168 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 28: 0%....50%....100% - 43 passes
-==PROF== Target process 32170 terminated before first instrumented API call.
-==PROF== Target process 32169 terminated before first instrumented API call.
-==PROF== Target process 32172 terminated before first instrumented API call.
-==PROF== Target process 32171 terminated before first instrumented API call.
-==PROF== Target process 32173 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 29: 0%....50%....100% - 43 passes
-==PROF== Target process 32175 terminated before first instrumented API call.
-==PROF== Target process 32174 terminated before first instrumented API call.
-==PROF== Target process 32177 terminated before first instrumented API call.
-==PROF== Target process 32176 terminated before first instrumented API call.
-==PROF== Target process 32178 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 30: 0%....50%....100% - 43 passes
-==PROF== Target process 32180 terminated before first instrumented API call.
-==PROF== Target process 32179 terminated before first instrumented API call.
-==PROF== Target process 32182 terminated before first instrumented API call.
-==PROF== Target process 32181 terminated before first instrumented API call.
-==PROF== Target process 32183 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 31: 0%....50%....100% - 43 passes
-==PROF== Target process 32185 terminated before first instrumented API call.
-==PROF== Target process 32184 terminated before first instrumented API call.
-==PROF== Target process 32187 terminated before first instrumented API call.
-==PROF== Target process 32186 terminated before first instrumented API call.
-==PROF== Target process 32188 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 32: 0%....50%....100% - 43 passes
-==PROF== Target process 32190 terminated before first instrumented API call.
-==PROF== Target process 32189 terminated before first instrumented API call.
-==PROF== Target process 32192 terminated before first instrumented API call.
-==PROF== Target process 32191 terminated before first instrumented API call.
-==PROF== Target process 32193 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 33: 0%....50%....100% - 43 passes
-==PROF== Target process 32195 terminated before first instrumented API call.
-==PROF== Target process 32194 terminated before first instrumented API call.
-==PROF== Target process 32197 terminated before first instrumented API call.
-==PROF== Target process 32196 terminated before first instrumented API call.
-==PROF== Target process 32198 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 34: 0%....50%....100% - 43 passes
-==PROF== Target process 32200 terminated before first instrumented API call.
-==PROF== Target process 32199 terminated before first instrumented API call.
-==PROF== Target process 32202 terminated before first instrumented API call.
-==PROF== Target process 32201 terminated before first instrumented API call.
-==PROF== Target process 32203 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 35: 0%....50%....100% - 43 passes
-==PROF== Target process 32205 terminated before first instrumented API call.
-==PROF== Target process 32204 terminated before first instrumented API call.
-==PROF== Target process 32207 terminated before first instrumented API call.
-==PROF== Target process 32206 terminated before first instrumented API call.
-==PROF== Target process 32208 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 36: 0%....50%....100% - 43 passes
-==PROF== Target process 32210 terminated before first instrumented API call.
-==PROF== Target process 32209 terminated before first instrumented API call.
-==PROF== Target process 32212 terminated before first instrumented API call.
-==PROF== Target process 32211 terminated before first instrumented API call.
-==PROF== Target process 32213 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 37: 0%....50%....100% - 43 passes
-==PROF== Target process 32215 terminated before first instrumented API call.
-==PROF== Target process 32214 terminated before first instrumented API call.
-==PROF== Target process 32217 terminated before first instrumented API call.
-==PROF== Target process 32216 terminated before first instrumented API call.
-==PROF== Target process 32218 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 38: 0%....50%....100% - 43 passes
-==PROF== Target process 32220 terminated before first instrumented API call.
-==PROF== Target process 32219 terminated before first instrumented API call.
-==PROF== Target process 32222 terminated before first instrumented API call.
-==PROF== Target process 32221 terminated before first instrumented API call.
-==PROF== Target process 32223 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 39: 0%....50%....100% - 43 passes
-==PROF== Target process 32225 terminated before first instrumented API call.
-==PROF== Target process 32224 terminated before first instrumented API call.
-==PROF== Target process 32227 terminated before first instrumented API call.
-==PROF== Target process 32226 terminated before first instrumented API call.
-==PROF== Target process 32228 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 40: 0%....50%....100% - 43 passes
-==PROF== Target process 32230 terminated before first instrumented API call.
-==PROF== Target process 32229 terminated before first instrumented API call.
-==PROF== Target process 32232 terminated before first instrumented API call.
-==PROF== Target process 32231 terminated before first instrumented API call.
-==PROF== Target process 32233 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 41: 0%....50%....100% - 43 passes
-==PROF== Target process 32235 terminated before first instrumented API call.
-==PROF== Target process 32234 terminated before first instrumented API call.
-==PROF== Target process 32237 terminated before first instrumented API call.
-==PROF== Target process 32236 terminated before first instrumented API call.
-==PROF== Target process 32238 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 42: 0%....50%....100% - 43 passes
-==PROF== Target process 32240 terminated before first instrumented API call.
-==PROF== Target process 32239 terminated before first instrumented API call.
-==PROF== Target process 32242 terminated before first instrumented API call.
-==PROF== Target process 32241 terminated before first instrumented API call.
-==PROF== Target process 32243 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 43: 0%....50%....100% - 43 passes
-==PROF== Target process 32245 terminated before first instrumented API call.
-==PROF== Target process 32244 terminated before first instrumented API call.
-==PROF== Target process 32247 terminated before first instrumented API call.
-==PROF== Target process 32246 terminated before first instrumented API call.
-==PROF== Target process 32248 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 44: 0%....50%....100% - 43 passes
-==PROF== Target process 32250 terminated before first instrumented API call.
-==PROF== Target process 32249 terminated before first instrumented API call.
-==PROF== Target process 32252 terminated before first instrumented API call.
-==PROF== Target process 32251 terminated before first instrumented API call.
-==PROF== Target process 32253 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 45: 0%....50%....100% - 43 passes
-==PROF== Target process 32255 terminated before first instrumented API call.
-==PROF== Target process 32254 terminated before first instrumented API call.
-==PROF== Target process 32257 terminated before first instrumented API call.
-==PROF== Target process 32256 terminated before first instrumented API call.
-==PROF== Target process 32258 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 46: 0%....50%....100% - 43 passes
-==PROF== Target process 32260 terminated before first instrumented API call.
-==PROF== Target process 32259 terminated before first instrumented API call.
-==PROF== Target process 32262 terminated before first instrumented API call.
-==PROF== Target process 32261 terminated before first instrumented API call.
-==PROF== Target process 32263 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 47: 0%....50%....100% - 43 passes
-==PROF== Target process 32265 terminated before first instrumented API call.
-==PROF== Target process 32264 terminated before first instrumented API call.
-==PROF== Target process 32267 terminated before first instrumented API call.
-==PROF== Target process 32266 terminated before first instrumented API call.
-==PROF== Target process 32268 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 48: 0%....50%....100% - 43 passes
-==PROF== Target process 32270 terminated before first instrumented API call.
-==PROF== Target process 32269 terminated before first instrumented API call.
-==PROF== Target process 32272 terminated before first instrumented API call.
-==PROF== Target process 32271 terminated before first instrumented API call.
-==PROF== Target process 32273 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 49: 0%....50%....100% - 43 passes
-==PROF== Target process 32275 terminated before first instrumented API call.
-==PROF== Target process 32274 terminated before first instrumented API call.
-==PROF== Target process 32277 terminated before first instrumented API call.
-==PROF== Target process 32276 terminated before first instrumented API call.
-==PROF== Target process 32278 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 50: 0%....50%....100% - 43 passes
-==PROF== Target process 32280 terminated before first instrumented API call.
-==PROF== Target process 32279 terminated before first instrumented API call.
-==PROF== Target process 32282 terminated before first instrumented API call.
-==PROF== Target process 32281 terminated before first instrumented API call.
-==PROF== Target process 32283 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 51: 0%....50%....100% - 43 passes
-==PROF== Target process 32285 terminated before first instrumented API call.
-==PROF== Target process 32284 terminated before first instrumented API call.
-==PROF== Target process 32287 terminated before first instrumented API call.
-==PROF== Target process 32286 terminated before first instrumented API call.
-==PROF== Target process 32288 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 52: 0%....50%....100% - 43 passes
-==PROF== Target process 32290 terminated before first instrumented API call.
-==PROF== Target process 32289 terminated before first instrumented API call.
-==PROF== Target process 32292 terminated before first instrumented API call.
-==PROF== Target process 32291 terminated before first instrumented API call.
-==PROF== Target process 32293 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 53: 0%....50%....100% - 43 passes
-==PROF== Target process 32295 terminated before first instrumented API call.
-==PROF== Target process 32294 terminated before first instrumented API call.
-==PROF== Target process 32297 terminated before first instrumented API call.
-==PROF== Target process 32296 terminated before first instrumented API call.
-==PROF== Target process 32298 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 54: 0%....50%....100% - 43 passes
-==PROF== Target process 32300 terminated before first instrumented API call.
-==PROF== Target process 32299 terminated before first instrumented API call.
-==PROF== Target process 32302 terminated before first instrumented API call.
-==PROF== Target process 32301 terminated before first instrumented API call.
-==PROF== Target process 32303 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 55: 0%....50%....100% - 43 passes
-==PROF== Target process 32305 terminated before first instrumented API call.
-==PROF== Target process 32304 terminated before first instrumented API call.
-==PROF== Target process 32307 terminated before first instrumented API call.
-==PROF== Target process 32308 terminated before first instrumented API call.
-==PROF== Target process 32306 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 56: 0%....50%....100% - 43 passes
-==PROF== Target process 32310 terminated before first instrumented API call.
-==PROF== Target process 32309 terminated before first instrumented API call.
-==PROF== Target process 32312 terminated before first instrumented API call.
-==PROF== Target process 32311 terminated before first instrumented API call.
-==PROF== Target process 32313 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 57: 0%....50%....100% - 43 passes
-==PROF== Target process 32315 terminated before first instrumented API call.
-==PROF== Target process 32314 terminated before first instrumented API call.
-==PROF== Target process 32317 terminated before first instrumented API call.
-==PROF== Target process 32316 terminated before first instrumented API call.
-==PROF== Target process 32318 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 58: 0%....50%....100% - 43 passes
-==PROF== Target process 32320 terminated before first instrumented API call.
-==PROF== Target process 32319 terminated before first instrumented API call.
-==PROF== Target process 32322 terminated before first instrumented API call.
-==PROF== Target process 32321 terminated before first instrumented API call.
-==PROF== Target process 32323 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 59: 0%....50%....100% - 43 passes
-==PROF== Target process 32325 terminated before first instrumented API call.
-==PROF== Target process 32324 terminated before first instrumented API call.
-==PROF== Target process 32327 terminated before first instrumented API call.
-==PROF== Target process 32326 terminated before first instrumented API call.
-==PROF== Target process 32328 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 60: 0%....50%....100% - 43 passes
-==PROF== Target process 32330 terminated before first instrumented API call.
-==PROF== Target process 32329 terminated before first instrumented API call.
-==PROF== Target process 32332 terminated before first instrumented API call.
-==PROF== Target process 32331 terminated before first instrumented API call.
-==PROF== Target process 32333 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 61: 0%....50%....100% - 43 passes
-==PROF== Target process 32335 terminated before first instrumented API call.
-==PROF== Target process 32334 terminated before first instrumented API call.
-==PROF== Target process 32337 terminated before first instrumented API call.
-==PROF== Target process 32336 terminated before first instrumented API call.
-==PROF== Target process 32338 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 62: 0%....50%....100% - 43 passes
-==PROF== Target process 32340 terminated before first instrumented API call.
-==PROF== Target process 32339 terminated before first instrumented API call.
-==PROF== Target process 32342 terminated before first instrumented API call.
-==PROF== Target process 32341 terminated before first instrumented API call.
-==PROF== Target process 32343 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 63: 0%....50%....100% - 43 passes
-==PROF== Target process 32345 terminated before first instrumented API call.
-==PROF== Target process 32344 terminated before first instrumented API call.
-==PROF== Target process 32347 terminated before first instrumented API call.
-==PROF== Target process 32346 terminated before first instrumented API call.
-==PROF== Target process 32348 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 64: 0%....50%....100% - 43 passes
-==PROF== Target process 32350 terminated before first instrumented API call.
-==PROF== Target process 32349 terminated before first instrumented API call.
-==PROF== Target process 32352 terminated before first instrumented API call.
-==PROF== Target process 32351 terminated before first instrumented API call.
-==PROF== Target process 32353 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 65: 0%....50%....100% - 43 passes
-==PROF== Target process 32355 terminated before first instrumented API call.
-==PROF== Target process 32354 terminated before first instrumented API call.
-==PROF== Target process 32357 terminated before first instrumented API call.
-==PROF== Target process 32356 terminated before first instrumented API call.
-==PROF== Target process 32358 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 66: 0%....50%....100% - 43 passes
-==PROF== Target process 32360 terminated before first instrumented API call.
-==PROF== Target process 32359 terminated before first instrumented API call.
-==PROF== Target process 32362 terminated before first instrumented API call.
-==PROF== Target process 32361 terminated before first instrumented API call.
-==PROF== Target process 32363 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 67: 0%....50%....100% - 43 passes
-==PROF== Target process 32365 terminated before first instrumented API call.
-==PROF== Target process 32364 terminated before first instrumented API call.
-==PROF== Target process 32367 terminated before first instrumented API call.
-==PROF== Target process 32366 terminated before first instrumented API call.
-==PROF== Target process 32368 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 68: 0%....50%....100% - 43 passes
-==PROF== Target process 32370 terminated before first instrumented API call.
-==PROF== Target process 32369 terminated before first instrumented API call.
-==PROF== Target process 32372 terminated before first instrumented API call.
-==PROF== Target process 32371 terminated before first instrumented API call.
-==PROF== Target process 32373 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 69: 0%....50%....100% - 43 passes
-==PROF== Target process 32375 terminated before first instrumented API call.
-==PROF== Target process 32374 terminated before first instrumented API call.
-==PROF== Target process 32377 terminated before first instrumented API call.
-==PROF== Target process 32376 terminated before first instrumented API call.
-==PROF== Target process 32378 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 70: 0%....50%....100% - 43 passes
-==PROF== Target process 32380 terminated before first instrumented API call.
-==PROF== Target process 32379 terminated before first instrumented API call.
-==PROF== Target process 32382 terminated before first instrumented API call.
-==PROF== Target process 32381 terminated before first instrumented API call.
-==PROF== Target process 32383 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 71: 0%....50%....100% - 43 passes
-==PROF== Target process 32385 terminated before first instrumented API call.
-==PROF== Target process 32384 terminated before first instrumented API call.
-==PROF== Target process 32387 terminated before first instrumented API call.
-==PROF== Target process 32386 terminated before first instrumented API call.
-==PROF== Target process 32388 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 72: 0%....50%....100% - 43 passes
-==PROF== Target process 32390 terminated before first instrumented API call.
-==PROF== Target process 32389 terminated before first instrumented API call.
-==PROF== Target process 32392 terminated before first instrumented API call.
-==PROF== Target process 32391 terminated before first instrumented API call.
-==PROF== Target process 32393 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 73: 0%....50%....100% - 43 passes
-==PROF== Target process 32395 terminated before first instrumented API call.
-==PROF== Target process 32394 terminated before first instrumented API call.
-==PROF== Target process 32397 terminated before first instrumented API call.
-==PROF== Target process 32396 terminated before first instrumented API call.
-==PROF== Target process 32398 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 74: 0%....50%....100% - 43 passes
-==PROF== Target process 32400 terminated before first instrumented API call.
-==PROF== Target process 32399 terminated before first instrumented API call.
-==PROF== Target process 32402 terminated before first instrumented API call.
-==PROF== Target process 32401 terminated before first instrumented API call.
-==PROF== Target process 32403 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 75: 0%....50%....100% - 43 passes
-==PROF== Target process 32405 terminated before first instrumented API call.
-==PROF== Target process 32404 terminated before first instrumented API call.
-==PROF== Target process 32407 terminated before first instrumented API call.
-==PROF== Target process 32406 terminated before first instrumented API call.
-==PROF== Target process 32408 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 76: 0%....50%....100% - 43 passes
-==PROF== Target process 32410 terminated before first instrumented API call.
-==PROF== Target process 32409 terminated before first instrumented API call.
-==PROF== Target process 32412 terminated before first instrumented API call.
-==PROF== Target process 32411 terminated before first instrumented API call.
-==PROF== Target process 32413 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 77: 0%....50%....100% - 43 passes
-==PROF== Target process 32415 terminated before first instrumented API call.
-==PROF== Target process 32414 terminated before first instrumented API call.
-==PROF== Target process 32417 terminated before first instrumented API call.
-==PROF== Target process 32416 terminated before first instrumented API call.
-==PROF== Target process 32418 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 78: 0%....50%....100% - 43 passes
-==PROF== Target process 32420 terminated before first instrumented API call.
-==PROF== Target process 32419 terminated before first instrumented API call.
-==PROF== Target process 32422 terminated before first instrumented API call.
-==PROF== Target process 32421 terminated before first instrumented API call.
-==PROF== Target process 32423 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 79: 0%....50%....100% - 43 passes
-==PROF== Target process 32425 terminated before first instrumented API call.
-==PROF== Target process 32424 terminated before first instrumented API call.
-==PROF== Target process 32427 terminated before first instrumented API call.
-==PROF== Target process 32426 terminated before first instrumented API call.
-==PROF== Target process 32428 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 80: 0%....50%....100% - 43 passes
-==PROF== Target process 32430 terminated before first instrumented API call.
-==PROF== Target process 32429 terminated before first instrumented API call.
-==PROF== Target process 32432 terminated before first instrumented API call.
-==PROF== Target process 32431 terminated before first instrumented API call.
-==PROF== Target process 32433 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 81: 0%....50%....100% - 43 passes
-==PROF== Target process 32435 terminated before first instrumented API call.
-==PROF== Target process 32434 terminated before first instrumented API call.
-==PROF== Target process 32437 terminated before first instrumented API call.
-==PROF== Target process 32436 terminated before first instrumented API call.
-==PROF== Target process 32438 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 82: 0%....50%....100% - 43 passes
-==PROF== Target process 32440 terminated before first instrumented API call.
-==PROF== Target process 32439 terminated before first instrumented API call.
-==PROF== Target process 32442 terminated before first instrumented API call.
-==PROF== Target process 32441 terminated before first instrumented API call.
-==PROF== Target process 32443 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 83: 0%....50%....100% - 43 passes
-==PROF== Target process 32445 terminated before first instrumented API call.
-==PROF== Target process 32444 terminated before first instrumented API call.
-==PROF== Target process 32447 terminated before first instrumented API call.
-==PROF== Target process 32446 terminated before first instrumented API call.
-==PROF== Target process 32448 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 84: 0%....50%....100% - 43 passes
-==PROF== Target process 32450 terminated before first instrumented API call.
-==PROF== Target process 32449 terminated before first instrumented API call.
-==PROF== Target process 32452 terminated before first instrumented API call.
-==PROF== Target process 32451 terminated before first instrumented API call.
-==PROF== Target process 32453 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 85: 0%....50%....100% - 43 passes
-==PROF== Target process 32455 terminated before first instrumented API call.
-==PROF== Target process 32454 terminated before first instrumented API call.
-==PROF== Target process 32457 terminated before first instrumented API call.
-==PROF== Target process 32456 terminated before first instrumented API call.
-==PROF== Target process 32458 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 86: 0%....50%....100% - 43 passes
-==PROF== Target process 32460 terminated before first instrumented API call.
-==PROF== Target process 32459 terminated before first instrumented API call.
-==PROF== Target process 32462 terminated before first instrumented API call.
-==PROF== Target process 32461 terminated before first instrumented API call.
-==PROF== Target process 32463 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 87: 0%....50%....100% - 43 passes
-==PROF== Target process 32465 terminated before first instrumented API call.
-==PROF== Target process 32464 terminated before first instrumented API call.
-==PROF== Target process 32467 terminated before first instrumented API call.
-==PROF== Target process 32466 terminated before first instrumented API call.
-==PROF== Target process 32468 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 88: 0%....50%....100% - 43 passes
-==PROF== Target process 32470 terminated before first instrumented API call.
-==PROF== Target process 32469 terminated before first instrumented API call.
-==PROF== Target process 32472 terminated before first instrumented API call.
-==PROF== Target process 32471 terminated before first instrumented API call.
-==PROF== Target process 32473 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 89: 0%....50%....100% - 43 passes
-==PROF== Target process 32475 terminated before first instrumented API call.
-==PROF== Target process 32474 terminated before first instrumented API call.
-==PROF== Target process 32477 terminated before first instrumented API call.
-==PROF== Target process 32476 terminated before first instrumented API call.
-==PROF== Target process 32478 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 90: 0%....50%....100% - 43 passes
-==PROF== Target process 32480 terminated before first instrumented API call.
-==PROF== Target process 32479 terminated before first instrumented API call.
-==PROF== Target process 32482 terminated before first instrumented API call.
-==PROF== Target process 32481 terminated before first instrumented API call.
-==PROF== Target process 32483 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 91: 0%....50%....100% - 43 passes
-==PROF== Target process 32485 terminated before first instrumented API call.
-==PROF== Target process 32484 terminated before first instrumented API call.
-==PROF== Target process 32487 terminated before first instrumented API call.
-==PROF== Target process 32486 terminated before first instrumented API call.
-==PROF== Target process 32488 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 92: 0%....50%....100% - 43 passes
-==PROF== Target process 32490 terminated before first instrumented API call.
-==PROF== Target process 32489 terminated before first instrumented API call.
-==PROF== Target process 32492 terminated before first instrumented API call.
-==PROF== Target process 32491 terminated before first instrumented API call.
-==PROF== Target process 32493 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 93: 0%....50%....100% - 43 passes
-==PROF== Target process 32495 terminated before first instrumented API call.
-==PROF== Target process 32494 terminated before first instrumented API call.
-==PROF== Target process 32497 terminated before first instrumented API call.
-==PROF== Target process 32496 terminated before first instrumented API call.
-==PROF== Target process 32498 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 94: 0%....50%....100% - 43 passes
-==PROF== Target process 32500 terminated before first instrumented API call.
-==PROF== Target process 32499 terminated before first instrumented API call.
-==PROF== Target process 32502 terminated before first instrumented API call.
-==PROF== Target process 32501 terminated before first instrumented API call.
-==PROF== Target process 32503 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 95: 0%....50%....100% - 43 passes
-==PROF== Target process 32505 terminated before first instrumented API call.
-==PROF== Target process 32504 terminated before first instrumented API call.
-==PROF== Target process 32507 terminated before first instrumented API call.
-==PROF== Target process 32506 terminated before first instrumented API call.
-==PROF== Target process 32508 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 96: 0%....50%....100% - 43 passes
-==PROF== Target process 32510 terminated before first instrumented API call.
-==PROF== Target process 32509 terminated before first instrumented API call.
-==PROF== Target process 32512 terminated before first instrumented API call.
-==PROF== Target process 32511 terminated before first instrumented API call.
-==PROF== Target process 32513 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 97: 0%....50%....100% - 43 passes
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 98: 0%....50%....100% - 43 passes
-==PROF== Target process 32515 terminated before first instrumented API call.
-==PROF== Target process 32514 terminated before first instrumented API call.
-==PROF== Target process 32517 terminated before first instrumented API call.
-==PROF== Target process 32516 terminated before first instrumented API call.
-==PROF== Target process 32518 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 99: 0%....50%....100% - 43 passes
-==PROF== Target process 32520 terminated before first instrumented API call.
-==PROF== Target process 32519 terminated before first instrumented API call.
-==PROF== Target process 32522 terminated before first instrumented API call.
-==PROF== Target process 32521 terminated before first instrumented API call.
-==PROF== Target process 32523 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 100: 0%....50%....100% - 43 passes
-==PROF== Target process 32525 terminated before first instrumented API call.
-==PROF== Target process 32524 terminated before first instrumented API call.
-==PROF== Target process 32527 terminated before first instrumented API call.
-==PROF== Target process 32526 terminated before first instrumented API call.
-==PROF== Target process 32528 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 101: 0%....50%....100% - 43 passes
-==PROF== Target process 32530 terminated before first instrumented API call.
-==PROF== Target process 32529 terminated before first instrumented API call.
-==PROF== Target process 32532 terminated before first instrumented API call.
-==PROF== Target process 32531 terminated before first instrumented API call.
-==PROF== Target process 32533 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 102: 0%....50%....100% - 43 passes
-==PROF== Target process 32535 terminated before first instrumented API call.
-==PROF== Target process 32534 terminated before first instrumented API call.
-==PROF== Target process 32537 terminated before first instrumented API call.
-==PROF== Target process 32536 terminated before first instrumented API call.
-==PROF== Target process 32538 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 103: 0%....50%....100% - 43 passes
-==PROF== Target process 32540 terminated before first instrumented API call.
-==PROF== Target process 32539 terminated before first instrumented API call.
-==PROF== Target process 32542 terminated before first instrumented API call.
-==PROF== Target process 32541 terminated before first instrumented API call.
-==PROF== Target process 32543 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 104: 0%....50%....100% - 43 passes
-==PROF== Target process 32545 terminated before first instrumented API call.
-==PROF== Target process 32544 terminated before first instrumented API call.
-==PROF== Target process 32547 terminated before first instrumented API call.
-==PROF== Target process 32546 terminated before first instrumented API call.
-==PROF== Target process 32548 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 105: 0%....50%....100% - 43 passes
-==PROF== Target process 32550 terminated before first instrumented API call.
-==PROF== Target process 32549 terminated before first instrumented API call.
-==PROF== Target process 32552 terminated before first instrumented API call.
-==PROF== Target process 32551 terminated before first instrumented API call.
-==PROF== Target process 32553 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_fused_con..." - 106: 0%....50%....100% - 43 passes
-==PROF== Target process 32555 terminated before first instrumented API call.
-==PROF== Target process 32554 terminated before first instrumented API call.
-==PROF== Target process 32557 terminated before first instrumented API call.
-==PROF== Target process 32556 terminated before first instrumented API call.
-==PROF== Target process 32558 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 107: 0%....50%....100% - 43 passes
-==PROF== Target process 32560 terminated before first instrumented API call.
-==PROF== Target process 32559 terminated before first instrumented API call.
-==PROF== Target process 32562 terminated before first instrumented API call.
-==PROF== Target process 32561 terminated before first instrumented API call.
-==PROF== Target process 32563 terminated before first instrumented API call.
-==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 108: 0%....50%....100% - 43 passes
-==PROF== Disconnected from process 31989
+==PROF== Connected to process 11284 (/workspace/anaconda3/bin/python3.9)
+==PROF== Target process 11328 terminated before first instrumented API call.
+==PROF== Target process 11327 terminated before first instrumented API call.
+==PROF== Target process 11330 terminated before first instrumented API call.
+==PROF== Target process 11329 terminated before first instrumented API call.
+==PROF== Target process 11331 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 0: 0%....50%....100% - 1 pass
+==PROF== Target process 11334 terminated before first instrumented API call.
+==PROF== Target process 11333 terminated before first instrumented API call.
+==PROF== Target process 11336 terminated before first instrumented API call.
+==PROF== Target process 11335 terminated before first instrumented API call.
+==PROF== Target process 11337 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_maxpool_1..." - 1: 0%....50%....100% - 1 pass
+==PROF== Target process 11339 terminated before first instrumented API call.
+==PROF== Target process 11338 terminated before first instrumented API call.
+==PROF== Target process 11341 terminated before first instrumented API call.
+==PROF== Target process 11340 terminated before first instrumented API call.
+==PROF== Target process 11342 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 2: 0%....50%....100% - 1 pass
+==PROF== Target process 11344 terminated before first instrumented API call.
+==PROF== Target process 11343 terminated before first instrumented API call.
+==PROF== Target process 11346 terminated before first instrumented API call.
+==PROF== Target process 11345 terminated before first instrumented API call.
+==PROF== Target process 11347 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 3: 0%....50%....100% - 1 pass
+==PROF== Target process 11349 terminated before first instrumented API call.
+==PROF== Target process 11348 terminated before first instrumented API call.
+==PROF== Target process 11351 terminated before first instrumented API call.
+==PROF== Target process 11350 terminated before first instrumented API call.
+==PROF== Target process 11352 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 4: 0%....50%....100% - 1 pass
+==PROF== Target process 11353 terminated before first instrumented API call.
+==PROF== Target process 11354 terminated before first instrumented API call.
+==PROF== Target process 11356 terminated before first instrumented API call.
+==PROF== Target process 11355 terminated before first instrumented API call.
+==PROF== Target process 11357 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 5: 0%....50%....100% - 1 pass
+==PROF== Target process 11358 terminated before first instrumented API call.
+==PROF== Target process 11359 terminated before first instrumented API call.
+==PROF== Target process 11361 terminated before first instrumented API call.
+==PROF== Target process 11360 terminated before first instrumented API call.
+==PROF== Target process 11362 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 6: 0%....50%....100% - 1 pass
+==PROF== Target process 11364 terminated before first instrumented API call.
+==PROF== Target process 11363 terminated before first instrumented API call.
+==PROF== Target process 11366 terminated before first instrumented API call.
+==PROF== Target process 11365 terminated before first instrumented API call.
+==PROF== Target process 11367 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 7: 0%....50%....100% - 1 pass
+==PROF== Target process 11369 terminated before first instrumented API call.
+==PROF== Target process 11368 terminated before first instrumented API call.
+==PROF== Target process 11371 terminated before first instrumented API call.
+==PROF== Target process 11370 terminated before first instrumented API call.
+==PROF== Target process 11372 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 8: 0%....50%....100% - 1 pass
+==PROF== Target process 11374 terminated before first instrumented API call.
+==PROF== Target process 11373 terminated before first instrumented API call.
+==PROF== Target process 11376 terminated before first instrumented API call.
+==PROF== Target process 11375 terminated before first instrumented API call.
+==PROF== Target process 11377 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 9: 0%....50%....100% - 1 pass
+==PROF== Target process 11379 terminated before first instrumented API call.
+==PROF== Target process 11378 terminated before first instrumented API call.
+==PROF== Target process 11381 terminated before first instrumented API call.
+==PROF== Target process 11380 terminated before first instrumented API call.
+==PROF== Target process 11382 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 10: 0%....50%....100% - 1 pass
+==PROF== Target process 11384 terminated before first instrumented API call.
+==PROF== Target process 11383 terminated before first instrumented API call.
+==PROF== Target process 11386 terminated before first instrumented API call.
+==PROF== Target process 11385 terminated before first instrumented API call.
+==PROF== Target process 11387 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 11: 0%....50%....100% - 1 pass
+==PROF== Target process 11389 terminated before first instrumented API call.
+==PROF== Target process 11388 terminated before first instrumented API call.
+==PROF== Target process 11391 terminated before first instrumented API call.
+==PROF== Target process 11390 terminated before first instrumented API call.
+==PROF== Target process 11392 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 12: 0%....50%....100% - 1 pass
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 13: 0%....50%....100% - 1 pass
+==PROF== Target process 11394 terminated before first instrumented API call.
+==PROF== Target process 11393 terminated before first instrumented API call.
+==PROF== Target process 11396 terminated before first instrumented API call.
+==PROF== Target process 11395 terminated before first instrumented API call.
+==PROF== Target process 11397 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 14: 0%....50%....100% - 1 pass
+==PROF== Target process 11399 terminated before first instrumented API call.
+==PROF== Target process 11398 terminated before first instrumented API call.
+==PROF== Target process 11401 terminated before first instrumented API call.
+==PROF== Target process 11400 terminated before first instrumented API call.
+==PROF== Target process 11402 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 15: 0%....50%....100% - 1 pass
+==PROF== Target process 11404 terminated before first instrumented API call.
+==PROF== Target process 11403 terminated before first instrumented API call.
+==PROF== Target process 11406 terminated before first instrumented API call.
+==PROF== Target process 11405 terminated before first instrumented API call.
+==PROF== Target process 11407 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 16: 0%....50%....100% - 1 pass
+==PROF== Target process 11409 terminated before first instrumented API call.
+==PROF== Target process 11408 terminated before first instrumented API call.
+==PROF== Target process 11411 terminated before first instrumented API call.
+==PROF== Target process 11410 terminated before first instrumented API call.
+==PROF== Target process 11412 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 17: 0%....50%....100% - 1 pass
+==PROF== Target process 11413 terminated before first instrumented API call.
+==PROF== Target process 11414 terminated before first instrumented API call.
+==PROF== Target process 11416 terminated before first instrumented API call.
+==PROF== Target process 11415 terminated before first instrumented API call.
+==PROF== Target process 11417 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 18: 0%....50%....100% - 1 pass
+==PROF== Target process 11419 terminated before first instrumented API call.
+==PROF== Target process 11418 terminated before first instrumented API call.
+==PROF== Target process 11421 terminated before first instrumented API call.
+==PROF== Target process 11420 terminated before first instrumented API call.
+==PROF== Target process 11422 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 19: 0%....50%....100% - 1 pass
+==PROF== Target process 11424 terminated before first instrumented API call.
+==PROF== Target process 11423 terminated before first instrumented API call.
+==PROF== Target process 11426 terminated before first instrumented API call.
+==PROF== Target process 11425 terminated before first instrumented API call.
+==PROF== Target process 11427 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 20: 0%....50%....100% - 1 pass
+==PROF== Target process 11429 terminated before first instrumented API call.
+==PROF== Target process 11428 terminated before first instrumented API call.
+==PROF== Target process 11431 terminated before first instrumented API call.
+==PROF== Target process 11430 terminated before first instrumented API call.
+==PROF== Target process 11432 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 21: 0%....50%....100% - 1 pass
+==PROF== Target process 11434 terminated before first instrumented API call.
+==PROF== Target process 11433 terminated before first instrumented API call.
+==PROF== Target process 11436 terminated before first instrumented API call.
+==PROF== Target process 11435 terminated before first instrumented API call.
+==PROF== Target process 11437 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 22: 0%....50%....100% - 1 pass
+==PROF== Target process 11439 terminated before first instrumented API call.
+==PROF== Target process 11438 terminated before first instrumented API call.
+==PROF== Target process 11441 terminated before first instrumented API call.
+==PROF== Target process 11440 terminated before first instrumented API call.
+==PROF== Target process 11442 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 23: 0%....50%....100% - 1 pass
+==PROF== Target process 11444 terminated before first instrumented API call.
+==PROF== Target process 11443 terminated before first instrumented API call.
+==PROF== Target process 11446 terminated before first instrumented API call.
+==PROF== Target process 11445 terminated before first instrumented API call.
+==PROF== Target process 11447 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 24: 0%....50%....100% - 1 pass
+==PROF== Target process 11449 terminated before first instrumented API call.
+==PROF== Target process 11448 terminated before first instrumented API call.
+==PROF== Target process 11451 terminated before first instrumented API call.
+==PROF== Target process 11450 terminated before first instrumented API call.
+==PROF== Target process 11452 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 25: 0%....50%....100% - 1 pass
+==PROF== Target process 11454 terminated before first instrumented API call.
+==PROF== Target process 11453 terminated before first instrumented API call.
+==PROF== Target process 11456 terminated before first instrumented API call.
+==PROF== Target process 11455 terminated before first instrumented API call.
+==PROF== Target process 11457 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 26: 0%....50%....100% - 1 pass
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 27: 0%....50%....100% - 1 pass
+==PROF== Target process 11459 terminated before first instrumented API call.
+==PROF== Target process 11458 terminated before first instrumented API call.
+==PROF== Target process 11461 terminated before first instrumented API call.
+==PROF== Target process 11460 terminated before first instrumented API call.
+==PROF== Target process 11462 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 28: 0%....50%....100% - 1 pass
+==PROF== Target process 11464 terminated before first instrumented API call.
+==PROF== Target process 11463 terminated before first instrumented API call.
+==PROF== Target process 11466 terminated before first instrumented API call.
+==PROF== Target process 11465 terminated before first instrumented API call.
+==PROF== Target process 11467 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 29: 0%....50%....100% - 1 pass
+==PROF== Target process 11469 terminated before first instrumented API call.
+==PROF== Target process 11468 terminated before first instrumented API call.
+==PROF== Target process 11471 terminated before first instrumented API call.
+==PROF== Target process 11470 terminated before first instrumented API call.
+==PROF== Target process 11472 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 30: 0%....50%....100% - 1 pass
+==PROF== Target process 11474 terminated before first instrumented API call.
+==PROF== Target process 11473 terminated before first instrumented API call.
+==PROF== Target process 11476 terminated before first instrumented API call.
+==PROF== Target process 11475 terminated before first instrumented API call.
+==PROF== Target process 11477 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 31: 0%....50%....100% - 1 pass
+==PROF== Target process 11479 terminated before first instrumented API call.
+==PROF== Target process 11478 terminated before first instrumented API call.
+==PROF== Target process 11481 terminated before first instrumented API call.
+==PROF== Target process 11480 terminated before first instrumented API call.
+==PROF== Target process 11482 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 32: 0%....50%....100% - 1 pass
+==PROF== Target process 11484 terminated before first instrumented API call.
+==PROF== Target process 11483 terminated before first instrumented API call.
+==PROF== Target process 11486 terminated before first instrumented API call.
+==PROF== Target process 11485 terminated before first instrumented API call.
+==PROF== Target process 11487 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 33: 0%....50%....100% - 1 pass
+==PROF== Target process 11489 terminated before first instrumented API call.
+==PROF== Target process 11488 terminated before first instrumented API call.
+==PROF== Target process 11491 terminated before first instrumented API call.
+==PROF== Target process 11490 terminated before first instrumented API call.
+==PROF== Target process 11492 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 34: 0%....50%....100% - 1 pass
+==PROF== Target process 11494 terminated before first instrumented API call.
+==PROF== Target process 11493 terminated before first instrumented API call.
+==PROF== Target process 11496 terminated before first instrumented API call.
+==PROF== Target process 11495 terminated before first instrumented API call.
+==PROF== Target process 11497 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 35: 0%....50%....100% - 1 pass
+==PROF== Target process 11499 terminated before first instrumented API call.
+==PROF== Target process 11498 terminated before first instrumented API call.
+==PROF== Target process 11501 terminated before first instrumented API call.
+==PROF== Target process 11500 terminated before first instrumented API call.
+==PROF== Target process 11502 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 36: 0%....50%....100% - 1 pass
+==PROF== Target process 11504 terminated before first instrumented API call.
+==PROF== Target process 11503 terminated before first instrumented API call.
+==PROF== Target process 11506 terminated before first instrumented API call.
+==PROF== Target process 11505 terminated before first instrumented API call.
+==PROF== Target process 11507 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 37: 0%....50%....100% - 1 pass
+==PROF== Target process 11509 terminated before first instrumented API call.
+==PROF== Target process 11508 terminated before first instrumented API call.
+==PROF== Target process 11511 terminated before first instrumented API call.
+==PROF== Target process 11510 terminated before first instrumented API call.
+==PROF== Target process 11512 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 38: 0%....50%....100% - 1 pass
+==PROF== Target process 11514 terminated before first instrumented API call.
+==PROF== Target process 11513 terminated before first instrumented API call.
+==PROF== Target process 11516 terminated before first instrumented API call.
+==PROF== Target process 11515 terminated before first instrumented API call.
+==PROF== Target process 11517 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 39: 0%....50%....100% - 1 pass
+==PROF== Target process 11519 terminated before first instrumented API call.
+==PROF== Target process 11518 terminated before first instrumented API call.
+==PROF== Target process 11521 terminated before first instrumented API call.
+==PROF== Target process 11520 terminated before first instrumented API call.
+==PROF== Target process 11522 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 40: 0%....50%....100% - 1 pass
+==PROF== Target process 11524 terminated before first instrumented API call.
+==PROF== Target process 11523 terminated before first instrumented API call.
+==PROF== Target process 11526 terminated before first instrumented API call.
+==PROF== Target process 11525 terminated before first instrumented API call.
+==PROF== Target process 11527 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 41: 0%....50%....100% - 1 pass
+==PROF== Target process 11529 terminated before first instrumented API call.
+==PROF== Target process 11528 terminated before first instrumented API call.
+==PROF== Target process 11531 terminated before first instrumented API call.
+==PROF== Target process 11530 terminated before first instrumented API call.
+==PROF== Target process 11532 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 42: 0%....50%....100% - 1 pass
+==PROF== Target process 11534 terminated before first instrumented API call.
+==PROF== Target process 11533 terminated before first instrumented API call.
+==PROF== Target process 11536 terminated before first instrumented API call.
+==PROF== Target process 11535 terminated before first instrumented API call.
+==PROF== Target process 11537 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 43: 0%....50%....100% - 1 pass
+==PROF== Target process 11539 terminated before first instrumented API call.
+==PROF== Target process 11538 terminated before first instrumented API call.
+==PROF== Target process 11541 terminated before first instrumented API call.
+==PROF== Target process 11540 terminated before first instrumented API call.
+==PROF== Target process 11542 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 44: 0%....50%....100% - 1 pass
+==PROF== Target process 11544 terminated before first instrumented API call.
+==PROF== Target process 11543 terminated before first instrumented API call.
+==PROF== Target process 11546 terminated before first instrumented API call.
+==PROF== Target process 11545 terminated before first instrumented API call.
+==PROF== Target process 11547 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 45: 0%....50%....100% - 1 pass
+==PROF== Target process 11549 terminated before first instrumented API call.
+==PROF== Target process 11548 terminated before first instrumented API call.
+==PROF== Target process 11551 terminated before first instrumented API call.
+==PROF== Target process 11550 terminated before first instrumented API call.
+==PROF== Target process 11552 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 46: 0%....50%....100% - 1 pass
+==PROF== Target process 11554 terminated before first instrumented API call.
+==PROF== Target process 11553 terminated before first instrumented API call.
+==PROF== Target process 11556 terminated before first instrumented API call.
+==PROF== Target process 11555 terminated before first instrumented API call.
+==PROF== Target process 11557 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 47: 0%....50%....100% - 1 pass
+==PROF== Target process 11559 terminated before first instrumented API call.
+==PROF== Target process 11558 terminated before first instrumented API call.
+==PROF== Target process 11561 terminated before first instrumented API call.
+==PROF== Target process 11560 terminated before first instrumented API call.
+==PROF== Target process 11562 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 48: 0%....50%....100% - 1 pass
+==PROF== Target process 11564 terminated before first instrumented API call.
+==PROF== Target process 11563 terminated before first instrumented API call.
+==PROF== Target process 11566 terminated before first instrumented API call.
+==PROF== Target process 11565 terminated before first instrumented API call.
+==PROF== Target process 11567 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 49: 0%....50%....100% - 1 pass
+==PROF== Target process 11569 terminated before first instrumented API call.
+==PROF== Target process 11568 terminated before first instrumented API call.
+==PROF== Target process 11571 terminated before first instrumented API call.
+==PROF== Target process 11570 terminated before first instrumented API call.
+==PROF== Target process 11572 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 50: 0%....50%....100% - 1 pass
+==PROF== Target process 11574 terminated before first instrumented API call.
+==PROF== Target process 11573 terminated before first instrumented API call.
+==PROF== Target process 11576 terminated before first instrumented API call.
+==PROF== Target process 11575 terminated before first instrumented API call.
+==PROF== Target process 11577 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 51: 0%....50%....100% - 1 pass
+==PROF== Target process 11579 terminated before first instrumented API call.
+==PROF== Target process 11578 terminated before first instrumented API call.
+==PROF== Target process 11581 terminated before first instrumented API call.
+==PROF== Target process 11580 terminated before first instrumented API call.
+==PROF== Target process 11582 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 52: 0%....50%....100% - 1 pass
+==PROF== Target process 11584 terminated before first instrumented API call.
+==PROF== Target process 11583 terminated before first instrumented API call.
+==PROF== Target process 11586 terminated before first instrumented API call.
+==PROF== Target process 11585 terminated before first instrumented API call.
+==PROF== Target process 11587 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 53: 0%....50%....100% - 1 pass
+==PROF== Target process 11589 terminated before first instrumented API call.
+==PROF== Target process 11588 terminated before first instrumented API call.
+==PROF== Target process 11591 terminated before first instrumented API call.
+==PROF== Target process 11590 terminated before first instrumented API call.
+==PROF== Target process 11592 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 54: 0%....50%....100% - 1 pass
+==PROF== Target process 11593 terminated before first instrumented API call.
+==PROF== Target process 11594 terminated before first instrumented API call.
+==PROF== Target process 11596 terminated before first instrumented API call.
+==PROF== Target process 11595 terminated before first instrumented API call.
+==PROF== Target process 11597 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 55: 0%....50%....100% - 1 pass
+==PROF== Target process 11599 terminated before first instrumented API call.
+==PROF== Target process 11598 terminated before first instrumented API call.
+==PROF== Target process 11601 terminated before first instrumented API call.
+==PROF== Target process 11600 terminated before first instrumented API call.
+==PROF== Target process 11602 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 56: 0%....50%....100% - 1 pass
+==PROF== Target process 11604 terminated before first instrumented API call.
+==PROF== Target process 11603 terminated before first instrumented API call.
+==PROF== Target process 11606 terminated before first instrumented API call.
+==PROF== Target process 11605 terminated before first instrumented API call.
+==PROF== Target process 11607 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 57: 0%....50%....100% - 1 pass
+==PROF== Target process 11608 terminated before first instrumented API call.
+==PROF== Target process 11609 terminated before first instrumented API call.
+==PROF== Target process 11611 terminated before first instrumented API call.
+==PROF== Target process 11610 terminated before first instrumented API call.
+==PROF== Target process 11612 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 58: 0%....50%....100% - 1 pass
+==PROF== Target process 11614 terminated before first instrumented API call.
+==PROF== Target process 11613 terminated before first instrumented API call.
+==PROF== Target process 11616 terminated before first instrumented API call.
+==PROF== Target process 11615 terminated before first instrumented API call.
+==PROF== Target process 11617 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 59: 0%....50%....100% - 1 pass
+==PROF== Target process 11619 terminated before first instrumented API call.
+==PROF== Target process 11618 terminated before first instrumented API call.
+==PROF== Target process 11621 terminated before first instrumented API call.
+==PROF== Target process 11620 terminated before first instrumented API call.
+==PROF== Target process 11622 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 60: 0%....50%....100% - 1 pass
+==PROF== Target process 11624 terminated before first instrumented API call.
+==PROF== Target process 11623 terminated before first instrumented API call.
+==PROF== Target process 11626 terminated before first instrumented API call.
+==PROF== Target process 11625 terminated before first instrumented API call.
+==PROF== Target process 11627 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 61: 0%....50%....100% - 1 pass
+==PROF== Target process 11629 terminated before first instrumented API call.
+==PROF== Target process 11628 terminated before first instrumented API call.
+==PROF== Target process 11631 terminated before first instrumented API call.
+==PROF== Target process 11630 terminated before first instrumented API call.
+==PROF== Target process 11632 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 62: 0%....50%....100% - 1 pass
+==PROF== Target process 11634 terminated before first instrumented API call.
+==PROF== Target process 11633 terminated before first instrumented API call.
+==PROF== Target process 11636 terminated before first instrumented API call.
+==PROF== Target process 11635 terminated before first instrumented API call.
+==PROF== Target process 11637 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 63: 0%....50%....100% - 1 pass
+==PROF== Target process 11639 terminated before first instrumented API call.
+==PROF== Target process 11638 terminated before first instrumented API call.
+==PROF== Target process 11641 terminated before first instrumented API call.
+==PROF== Target process 11640 terminated before first instrumented API call.
+==PROF== Target process 11642 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 64: 0%....50%....100% - 1 pass
+==PROF== Target process 11644 terminated before first instrumented API call.
+==PROF== Target process 11643 terminated before first instrumented API call.
+==PROF== Target process 11646 terminated before first instrumented API call.
+==PROF== Target process 11645 terminated before first instrumented API call.
+==PROF== Target process 11647 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 65: 0%....50%....100% - 1 pass
+==PROF== Target process 11649 terminated before first instrumented API call.
+==PROF== Target process 11648 terminated before first instrumented API call.
+==PROF== Target process 11651 terminated before first instrumented API call.
+==PROF== Target process 11650 terminated before first instrumented API call.
+==PROF== Target process 11652 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 66: 0%....50%....100% - 1 pass
+==PROF== Target process 11654 terminated before first instrumented API call.
+==PROF== Target process 11653 terminated before first instrumented API call.
+==PROF== Target process 11656 terminated before first instrumented API call.
+==PROF== Target process 11655 terminated before first instrumented API call.
+==PROF== Target process 11657 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 67: 0%....50%....100% - 1 pass
+==PROF== Target process 11659 terminated before first instrumented API call.
+==PROF== Target process 11658 terminated before first instrumented API call.
+==PROF== Target process 11661 terminated before first instrumented API call.
+==PROF== Target process 11660 terminated before first instrumented API call.
+==PROF== Target process 11662 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 68: 0%....50%....100% - 1 pass
+==PROF== Target process 11664 terminated before first instrumented API call.
+==PROF== Target process 11663 terminated before first instrumented API call.
+==PROF== Target process 11666 terminated before first instrumented API call.
+==PROF== Target process 11665 terminated before first instrumented API call.
+==PROF== Target process 11667 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 69: 0%....50%....100% - 1 pass
+==PROF== Target process 11669 terminated before first instrumented API call.
+==PROF== Target process 11668 terminated before first instrumented API call.
+==PROF== Target process 11671 terminated before first instrumented API call.
+==PROF== Target process 11670 terminated before first instrumented API call.
+==PROF== Target process 11672 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 70: 0%....50%....100% - 1 pass
+==PROF== Target process 11674 terminated before first instrumented API call.
+==PROF== Target process 11673 terminated before first instrumented API call.
+==PROF== Target process 11676 terminated before first instrumented API call.
+==PROF== Target process 11675 terminated before first instrumented API call.
+==PROF== Target process 11677 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 71: 0%....50%....100% - 1 pass
+==PROF== Target process 11679 terminated before first instrumented API call.
+==PROF== Target process 11678 terminated before first instrumented API call.
+==PROF== Target process 11681 terminated before first instrumented API call.
+==PROF== Target process 11680 terminated before first instrumented API call.
+==PROF== Target process 11682 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 72: 0%....50%....100% - 1 pass
+==PROF== Target process 11684 terminated before first instrumented API call.
+==PROF== Target process 11683 terminated before first instrumented API call.
+==PROF== Target process 11686 terminated before first instrumented API call.
+==PROF== Target process 11685 terminated before first instrumented API call.
+==PROF== Target process 11687 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 73: 0%....50%....100% - 1 pass
+==PROF== Target process 11689 terminated before first instrumented API call.
+==PROF== Target process 11688 terminated before first instrumented API call.
+==PROF== Target process 11691 terminated before first instrumented API call.
+==PROF== Target process 11690 terminated before first instrumented API call.
+==PROF== Target process 11692 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 74: 0%....50%....100% - 1 pass
+==PROF== Target process 11694 terminated before first instrumented API call.
+==PROF== Target process 11693 terminated before first instrumented API call.
+==PROF== Target process 11696 terminated before first instrumented API call.
+==PROF== Target process 11695 terminated before first instrumented API call.
+==PROF== Target process 11697 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 75: 0%....50%....100% - 1 pass
+==PROF== Target process 11699 terminated before first instrumented API call.
+==PROF== Target process 11698 terminated before first instrumented API call.
+==PROF== Target process 11701 terminated before first instrumented API call.
+==PROF== Target process 11700 terminated before first instrumented API call.
+==PROF== Target process 11702 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 76: 0%....50%....100% - 1 pass
+==PROF== Target process 11704 terminated before first instrumented API call.
+==PROF== Target process 11703 terminated before first instrumented API call.
+==PROF== Target process 11706 terminated before first instrumented API call.
+==PROF== Target process 11705 terminated before first instrumented API call.
+==PROF== Target process 11707 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 77: 0%....50%....100% - 1 pass
+==PROF== Target process 11709 terminated before first instrumented API call.
+==PROF== Target process 11708 terminated before first instrumented API call.
+==PROF== Target process 11711 terminated before first instrumented API call.
+==PROF== Target process 11710 terminated before first instrumented API call.
+==PROF== Target process 11712 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 78: 0%....50%....100% - 1 pass
+==PROF== Target process 11714 terminated before first instrumented API call.
+==PROF== Target process 11713 terminated before first instrumented API call.
+==PROF== Target process 11716 terminated before first instrumented API call.
+==PROF== Target process 11715 terminated before first instrumented API call.
+==PROF== Target process 11717 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 79: 0%....50%....100% - 1 pass
+==PROF== Target process 11719 terminated before first instrumented API call.
+==PROF== Target process 11718 terminated before first instrumented API call.
+==PROF== Target process 11721 terminated before first instrumented API call.
+==PROF== Target process 11720 terminated before first instrumented API call.
+==PROF== Target process 11722 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 80: 0%....50%....100% - 1 pass
+==PROF== Target process 11724 terminated before first instrumented API call.
+==PROF== Target process 11723 terminated before first instrumented API call.
+==PROF== Target process 11726 terminated before first instrumented API call.
+==PROF== Target process 11725 terminated before first instrumented API call.
+==PROF== Target process 11727 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 81: 0%....50%....100% - 1 pass
+==PROF== Target process 11729 terminated before first instrumented API call.
+==PROF== Target process 11728 terminated before first instrumented API call.
+==PROF== Target process 11731 terminated before first instrumented API call.
+==PROF== Target process 11730 terminated before first instrumented API call.
+==PROF== Target process 11732 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 82: 0%....50%....100% - 1 pass
+==PROF== Target process 11734 terminated before first instrumented API call.
+==PROF== Target process 11733 terminated before first instrumented API call.
+==PROF== Target process 11736 terminated before first instrumented API call.
+==PROF== Target process 11735 terminated before first instrumented API call.
+==PROF== Target process 11737 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 83: 0%....50%....100% - 1 pass
+==PROF== Target process 11739 terminated before first instrumented API call.
+==PROF== Target process 11738 terminated before first instrumented API call.
+==PROF== Target process 11741 terminated before first instrumented API call.
+==PROF== Target process 11740 terminated before first instrumented API call.
+==PROF== Target process 11742 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 84: 0%....50%....100% - 1 pass
+==PROF== Target process 11744 terminated before first instrumented API call.
+==PROF== Target process 11743 terminated before first instrumented API call.
+==PROF== Target process 11746 terminated before first instrumented API call.
+==PROF== Target process 11745 terminated before first instrumented API call.
+==PROF== Target process 11747 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 85: 0%....50%....100% - 1 pass
+==PROF== Target process 11749 terminated before first instrumented API call.
+==PROF== Target process 11748 terminated before first instrumented API call.
+==PROF== Target process 11751 terminated before first instrumented API call.
+==PROF== Target process 11750 terminated before first instrumented API call.
+==PROF== Target process 11752 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 86: 0%....50%....100% - 1 pass
+==PROF== Target process 11754 terminated before first instrumented API call.
+==PROF== Target process 11753 terminated before first instrumented API call.
+==PROF== Target process 11755 terminated before first instrumented API call.
+==PROF== Target process 11756 terminated before first instrumented API call.
+==PROF== Target process 11757 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 87: 0%....50%....100% - 1 pass
+==PROF== Target process 11759 terminated before first instrumented API call.
+==PROF== Target process 11758 terminated before first instrumented API call.
+==PROF== Target process 11761 terminated before first instrumented API call.
+==PROF== Target process 11760 terminated before first instrumented API call.
+==PROF== Target process 11762 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 88: 0%....50%....100% - 1 pass
+==PROF== Target process 11764 terminated before first instrumented API call.
+==PROF== Target process 11763 terminated before first instrumented API call.
+==PROF== Target process 11766 terminated before first instrumented API call.
+==PROF== Target process 11765 terminated before first instrumented API call.
+==PROF== Target process 11767 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 89: 0%....50%....100% - 1 pass
+==PROF== Target process 11769 terminated before first instrumented API call.
+==PROF== Target process 11768 terminated before first instrumented API call.
+==PROF== Target process 11771 terminated before first instrumented API call.
+==PROF== Target process 11770 terminated before first instrumented API call.
+==PROF== Target process 11772 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 90: 0%....50%....100% - 1 pass
+==PROF== Target process 11774 terminated before first instrumented API call.
+==PROF== Target process 11773 terminated before first instrumented API call.
+==PROF== Target process 11776 terminated before first instrumented API call.
+==PROF== Target process 11775 terminated before first instrumented API call.
+==PROF== Target process 11777 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 91: 0%....50%....100% - 1 pass
+==PROF== Target process 11779 terminated before first instrumented API call.
+==PROF== Target process 11778 terminated before first instrumented API call.
+==PROF== Target process 11781 terminated before first instrumented API call.
+==PROF== Target process 11780 terminated before first instrumented API call.
+==PROF== Target process 11782 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 92: 0%....50%....100% - 1 pass
+==PROF== Target process 11784 terminated before first instrumented API call.
+==PROF== Target process 11783 terminated before first instrumented API call.
+==PROF== Target process 11786 terminated before first instrumented API call.
+==PROF== Target process 11785 terminated before first instrumented API call.
+==PROF== Target process 11787 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 93: 0%....50%....100% - 1 pass
+==PROF== Target process 11788 terminated before first instrumented API call.
+==PROF== Target process 11789 terminated before first instrumented API call.
+==PROF== Target process 11791 terminated before first instrumented API call.
+==PROF== Target process 11790 terminated before first instrumented API call.
+==PROF== Target process 11792 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 94: 0%....50%....100% - 1 pass
+==PROF== Target process 11794 terminated before first instrumented API call.
+==PROF== Target process 11793 terminated before first instrumented API call.
+==PROF== Target process 11796 terminated before first instrumented API call.
+==PROF== Target process 11795 terminated before first instrumented API call.
+==PROF== Target process 11797 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 95: 0%....50%....100% - 1 pass
+==PROF== Target process 11798 terminated before first instrumented API call.
+==PROF== Target process 11799 terminated before first instrumented API call.
+==PROF== Target process 11801 terminated before first instrumented API call.
+==PROF== Target process 11800 terminated before first instrumented API call.
+==PROF== Target process 11802 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 96: 0%....50%....100% - 1 pass
+==PROF== Target process 11804 terminated before first instrumented API call.
+==PROF== Target process 11803 terminated before first instrumented API call.
+==PROF== Target process 11806 terminated before first instrumented API call.
+==PROF== Target process 11805 terminated before first instrumented API call.
+==PROF== Target process 11807 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 97: 0%....50%....100% - 1 pass
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 98: 0%....50%....100% - 1 pass
+==PROF== Target process 11809 terminated before first instrumented API call.
+==PROF== Target process 11808 terminated before first instrumented API call.
+==PROF== Target process 11811 terminated before first instrumented API call.
+==PROF== Target process 11810 terminated before first instrumented API call.
+==PROF== Target process 11812 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 99: 0%....50%....100% - 1 pass
+==PROF== Target process 11814 terminated before first instrumented API call.
+==PROF== Target process 11813 terminated before first instrumented API call.
+==PROF== Target process 11816 terminated before first instrumented API call.
+==PROF== Target process 11815 terminated before first instrumented API call.
+==PROF== Target process 11817 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 100: 0%....50%....100% - 1 pass
+==PROF== Target process 11819 terminated before first instrumented API call.
+==PROF== Target process 11818 terminated before first instrumented API call.
+==PROF== Target process 11821 terminated before first instrumented API call.
+==PROF== Target process 11820 terminated before first instrumented API call.
+==PROF== Target process 11822 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 101: 0%....50%....100% - 1 pass
+==PROF== Target process 11824 terminated before first instrumented API call.
+==PROF== Target process 11823 terminated before first instrumented API call.
+==PROF== Target process 11826 terminated before first instrumented API call.
+==PROF== Target process 11825 terminated before first instrumented API call.
+==PROF== Target process 11827 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 102: 0%....50%....100% - 1 pass
+==PROF== Target process 11829 terminated before first instrumented API call.
+==PROF== Target process 11828 terminated before first instrumented API call.
+==PROF== Target process 11831 terminated before first instrumented API call.
+==PROF== Target process 11830 terminated before first instrumented API call.
+==PROF== Target process 11832 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 103: 0%....50%....100% - 1 pass
+==PROF== Target process 11833 terminated before first instrumented API call.
+==PROF== Target process 11834 terminated before first instrumented API call.
+==PROF== Target process 11836 terminated before first instrumented API call.
+==PROF== Target process 11835 terminated before first instrumented API call.
+==PROF== Target process 11837 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 104: 0%....50%....100% - 1 pass
+==PROF== Target process 11839 terminated before first instrumented API call.
+==PROF== Target process 11838 terminated before first instrumented API call.
+==PROF== Target process 11841 terminated before first instrumented API call.
+==PROF== Target process 11840 terminated before first instrumented API call.
+==PROF== Target process 11842 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 105: 0%....50%....100% - 1 pass
+==PROF== Target process 11844 terminated before first instrumented API call.
+==PROF== Target process 11843 terminated before first instrumented API call.
+==PROF== Target process 11846 terminated before first instrumented API call.
+==PROF== Target process 11845 terminated before first instrumented API call.
+==PROF== Target process 11847 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_fused_con..." - 106: 0%....50%....100% - 1 pass
+==PROF== Target process 11849 terminated before first instrumented API call.
+==PROF== Target process 11848 terminated before first instrumented API call.
+==PROF== Target process 11851 terminated before first instrumented API call.
+==PROF== Target process 11850 terminated before first instrumented API call.
+==PROF== Target process 11852 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 107: 0%....50%....100% - 1 pass
+==PROF== Target process 11854 terminated before first instrumented API call.
+==PROF== Target process 11853 terminated before first instrumented API call.
+==PROF== Target process 11856 terminated before first instrumented API call.
+==PROF== Target process 11855 terminated before first instrumented API call.
+==PROF== Target process 11857 terminated before first instrumented API call.
+==PROF== Profiling "resnext_imagenet_50_conv1x1_1..." - 108: 0%....50%....100% - 1 pass
+==PROF== Disconnected from process 11284
 ==PROF== Report: /workspace/souffle-models/python/models/resnext/ncu-souffle_resnext_O4.ncu-rep
