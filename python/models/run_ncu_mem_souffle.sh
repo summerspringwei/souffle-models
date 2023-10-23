@@ -5,8 +5,8 @@ DIRPATH=/workspace/souffle-models/python/models
 
 NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none --target-processes all"
 
-# cd ${DIRPATH}/bert
 # BERT Pass
+cd ${DIRPATH}/bert
 NAME="souffle_bert_O4"
 if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
   ncu ${NCU_ARGS} -o ncu-${NAME} -f --target-processes all python3 souffle_bert.py O4 1 1
@@ -75,10 +75,9 @@ SOUFFLE_MMoE_MEM=$(python3 ../../extract_ncu_cuda_mem_read.py ncu-${NAME}.csv)
 SOUFFLE_MMoE_NUM_KERNELS=$(wc -l ncu-${NAME}-dram_bytes_read.csv | awk '{ print $1 }')
 cd ${DIRPATH}
 
-
-echo "Souffle: ," ${SOUFFLE_BERT_MEM}, ${SOUFFLE_RESNEXT_MEM}, \
-  ${SOUFFLE_LSTM_MEM}, ${SOUFFLE_EFFICIENTNET_MEM}, \
-  ${SOUFFLE_SWIN_TRANS_MEM}, ${SOUFFLE_MMoE_MEM} > tee table5_souffle.csv
-echo "Souffle: ," ${SOUFFLE_BERT_NUM_KERNELS}, ${SOUFFLE_RESNEXT_NUM_KERNELS}, \
+echo "Souffle number of kernels:," ${SOUFFLE_BERT_NUM_KERNELS}, ${SOUFFLE_RESNEXT_NUM_KERNELS}, \
   ${SOUFFLE_LSTM_NUM_KERNELS}, ${SOUFFLE_EFFICIENTNET_NUM_KERNELS}, \
-  ${SOUFFLE_SWIN_TRANS_NUM_KERNELS}, ${SOUFFLE_MMoE_NUM_KERNELS} >> tee table5_souffle.csv
+  ${SOUFFLE_SWIN_TRANS_NUM_KERNELS}, ${SOUFFLE_MMoE_NUM_KERNELS} > tee table5_souffle.csv
+echo "Souffle memory read:," ${SOUFFLE_BERT_MEM}, ${SOUFFLE_RESNEXT_MEM}, \
+  ${SOUFFLE_LSTM_MEM}, ${SOUFFLE_EFFICIENTNET_MEM}, \
+  ${SOUFFLE_SWIN_TRANS_MEM}, ${SOUFFLE_MMoE_MEM} >> tee table5_souffle.csv
