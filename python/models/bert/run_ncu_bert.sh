@@ -46,5 +46,7 @@ BERT_O4_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_b
 BERT_O4_LATENCY=$(python3 -c "print(${BERT_O4_LATENCY} * ${bert_layers})")
 
 
-echo "BERT:", ${BERT_O0_LATENCY}, ${BERT_O1_LATENCY}, \
-  ${BERT_O2_LATENCY}, ${BERT_O3_LATENCY}, ${BERT_O4_LATENCY} | tee table4_bert.csv
+# echo "BERT:", ${BERT_O0_LATENCY}, ${BERT_O1_LATENCY}, \
+#   ${BERT_O2_LATENCY}, ${BERT_O3_LATENCY}, ${BERT_O4_LATENCY} | tee table4_bert.csv
+
+python3 -c "print('BERT:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${BERT_O0_LATENCY}, ${BERT_O1_LATENCY}, ${BERT_O2_LATENCY}, ${BERT_O3_LATENCY}, ${BERT_O4_LATENCY}))" | tee table4_bert.csv

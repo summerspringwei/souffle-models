@@ -40,5 +40,7 @@ ncu -i ./ncu-souffle_efficientnet_O4.ncu-rep --csv --page raw  | grep -v "at::na
 EFFICIENTNET_O4_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_efficientnet_O4.csv)
 
 
-echo "EfficientNet:", ${EFFICIENTNET_O0_LATENCY}, ${EFFICIENTNET_O1_LATENCY}, ${EFFICIENTNET_O2_LATENCY},\
-   ${EFFICIENTNET_O3_LATENCY}, ${EFFICIENTNET_O4_LATENCY} | tee table4_efficientnet.csv
+# echo "EfficientNet:", ${EFFICIENTNET_O0_LATENCY}, ${EFFICIENTNET_O1_LATENCY}, ${EFFICIENTNET_O2_LATENCY},\
+#    ${EFFICIENTNET_O3_LATENCY}, ${EFFICIENTNET_O4_LATENCY} | tee table4_efficientnet.csv
+
+python3 -c "print('EfficientNet:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${EFFICIENTNET_O0_LATENCY}, ${EFFICIENTNET_O1_LATENCY}, ${EFFICIENTNET_O2_LATENCY}, ${EFFICIENTNET_O3_LATENCY}, ${EFFICIENTNET_O4_LATENCY}))" | tee table4_efficientnet.csv

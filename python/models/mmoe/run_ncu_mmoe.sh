@@ -34,5 +34,7 @@ O3_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_mmoe_O
 
 O4_LATENCY=${O3_LATENCY}
 
-echo "MMoE:", ${O0_LATENCY}, ${O1_LATENCY}, ${O2_LATENCY},\
-   ${O3_LATENCY}, ${O4_LATENCY} | tee table4_mmoe.csv
+# echo "MMoE:", ${O0_LATENCY}, ${O1_LATENCY}, ${O2_LATENCY},\
+#    ${O3_LATENCY}, ${O4_LATENCY} | tee table4_mmoe.csv
+
+python3 -c "print('MMoE:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${O0_LATENCY}, ${O1_LATENCY}, ${O2_LATENCY}, ${O3_LATENCY}, ${O4_LATENCY}))" | tee table4_mmoe.csv

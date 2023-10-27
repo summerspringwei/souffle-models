@@ -58,6 +58,7 @@ fi
 SOUFFLE_MMoE_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_mmoe_O2.csv)
 cd ${DIRPATH}
 
-echo "Souffle: ," ${SOUFFLE_BERT_LATENCY}, ${SOUFFLE_RESNEXT_LATENCY}, \
-  ${SOUFFLE_LSTM_LATENCY}, ${SOUFFLE_EFFICIENTNET_LATENCY}, \
-  ${SOUFFLE_SWIN_TRANS_LATENCY}, ${SOUFFLE_MMoE_LATENCY} | tee table3_souffle.csv
+# echo "Souffle: ," ${SOUFFLE_BERT_LATENCY}, ${SOUFFLE_RESNEXT_LATENCY}, \
+#   ${SOUFFLE_LSTM_LATENCY}, ${SOUFFLE_EFFICIENTNET_LATENCY}, \
+#   ${SOUFFLE_SWIN_TRANS_LATENCY}, ${SOUFFLE_MMoE_LATENCY} | tee table3_souffle.csv
+python3 -c "print('Souffle:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${SOUFFLE_BERT_LATENCY}, ${SOUFFLE_RESNEXT_LATENCY}, ${SOUFFLE_LSTM_LATENCY}, ${SOUFFLE_EFFICIENTNET_LATENCY}, ${SOUFFLE_SWIN_TRANS_LATENCY}, ${SOUFFLE_MMoE_LATENCY}))"  | tee table3_souffle.csv

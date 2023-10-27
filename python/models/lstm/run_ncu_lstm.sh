@@ -12,7 +12,7 @@ fi
 ncu -i ./ncu-souffle_lstm_O0.ncu-rep --csv --page raw > ncu-souffle_lstm_O0.csv
 LSTM_O0_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_lstm_O0.csv)
 LSTM_O0_LATENCY=$(python3 -c "print(${LSTM_O0_LATENCY} * ${num_layers} * ${num_timesteps})")
-exit 0
+
 # Filter out torch kernels
 if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
 ncu ${NCU_ARGS} -o ncu-souffle_lstm_O1 -f  \
@@ -36,5 +36,8 @@ ncu -i ./ncu-souffle_lstm_O3.ncu-rep --csv --page raw | grep -v "at::native*" | 
 LSTM_O3_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffle_lstm_O3.csv)
 
 LSTM_O4_LATENCY=${LSTM_O3_LATENCY}
-echo "LSTM:", ${LSTM_O0_LATENCY}, ${LSTM_O1_LATENCY}, \
-  ${LSTM_O2_LATENCY}, ${LSTM_O3_LATENCY}, ${LSTM_O4_LATENCY} | tee table4_lstm.csv
+
+# echo "LSTM:", ${LSTM_O0_LATENCY}, ${LSTM_O1_LATENCY}, \
+#   ${LSTM_O2_LATENCY}, ${LSTM_O3_LATENCY}, ${LSTM_O4_LATENCY} | tee table4_lstm.csv
+
+python3 -c "print('LSTM:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${LSTM_O0_LATENCY}, ${LSTM_O1_LATENCY}, ${LSTM_O2_LATENCY}, ${LSTM_O3_LATENCY}, ${LSTM_O4_LATENCY}))" | tee table4_lstm.csv

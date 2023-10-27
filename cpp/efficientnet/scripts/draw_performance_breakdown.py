@@ -150,7 +150,8 @@ def draw_efficientnet_plot(group_data, normalize=False):
     }
     print(fusion_latency)
     draw_bars(species, fusion_latency, "efficientnet-se-module-latency-ours.pdf", 3)
-    draw_bars(species, fusion_latency, "efficientnet-se-module-latency-ours.svg", 3)
+    draw_bars(species, fusion_latency, "efficientnet-se-module-latency-ours.eps", 3)
+    draw_bars(species, fusion_latency, "efficientnet-se-module-latency-ours.png", 3)
 
     return unfused_list, tvm_fused_list, one_kernel_list, fused_list
 

@@ -29,5 +29,7 @@ RESNEXT_O2_LATENCY=$(python3 ../../extract_ncu_cuda_kernel_latency.py ncu-souffl
 RESNEXT_O3_LATENCY=${RESNEXT_O2_LATENCY}
 RESNEXT_O4_LATENCY=${RESNEXT_O2_LATENCY}
 
-echo "RESNEXT:", ${RESNEXT_O0_LATENCY}, ${RESNEXT_O1_LATENCY}, \
-  ${RESNEXT_O2_LATENCY}, ${RESNEXT_O3_LATENCY}, ${RESNEXT_O4_LATENCY} | tee table4_resnext.csv
+# echo "RESNEXT:", ${RESNEXT_O0_LATENCY}, ${RESNEXT_O1_LATENCY}, \
+#   ${RESNEXT_O2_LATENCY}, ${RESNEXT_O3_LATENCY}, ${RESNEXT_O4_LATENCY} | tee table4_resnext.csv
+
+python3 -c "print('RESNEXT:, {:.3f}, {:.3f}, {:.3f}, {:.3f}, {:.3f}'.format(${RESNEXT_O0_LATENCY}, ${RESNEXT_O1_LATENCY}, ${RESNEXT_O2_LATENCY}, ${RESNEXT_O3_LATENCY}, ${RESNEXT_O4_LATENCY}))" | tee table4_resnext.csv
