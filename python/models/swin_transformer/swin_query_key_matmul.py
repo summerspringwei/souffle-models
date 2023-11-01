@@ -101,7 +101,7 @@ def auto_tvm_apply_query_key_matmul(batch_size,
                                     seq_length,
                                     size_per_head,
                                     model_name="swin_transformer",
-                                    num_bench=1000):
+                                    num_bench=1):
     # log_file = "kernel_configs/transformer_auto_tvm_qeury_key_matmul_{}_{}_{}_{}.log".format(batch_size, num_heads, seq_length, size_per_head)
     log_file = "kernel_configs/{}_auto_tvm_qeury_key_matmul_q_k_{}_{}_{}_{}.log".format(
         model_name, batch_size, num_heads, seq_length, size_per_head)
@@ -109,14 +109,12 @@ def auto_tvm_apply_query_key_matmul(batch_size,
     A_shape = (batch_size * num_heads, seq_length, size_per_head)
     B_shape = (batch_size * num_heads, seq_length, size_per_head)
 
-    A = te.placeholder(A_shape, dtype="float16")
-    B = te.placeholder(B_shape, dtype="float16")
+    A = te.placeholder(A_shape, dtype="float16", name="A_query_key_matmul")
+    B = te.placeholder(B_shape, dtype="float16", name="B_query_key_matmul")
     task = tvm.autotvm.task.create("batch_matmul_tensorcore_q_k.cuda",
                                    args=(A, B),
                                    target='cuda')
     assert(os.path.exists(log_file))
-    if not os.path.exists(log_file):
-        return (0, 0), ("", "")
     dispatch_context = autotvm.apply_history_best(log_file)
     best_config = dispatch_context.query(task.target, task.workload)
     print("\nBest config:")
@@ -146,9 +144,9 @@ def auto_tvm_apply_query_key_matmul(batch_size,
 
 def query_key_matmul_tune(tuning=False):
     configs = [
-        (64, 4, 64, 32, "swin_transformer"),
+        # (64, 4, 64, 32, "swin_transformer"),
         # (16, 8, 64, 32, "swin_transformer"),
-        # (4, 16, 64, 32, "swin_transformer"),
+        (4, 16, 64, 32, "swin_transformer"),
         # (1, 32, 64, 32, "swin_transformer")
     ]
     for conf in configs:
@@ -178,5 +176,5 @@ def softmax_tune(tuning=False):
 if __name__ == "__main__":
     # auto_tvm_query_key_matmul(1, 12, 384, 64, "transformer")
     # apply_query_key_matmul(1, 12, 384, 64, "transformer")
-    # query_key_matmul_tune()
-    softmax_tune()
+    query_key_matmul_tune()
+    # softmax_tune()

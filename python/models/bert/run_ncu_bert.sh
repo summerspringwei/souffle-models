@@ -2,8 +2,8 @@
 set -x
 
 bert_layers=12
-
-NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none --target-processes all"
+#  --target-processes all
+NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none"
 
 if [ -n "${SOUFFLE_RUN}" ] && [ "${SOUFFLE_RUN}" = "TRUE" ]; then
 ncu ${NCU_ARGS} -o ncu-souffle_bert_O0 -f  \

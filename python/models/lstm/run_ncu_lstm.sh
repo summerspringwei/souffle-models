@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
-
-NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none --target-processes all"
+#  --target-processes all
+NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none"
 
 num_layers=10
 num_timesteps=100

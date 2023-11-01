@@ -248,8 +248,8 @@ def fused_window_reverse_roll_add(batch_size,
         shift_size = shift_size % width
     h_num_windows, w_num_windows = height // window_size, width // window_size
     x = te.placeholder((batch_size * h_num_windows * w_num_windows *
-                        window_size * window_size, channel), dtype)
-    short_cut = te.placeholder((batch_size, height, width, channel), dtype)
+                        window_size * window_size, channel), dtype, name="x_fused_window_reverse_roll_add")
+    short_cut = te.placeholder((batch_size, height, width, channel), dtype, name="short_cut_fused_window_reverse_roll_add")
     x_permute_roll = te.compute(
         (batch_size, height, width, channel),
         lambda b, h, w, c: x[b * height * width + tir.indexdiv(
@@ -260,17 +260,17 @@ def fused_window_reverse_roll_add(batch_size,
             tir.indexmod((h + height - shift_size), height), window_size
         ) * window_size + tir.indexmod(
             tir.indexmod((w + width - shift_size), width), window_size), c
-                             ] + short_cut[b, h, w, c])
+                             ] + short_cut[b, h, w, c], name="x_permute_roll_fused_window_reverse_roll_add")
 
     return [x, short_cut, x_permute_roll]
 
 
 def fused_window_reverse_roll_add_tune(tuning=False):
     kernel_configs = [
-        [1, 56, 56, 128, 3, 7, "float16"],
-        [1, 28, 28, 256, 3, 7, "float16"],
+        # [1, 56, 56, 128, 3, 7, "float16"],
+        # [1, 28, 28, 256, 3, 7, "float16"],
         [1, 14, 14, 512, 3, 7, "float16"],
-        [1, 7, 7, 1024, 3, 7, "float16"],
+        # [1, 7, 7, 1024, 3, 7, "float16"],
     ]
     for config in kernel_configs:
         log_file = "kernel_configs/swin_transformer_fused_window_reverse_roll_add_{}_{}_{}_{}_{}_{}_{}.log".format(
@@ -398,7 +398,7 @@ def auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore(
         window_size,
         model_name="swin_transform",
         dtype="float16",
-        num_bench=1000):
+        num_bench=1):
     log_file = "kernel_configs/{}_auto_tvm_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore_{}_{}_{}_{}_{}_{}.log".format(
         model_name, batch_size, height, width, channel, shift_size,
         window_size)
@@ -408,8 +408,8 @@ def auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore(
         print(batch_size, height, width, channel, shift_size, window_size)
         return (0, 0), ("", "")
     weight_shape = (3 * channel, channel)
-    x = te.placeholder((batch_size, height, width, channel), dtype, name="x")
-    weight = te.placeholder(weight_shape, dtype)
+    x = te.placeholder((batch_size, height, width, channel), dtype, name="x_fused_roll_reshape_permute_reshape_qkv_dense")
+    weight = te.placeholder(weight_shape, dtype, name="weight_fused_roll_reshape_permute_reshape_qkv_dense")
 
     with autotvm.apply_history_best(log_file):
         with tvm.target.Target("cuda"):
@@ -420,6 +420,7 @@ def auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore(
                 C)
             args = (x, weight, C)
             func = tvm.build(s, args, name=pathlib.Path(log_file).stem)
+            # print(func.get_source())
             # print(tvm.lower(s, args, simple_mode=True))
             # print(func.imported_modules[0].get_source())
             str_schedule = str(tvm.lower(s, args, simple_mode=True))
@@ -437,8 +438,12 @@ def auto_tvm_apply_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore(
 
 
 def fused_roll_reshape_permute_reshape_qkv_tune(tuning=False):
-    kernel_configs = [[1, 64, 64, 128, 3, 8], [1, 32, 32, 256, 3, 8],
-                      [1, 16, 16, 512, 3, 8], [1, 8, 8, 1024, 3, 8]]
+    kernel_configs = [
+        # [1, 64, 64, 128, 3, 8],
+        # [1, 32, 32, 256, 3, 8],
+        [1, 16, 16, 512, 3, 8], 
+        # [1, 8, 8, 1024, 3, 8]
+    ]
     for config in kernel_configs:
         if tuning:
             auto_tvm_tune_fused_roll_reshape_permute_reshape_qkv_dense_tensorcore(
@@ -741,11 +746,11 @@ def fused_reshape_permute(batch_size,
     """(B*H*W, 3*C) -> (B,NH,WS,NW,WS, 3, n_head, C/n_head) -> (3, B*NH*NW, n_head, WS*WS,  c/n_head)
   """
     x_shape = (batch_size * height * width, 3 * channel)
-    x = te.placeholder(x_shape, dtype, name='x')
+    x = te.placeholder(x_shape, dtype, name='x_fused_reshape_permute')
     num_height = height // window_size
     num_width = width // window_size
     seq_length = channel // num_heads
-    x = te.placeholder(x_shape, dtype, name='x')
+    x = te.placeholder(x_shape, dtype, name='x_fused_reshape_permute')
 
     fused_x_reshape_permuted = te.compute((3, batch_size*num_height*num_width, num_heads, window_size*window_size, seq_length),
       lambda g, bhw, i, ws, s:
@@ -759,8 +764,12 @@ def fused_reshape_permute(batch_size,
 
 
 def fused_reshape_permute_tune(tuning=False):
-    kernel_configs = [[1, 64, 64, 128, 8, 4], [1, 32, 32, 256, 8, 8],
-                      [1, 16, 16, 512, 8, 16], [1, 8, 8, 1024, 8, 32]]
+    kernel_configs = [
+        # [1, 64, 64, 128, 8, 4], 
+        # [1, 32, 32, 256, 8, 8],
+        [1, 16, 16, 512, 8, 16], 
+        # [1, 8, 8, 1024, 8, 32]
+    ]
     for config in kernel_configs:
         log_file = "kernel_configs/{}_fused_reshape_permute_{}_{}_{}_{}_{}_{}".format(
             "swin_transformer", *config)
@@ -791,7 +800,7 @@ def permute_attn_q_k_v(batch_size,
 
 if __name__ == "__main__":
     # Re-Part-1
-    fused_roll_reshape_qkv_matmul_tune(True)
+    # fused_roll_reshape_qkv_matmul_tune(True)
     # Re-Part-2
     # fused_reshape_permute_tune(False)
     # Part-3
@@ -801,7 +810,7 @@ if __name__ == "__main__":
     # layer_normalization_variance_tune()
     # fused_roll_window_partition_tune()
     # Part-6
-    # fused_window_reverse_roll_add_tune(False)
+    fused_window_reverse_roll_add_tune(False)
     # fused_window_reverse_not_roll_add_tune(False)
     # roll_tune(False)
     # fused_roll_reshape_permute_reshape_qkv_tune(False)

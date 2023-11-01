@@ -104,8 +104,8 @@ def auto_tvm_apply_fused_reshape_permute_matmul_tensorcore(
     BN = batch_size * 64
     x_shape = (BN, channel // num_heads, num_heads)
     print("swin_fused_roll_reshape_qkv_matmul.py:106 x_shape: {}, weight_shape:{} ".format(x_shape, (channel, channel)))
-    x = te.placeholder(x_shape, dtype, name="x")
-    weight = te.placeholder((channel, channel), dtype, name="weight")
+    x = te.placeholder(x_shape, dtype, name="x_fused_reshape_permute_matmul_tensorcore")
+    weight = te.placeholder((channel, channel), dtype, name="weight_fused_reshape_permute_matmul_tensorcore")
     if not os.path.exists(log_file):
         print("Cannot find log file: {}".format(log_file))
         return
@@ -130,10 +130,10 @@ def auto_tvm_apply_fused_reshape_permute_matmul_tensorcore(
 
 def fused_reshape_permute_matmul_tensorcore_tune(tunning=False):
     kernel_configs = [
-        [64, 64, 64, 4, 128, 'swin_transform', 'float16'],
-        [16, 32, 32, 8, 256, 'swin_transform', 'float16'],
+        # [64, 64, 64, 4, 128, 'swin_transform', 'float16'],
+        # [16, 32, 32, 8, 256, 'swin_transform', 'float16'],
         [4, 16, 16, 16, 512, 'swin_transform', 'float16'],
-        [1, 8, 8, 32, 1024, 'swin_transform', 'float16'],
+        # [1, 8, 8, 32, 1024, 'swin_transform', 'float16'],
         # [64, 64, 64, 4, 32, "swin_transform", "float16"],
         # [16, 32, 32, 8, 32, "swin_transform", "float16"],
         # [4, 16, 16, 16, 32, "swin_transform", "float16"],
@@ -227,11 +227,11 @@ def attn_v_pad_matmul(cfg, attn, v, dtype="float16"):
     paded_attn = te.compute((B, pad_WS, pad_WS),
                             lambda b, i, j: tir.if_then_else(
                                 tir.all(i < WS, j < WS), attn[b, i, j], 0),
-                            tag="injective")
+                            tag="injective", name="paded_attn")
     paded_v = te.compute((B, dim, pad_WS),
                          lambda b, i, j: tir.if_then_else(
                              (j < WS), v[b, i, j], 0),
-                         tag="injective")
+                         tag="injective", name="paded_v")
     return topi.cuda.batch_matmul_tensorcore_cuda(paded_attn,
                                                   paded_v,
                                                   out_dtype=dtype)
@@ -304,7 +304,7 @@ def auto_tvm_apply_attn_v_pad_matmul_tensorcore(batch_size,
                                                 channel,
                                                 model_name="swin_transform",
                                                 dtype="float16",
-                                                num_bench=1000):
+                                                num_bench=1):
     log_file = "kernel_configs/{}_auto_tvm_tune_attn_v_pad_matmul_tensorcore_{}_{}_{}_{}_{}.log".format(\
       model_name, batch_size, height, width, num_heads, window_size, channel)
     B = batch_size * height // window_size * width // window_size * num_heads
@@ -314,7 +314,7 @@ def auto_tvm_apply_attn_v_pad_matmul_tensorcore(batch_size,
     func_name = "{}_auto_tvm_tune_attn_v_pad_matmul_tensorcore_{}_{}_{}_{}_{}.log".format(
       model_name, batch_size, height, width, num_heads, window_size, channel)
     attn = te.placeholder(attn_shape, dtype, name="attn")
-    v = te.placeholder(v_shape, dtype, name="v")
+    v = te.placeholder(v_shape, dtype, name="value")
     assert(os.path.exists(log_file))
     func_name = pathlib.Path(log_file).stem
     with autotvm.apply_history_best(log_file):
@@ -384,4 +384,4 @@ if __name__ == "__main__":
     # Part-5
     # fused_reshape_attn_v_pad_matmul_tensorcore(False)
     # Part-6
-    fused_reshape_permute_matmul_tensorcore_tune(True)
+    fused_reshape_permute_matmul_tensorcore_tune(False)
