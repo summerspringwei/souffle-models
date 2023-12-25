@@ -1,6 +1,11 @@
 #!/bin/bash
 
 set -x
+
+cd /workspace/souffle-models/cpp/ && bash build_all_bindings.sh p
+
+echo "Installed all python bindings"
+
 DIRPATH=/workspace/souffle-models/python/models
 
 NCU_ARGS="--metrics dram__bytes_read,gpu__time_duration --clock-control none --target-processes all"

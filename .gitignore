@@ -408,3 +408,6 @@ python/models/swin_transformer/ncu-souffle_swin_trans_O3.txt
 Fused_*.cu
 Fused_*.info
 Fused_*.json
+python/models/resnext/resnext_O4_ncu.txt
+cpp/efficientnet/scripts/efficientnet-se-module-latency-ours.eps
+cpp/efficientnet/scripts/efficientnet-se-module-latency-ours.eps
