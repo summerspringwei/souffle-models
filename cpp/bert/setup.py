@@ -8,10 +8,10 @@ CUDA_HOME = os.getenv('CUDA_HOME') if os.getenv('CUDA_HOME')!=None else "/usr/lo
 
 extra_compile_args = {"cxx": []}
 extra_compile_args["nvcc"] = [
-            # "-g",
-            # "-G",
-            # "-O0",
-            "-O3",
+            "-g",
+            "-G",
+            "-O0",
+            # "-O3",
             "-lcuda",
             "-lcudart",
             "-lcudart_static",
@@ -35,14 +35,14 @@ setup(name='bert_binding',
             extra_compile_args=extra_compile_args,
             libraries=["cuda", "cudart", "cudart_static"]
           ),
-          cpp_extension.CUDAExtension(
-            'souffle_bert_base', 
-            ['bert_base_impl.cu'],
-            include_dirs=[CUDA_HOME+"/include", this_dir+"/../"],
-            # library_dirs=[CUDA_HOME+"/lib64"],
-            library_dirs=[CUDA_HOME+"/lib64", CUDA_HOME+"/targets/x86_64-linux/lib/stubs", CUDA_HOME+"/targets/x86_64-linux"],
-            extra_compile_args=extra_compile_args,
-            libraries=["cuda", "cudart", "cudart_static"]
-          )
+          # cpp_extension.CUDAExtension(
+          #   'souffle_bert_base', 
+          #   ['bert_base_impl.cu'],
+          #   include_dirs=[CUDA_HOME+"/include", this_dir+"/../"],
+          #   # library_dirs=[CUDA_HOME+"/lib64"],
+          #   library_dirs=[CUDA_HOME+"/lib64", CUDA_HOME+"/targets/x86_64-linux/lib/stubs", CUDA_HOME+"/targets/x86_64-linux"],
+          #   extra_compile_args=extra_compile_args,
+          #   libraries=["cuda", "cudart", "cudart_static"]
+          # )
         ],
       cmdclass={'build_ext': cpp_extension.BuildExtension})

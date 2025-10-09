@@ -361,7 +361,8 @@ __global__ void fused_sqq_feedforward(
     }
     } // End of feed_forward_fc1 + relu
     grid.sync();
-    
+    // debug
+    // return;
   profile_grid_clock[clock_idx * 108 * 4 + blockIdx.x * 4 + warpIdx] = clock64(); clock_idx++;
     // Begin of feed_forward_fc2 + shor_cuda  Add
     if(blockIdx.x < 72){

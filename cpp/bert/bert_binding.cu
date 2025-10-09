@@ -36,8 +36,6 @@ souffle_bert_layer(torch::Tensor src, torch::Tensor qkv_weight,
       {batch_size * num_heads, max_seq_length, max_seq_length}, options_fp16);
   auto query_key_softmax_sum =
       torch::zeros({batch_size * num_heads, max_seq_length}, options_fp32);
-  auto tvm_query_key_output = torch::zeros(
-      {batch_size * num_heads, max_seq_length, max_seq_length}, options_fp16);
   auto attn_value_output =
       torch::zeros({batch_size * max_seq_length, d_model}, options_fp16);
   auto attn_fc_output =
@@ -532,7 +530,8 @@ souffle_bert_layer(torch::Tensor src, torch::Tensor qkv_weight,
     printf("opt level %d not supported\n", opt_level);
   }
   cudaDeviceSynchronize();
-  return {attn_fc_output, feed_forward_fc2_output};
+//   return {attn_fc_output, feed_forward_fc2_output};
+  return {output_qkv, query_key_output, attn_value_output, attn_fc_output, feed_forward_fc1_output, feed_forward_fc2_output};
 }
 
 PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {

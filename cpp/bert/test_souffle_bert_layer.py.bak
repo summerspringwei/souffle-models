@@ -1,0 +1,316 @@
+import logging
+import torch
+import pandas as pd
+import numpy as np
+from torch import nn
+from transformers import BertForQuestionAnswering, BertTokenizer, BertModel
+
+import bert_binding
+
+logging.basicConfig(level=logging.INFO)
+
+
+class BertLayerModule(nn.Module):
+  def __init__(self, batch_size, max_seq_length, num_heads, hidden_size, device=torch.device('cuda'), dtype=torch.float16, fused_qkv=False) -> None:
+    super().__init__()
+    self.device = device
+    self.dtype = dtype
+    self.fused_qkv = fused_qkv
+
+    self.d_model = num_heads * hidden_size
+    self.batch_size = batch_size
+    self.max_seq_length = max_seq_length
+    self.num_heads = num_heads
+    self.hidden_size = hidden_size
+    
+  
+  def init_weights_with_bert(self, original_model, layer_idx = 5):
+    # init with a layer
+    layer = original_model.encoder.layer[layer_idx]
+    attention = layer.attention.self
+    q_weight = attention.query.weight.data.clone()  # [N768, K768]
+    k_weight = attention.key.weight.data.clone()  # [N768, K768]
+    v_weight = attention.value.weight.data.clone()  # [N768, K768]
+    attn_output_weight = layer.attention.output.dense.weight.data.clone()  # [N768, K768]
+    self.ff_fc1_weight = layer.intermediate.dense.weight.data.clone()  # [3072, 768]
+    self.ff_fc2_weight = layer.output.dense.weight.data.clone()  # [768, 3072]
+
+    self.qkv_matmul_weight = torch.concat([q_weight, k_weight, v_weight], dim=0).to(torch.float16).to(self.device) # [3N768, K768]
+    self.fc_weight = attn_output_weight.to(self.dtype).to(self.device) # [N768, K768]
+
+    # Set up Linear parameters
+    factory_kwargs = {'device': self.device, 'dtype': self.dtype}
+    self.qkv_matmul = nn.Linear(self.d_model, self.d_model * 3, **factory_kwargs)
+    self.qkv_matmul.weight = nn.Parameter(self.qkv_matmul_weight)
+    self.qkv_matmul.bias = nn.Parameter(torch.zeros(self.d_model * 3, **factory_kwargs))
+    self.fc = nn.Linear(self.d_model, self.d_model, **factory_kwargs)
+    self.fc.weight = nn.Parameter(self.fc_weight)
+    self.fc.bias = nn.Parameter(torch.zeros(self.d_model, **factory_kwargs))
+    self.ff_fc1 = nn.Linear(self.d_model, self.hidden_size * 4, **factory_kwargs)
+    self.ff_fc1.weight = nn.Parameter(self.ff_fc1_weight)
+    self.ff_fc1.bias = nn.Parameter(torch.zeros(self.hidden_size * 4, **factory_kwargs))
+    self.ff_fc2 = nn.Linear(self.hidden_size * 4, self.d_model, **factory_kwargs)
+    self.ff_fc2.weight = nn.Parameter(self.ff_fc2_weight)
+    self.ff_fc2.bias = nn.Parameter(torch.zeros(self.d_model, **factory_kwargs))
+    # Dump the parameters to csv
+    # pd.DataFrame(self.fc_weight.detach().cpu().numpy()).to_csv("debug_outputs/fc_weight.csv", index=False, header=False)
+
+  
+  def forward(self, src: torch.Tensor):
+    if self.fused_qkv:
+      t_output_qkv = self.qkv_matmul(src)
+      qkv = torch.split(t_output_qkv, 768, 2)
+      q = qkv[0].reshape(self.batch_size, self.max_seq_length, self.num_heads, self.hidden_size).permute(0, 2, 1, 3)
+      k = qkv[1].reshape(self.batch_size, self.max_seq_length, self.num_heads, self.hidden_size).permute(0, 2, 1, 3)
+      v = qkv[2].reshape(self.batch_size, self.max_seq_length, self.num_heads, self.hidden_size).permute(0, 2, 1, 3)
+      return_t_output_qkv = torch.concat([q, k, v], dim=0) # (batch_size * 3, num_heads, max_seq_length, hidden_size)
+      t_query = torch.permute(torch.reshape(qkv[0], (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 0, 2)) # (num_heads, max_seq_length, hidden_size)
+      t_key = torch.permute(torch.reshape(qkv[1], (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 2, 0)) # (num_heads, hidden_size, max_seq_length)
+      t_value = torch.permute(torch.reshape(qkv[2], (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 0, 2)) # (num_heads, max_seq_length, hidden_size)
+    else:
+      t_query = torch.permute(torch.reshape(self.query(src), (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 0, 2))
+      t_key = torch.permute(torch.reshape(self.key(src), (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 2, 0)) # (num_heads, hidden_size, max_seq_length)
+      t_value = torch.permute(torch.reshape(self.value(src), (self.batch_size*self.max_seq_length, self.num_heads, self.hidden_size)), (1, 0, 2)) # (num_heads, max_seq_length, hidden_size)
+    factor = torch.tensor(((self.hidden_size * self.num_heads) ** 0.5, ), dtype=self.dtype).cuda()
+    t_query_key_output = torch.softmax(torch.divide(torch.bmm(t_query, t_key), factor), 2)
+    t_attn_value_output = torch.bmm(t_query_key_output, t_value) # (num_heads, max_seq_length, hidden_size)
+    t_attn_value_output_permuted = torch.reshape(torch.permute(t_attn_value_output, (1, 0, 2)), (self.batch_size * self.max_seq_length, self.d_model))
+    t_attn_fc_output_tmp = self.fc(t_attn_value_output_permuted)
+    t_attn_fc_output = torch.add(t_attn_fc_output_tmp, src)
+    t_attn_layer_norm_output = torch.layer_norm(t_attn_fc_output, (self.d_model,)).reshape(self.batch_size* self.max_seq_length, self.d_model)
+
+    # pd.DataFrame(t_attn_value_output_permuted.detach().cpu().numpy()).to_csv("debug_outputs/torch_attn_value_output_permuted.csv", index=False, header=False)
+    
+    return return_t_output_qkv, t_query_key_output,  t_attn_value_output, t_attn_value_output_permuted, t_attn_fc_output_tmp, t_attn_layer_norm_output
+  
+
+
+class SouffleBertLayerModule(nn.Module):
+    def __init__(self, batch_size, max_seq_length, num_heads, hidden_size, device=torch.device('cuda'), dtype=torch.float16, fused_qkv=False) -> None:
+        super().__init__()
+        self.device = device
+        self.dtype = dtype
+        self.fused_qkv = fused_qkv
+
+        self.d_model = num_heads * hidden_size
+        self.batch_size = batch_size
+        self.max_seq_length = max_seq_length
+        self.num_heads = num_heads
+        self.hidden_size = hidden_size
+        self.qkv_weight = None
+        self.fc_weight = None
+
+    
+    def init_weights_with_bert(self, original_model, layer_idx = 5):
+        factory_kwargs = {'device': self.device, 'dtype': self.dtype}
+        # init with a layer
+        layer = original_model.encoder.layer[layer_idx]
+        attention = layer.attention.self
+        q_weight = attention.query.weight.data.clone()  # [N768, K768]
+        k_weight = attention.key.weight.data.clone()  # [N768, K768]
+        v_weight = attention.value.weight.data.clone()  # [N768, K768]
+        attn_output_weight = layer.attention.output.dense.weight.data.clone()  # [N768, K768]
+        self.qkv_weight = torch.stack([q_weight.t(), k_weight.t(), v_weight.t()], dim=0).to(self.dtype).to(self.device) # [3K, N768]
+        self.fc_weight = attn_output_weight.t().contiguous().to(torch.float16).to(self.device) # [K768, N768] should be K * N in cuda kernel
+
+
+    def forward(self, src):
+        output_qkv, query_key_output, attn_value_output, attn_fc_output, feed_forward_fc1_output, feed_forward_fc2_output = bert_binding.souffle_bert_layer(
+            src,
+            self.qkv_weight,
+            self.fc_weight,
+            self.ff_fc1.weight,
+            self.ff_fc2.weight,
+            3  # opt_level
+        )
+        return output_qkv, query_key_output, attn_value_output, attn_fc_output, feed_forward_fc1_output, feed_forward_fc2_output
+
+
+def load_model_to_cuda(model_name = "bert-base-uncased"):
+    # 加载原始模型
+    print(f"Loading model: {model_name}")
+    original_model = BertModel.from_pretrained(model_name, torch_dtype=torch.float16)
+    original_model.eval()
+    if torch.cuda.is_available():
+        original_model = original_model.cuda()
+
+    return original_model
+
+
+def prepare_input(original_model):
+    # 加载原始模型
+    model_name = "bert-base-uncased"
+    print(f"Loading model: {model_name}")
+    tokenizer = BertTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
+
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+    text = """The actual opcode is VDPBF16PS (vector dot-product bf16 → packed single-precision). It computes dot-products of bf16 lanes and accumulates into float32 results in zmm registers.
+	•	Compilers may expose this via intrinsics such as _mm512_dpbf16_ps or _mm512_dpbf16_ps_* (names vary by vendor/headers). If available, you would:
+	1.	Load 32 bf16 elements (or 64) packed into a zmm-like bf16 container (toolchains define __m512bh for bf16 vectors),
+	2.	Use the dpbf16 intrinsic to do the dot product and accumulate into __m512 float accumulators.
+	•	If your compiler doesn’t yet have that intrinsic, you can emit vdpbf16ps in inline asm. Syntax and operand ordering depends on assembler (AT&T vs Intel syntax), toolchain, and exact operand types; check your assembler/intrinsics reference."""
+    inputs = tokenizer(text, return_tensors='pt', max_length=384, truncation=True, padding='max_length')
+    if torch.cuda.is_available():
+        inputs = {k: v.to('cuda') for k, v in inputs.items()}
+    with torch.no_grad():
+        input_embeddings = original_model.embeddings(
+            input_ids=inputs["input_ids"],
+            token_type_ids=inputs.get("token_type_ids"),
+        ).to(device)
+
+    return input_embeddings
+
+
+def run_test():
+    original_model = load_model_to_cuda()
+
+    bert_layer_module = BertLayerModule(batch_size=1, max_seq_length=384, num_heads=12, hidden_size=64, device='cuda', dtype=torch.float16, fused_qkv=True)
+    bert_layer_module.init_weights_with_bert(original_model, layer_idx=5)
+
+    souffle_bert_layer_module = SouffleBertLayerModule(batch_size=1, max_seq_length=384, num_heads=12, hidden_size=64, device='cuda', dtype=torch.float16, fused_qkv=True)
+    souffle_bert_layer_module.init_weights_with_bert(original_model, layer_idx=5)
+
+    input_embeddings = prepare_input(original_model)
+
+    with torch.no_grad():
+        output_qkv, query_key_output, attn_value_output, attn_fc_output, feed_forward_fc1_output, feed_forward_fc2_output = bert_layer_module(input_embeddings)
+        souffle_output_qkv, souffle_query_key_output, souffle_attn_value_output, souffle_attn_fc_output, souffle_feed_forward_fc1_output, souffle_feed_forward_fc2_output = souffle_bert_layer_module(input_embeddings)
+        torch.cuda.synchronize()
+        torch.testing.assert_close(souffle_output_qkv, output_qkv, rtol=1e-2, atol=1e-2)
+        torch.testing.assert_close(souffle_query_key_output, query_key_output, rtol=1e-2, atol=1e-2)
+        torch.testing.assert_close(souffle_attn_value_output, attn_value_output, rtol=1e-2, atol=1e-2)
+        torch.testing.assert_close(souffle_attn_fc_output, attn_fc_output, rtol=1e-2, atol=1e-2)
+        # torch.testing.assert_close(souffle_feed_forward_fc1_output, feed_forward_fc1_output, rtol=1e-2, atol=1e-2)
+        # torch.testing.assert_close(souffle_feed_forward_fc2_output, feed_forward_fc2_output, rtol=1e-2, atol=1e-2)
+        print("All outputs match between BertLayerModule and SouffleBertLayerModule!")
+
+
+def simple_souffle_test():
+    # 重置CUDA
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+
+    # 加载原始模型
+    model_name = "bert-base-uncased"
+    print(f"Loading model: {model_name}")
+
+    tokenizer = BertTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
+    original_model = BertModel.from_pretrained(model_name, torch_dtype=torch.float16)
+    original_model.eval()
+
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    if torch.cuda.is_available():
+        original_model = original_model.cuda()
+
+    text = """The actual opcode is VDPBF16PS (vector dot-product bf16 → packed single-precision). It computes dot-products of bf16 lanes and accumulates into float32 results in zmm registers.
+	•	Compilers may expose this via intrinsics such as _mm512_dpbf16_ps or _mm512_dpbf16_ps_* (names vary by vendor/headers). If available, you would:
+	1.	Load 32 bf16 elements (or 64) packed into a zmm-like bf16 container (toolchains define __m512bh for bf16 vectors),
+	2.	Use the dpbf16 intrinsic to do the dot product and accumulate into __m512 float accumulators.
+	•	If your compiler doesn’t yet have that intrinsic, you can emit vdpbf16ps in inline asm. Syntax and operand ordering depends on assembler (AT&T vs Intel syntax), toolchain, and exact operand types; check your assembler/intrinsics reference."""
+    inputs = tokenizer(text, return_tensors='pt', max_length=384, truncation=True, padding='max_length')
+    if torch.cuda.is_available():
+        inputs = {k: v.to('cuda') for k, v in inputs.items()}
+    with torch.no_grad():
+        input_embeddings = original_model.embeddings(
+            input_ids=inputs["input_ids"],
+            token_type_ids=inputs.get("token_type_ids"),
+        ).to(device)
+
+    # =========================================================================
+    # START: 关键修改部分 - 将输入矩阵替换为所有元素为 0.125 的矩阵
+    # =========================================================================
+    print("\n--- 调试模式: 替换 Input Embeddings 为常数矩阵 (0.125) ---")
+
+    # 使用 torch.full_like() 创建一个与 input_embeddings 形状、dtype、device 相同，
+    # 但所有元素值为 0.125 的新张量
+
+    input_value = 1/16
+    weight_value = 1/12 * 1/4
+    # input_embeddings = torch.full_like(
+    #     input_embeddings,
+    #     input_value,
+    #     dtype=input_embeddings.dtype,
+    #     device=input_embeddings.device
+    # )
+    # input_embeddings = torch.randn_like(
+    #     input_embeddings,
+    #     dtype=input_embeddings.dtype,
+    #     device=input_embeddings.device
+    # ) * input_value
+    # =========================================================================
+    # END: 关键修改部分
+    # =========================================================================
+
+    layer_6 = original_model.encoder.layer[5]
+
+    attention = layer_6.attention.self
+
+    # 提取权重 (PyTorch Linear层格式: [out_features, in_features])
+    q_weight = attention.query.weight.data.clone()  # [N768, K768]
+    k_weight = attention.key.weight.data.clone()  # [N768, K768]
+    v_weight = attention.value.weight.data.clone()  # [N768, K768]
+
+    # ----------------------------------------------
+    # 关键修改：将所有元素原地设置为 0.01
+    # ----------------------------------------------
+    # q_weight.fill_(weight_value)
+    # k_weight.fill_(weight_value)
+    # v_weight.fill_(weight_value)
+
+    attn_output_weight = layer_6.attention.output.dense.weight.data.clone()  # [N768, K768]
+
+    ff_fc1_weight = layer_6.intermediate.dense.weight.data.clone()  # [3072, 768]
+    ff_fc2_weight = layer_6.output.dense.weight.data.clone()  # [768, 3072]
+
+    # 运行原始模型第一层获取参考输出
+    print("\n--- Running Original Model Layer 5 ---")
+
+    # 转换权重到FP16和正确设备
+    qkv_w = torch.stack([q_weight.t(), k_weight.t(), v_weight.t()], dim=0).to(torch.float16).to(device) # [3K, N768]
+    attn_w = attn_output_weight.t().contiguous().to(torch.float16).to(device) # [K768, N768] should be K * N in cuda kernel
+    ff1_w = ff_fc1_weight.to(torch.float16).to(device)
+    ff2_w = ff_fc2_weight.to(torch.float16).to(device)
+
+    # 调用 souffle_bert_layer
+    souffle_output = bert_binding.souffle_bert_layer(
+        input_embeddings,
+        qkv_w,
+        attn_w,
+        ff1_w,
+        ff2_w,
+        3  # opt_level
+    )
+
+    output_qkv, query_key_output, attn_value_output, attn_fc_output, feed_forward_fc1_output, feed_forward_fc2_output = souffle_output
+    
+    
+    attn_torch = BertLayerModule(
+        batch_size=1,
+        max_seq_length=384,
+        num_heads=12,
+        hidden_size=64,
+        device=device,
+        dtype=torch.float16,
+        fused_qkv=True
+    )
+
+    return_t_output_qkv, t_query_key_output,  t_attn_value_output, t_attn_value_output_permuted, t_attn_fc_output_tmp, t_attn_layer_norm_output = attn_torch(input_embeddings)
+    
+    torch.testing.assert_close(output_qkv, return_t_output_qkv, rtol=1e-2, atol=1e-2)
+    torch.testing.assert_close(query_key_output, t_query_key_output, rtol=1e-2, atol=1e-2)
+    torch.testing.assert_close(attn_value_output, t_attn_value_output_permuted, rtol=1e-2, atol=1e-2)
+
+    df_attn_layer_norm_output = pd.DataFrame(t_attn_fc_output_tmp.detach().cpu().numpy())
+    df_attn_layer_norm_output.to_csv("debug_outputs/attn_layer_norm_output.csv", index=False, header=False)
+    souffle_attn_layer_norm_output = pd.DataFrame(attn_fc_output.detach().cpu().numpy())
+    souffle_attn_layer_norm_output.to_csv("debug_outputs/souffle_attn_layer_norm_output.csv", index=False, header=False)
+    
+    torch.testing.assert_close(attn_fc_output, t_attn_fc_output_tmp, rtol=1e-2, atol=1e-2)
+
+
+
+if __name__ == "__main__":
+    # simple_souffle_test()
+    run_test()

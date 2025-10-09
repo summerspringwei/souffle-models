@@ -2,6 +2,7 @@
 #include <cooperative_groups.h>
 #include <cuda/pipeline>
 #include <mma.h>
+#include <cuda_fp16.h>
 
 // __inline__ __device__
 // half2 warpReduceSumHalf2(half2 val) {
@@ -16,6 +17,10 @@ half2 warpReduceSumHalf2(half2 val) {
     val = __hadd2(val, __shfl_down_sync(0xffffffff, val, offset));
     // val += __shfl_down_sync(0xffffffff, val, offset);
   return val;
+}
+
+__device__ float myhalf2float(const __half a){
+    return __half2float(a);
 }
 
 // qkv matmul shared memory: 87552, blocks 96
@@ -3469,7 +3474,7 @@ __global__ void fused_sqq_bert_attn(const half *__restrict__ qkv_weight,
         }
         pipe.producer_commit();
     }
-
+    
     // Soft pipeline
 #pragma unroll
     for (; k_loop < (K / kChunkK / kWmmaK) - (kStage - 1); ++k_loop) {
@@ -3612,6 +3617,9 @@ __global__ void fused_sqq_bert_attn(const half *__restrict__ qkv_weight,
                 nvcuda::wmma::mem_col_major);
         }
     }
+
+
+
     // The attn_output and src share the same layout
     uint64_t attn_fc_offset = batched_id * N * M +
                        row_block_id * kBlockRowTiles * kWmmaM +
@@ -3627,6 +3635,19 @@ __global__ void fused_sqq_bert_attn(const half *__restrict__ qkv_weight,
     const int c_dst_stride = kStoreCColsPerIter * M;
     const int c_src_stride =
         kStoreCColsPerIter * (kBlockRowTiles * kWmmaM + kAccSkew);
+
+    
+    // Debug, we only get the result of matmul(attn_value_output, attn_fc)
+    __syncthreads();
+//     half *c_dst_base = attn_fc_output + attn_fc_offset;
+//     half *c_src_base = acc_shared + shared_attn_fc_offset;
+// #pragma unroll
+//     for (int i = 0; i < kBlockColTiles * kWmmaN / kStoreCColsPerIter; ++i) {
+//         *reinterpret_cast<float4 *>(c_dst_base + i * c_dst_stride) =
+//             *reinterpret_cast<float4 *>(c_src_base + i * c_src_stride);
+//     }
+//     __syncthreads();
+    // End of debug
     
     half* src_base = src + attn_fc_offset;
     half* short_cut_add_shared_base = short_cut_add_shared + shared_attn_fc_offset;
@@ -3665,7 +3686,6 @@ __global__ void fused_sqq_bert_attn(const half *__restrict__ qkv_weight,
     __syncthreads();
   }
   grid.sync();
-  
   profile_grid_clock[clock_idx * 108 * 4 + blockIdx.x * 4 + warpIdx] = clock64(); clock_idx++;
   if(blockIdx.x < 72){
     const int kWarpRowTiles=kGemmK4WarpRowTiles;
